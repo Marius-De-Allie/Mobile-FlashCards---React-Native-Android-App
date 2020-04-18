@@ -6,3 +6,5 @@ const DeckList = (props) => (
         <Text>Deck List View Comp</Text>
     </View>
 ); 
+
+export default DeckList;
