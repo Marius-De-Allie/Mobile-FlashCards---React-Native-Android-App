@@ -11,3 +11,5 @@ class NewDeck extends Component {
         );
     }
 };
+
+export default NewDeck;
