@@ -6,7 +6,9 @@ import NewDeck from '../components/NewDeck';
 const Tab = createMaterialTopTabNavigator();
 
 const TabNavigator = () => (
-    <Tab.Navigator>
+    <Tab.Navigator
+        initialRouteName="Decks"
+    >
         <Tab.Screen name="Decks" component={DeckList} />
         <Tab.Screen name="New Deck" component={NewDeck} />
     </Tab.Navigator>
