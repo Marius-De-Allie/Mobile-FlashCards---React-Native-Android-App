@@ -1,0 +1,1 @@
+import { createMaterialTopNavigator } from 'react-navigation';
