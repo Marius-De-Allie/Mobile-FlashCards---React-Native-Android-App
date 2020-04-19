@@ -6,3 +6,5 @@ const DeckListItem = () => (
         <Text>DeckListItem Comp</Text>
     </View>
 );
+
+export default DeckListItem;
