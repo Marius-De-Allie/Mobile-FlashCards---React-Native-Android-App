@@ -6,3 +6,5 @@ const Answer = () => (
         <Text>Answer Comp</Text>
     </View>
 );
+
+export default Answer;
