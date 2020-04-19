@@ -6,3 +6,5 @@ const QuizCount = () => (
         <Text>QuizCount Comp</Text>
     </View>
 );
+
+export default QuizCount;
