@@ -6,3 +6,5 @@ const Deck = () => (
         <Text>Deck Comp</Text>
     </View>
 );
+
+export default Deck;
