@@ -6,3 +6,5 @@ const Quiz = () => (
         <Text>Quiz Comp</Text>
     </View>
 );
+
+export default Quiz;
