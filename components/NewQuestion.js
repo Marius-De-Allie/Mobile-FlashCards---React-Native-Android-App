@@ -10,4 +10,6 @@ class NewQuestion extends Component {
             </View>
         );
     }
-}
+};
+
+export default NewQuestion;
