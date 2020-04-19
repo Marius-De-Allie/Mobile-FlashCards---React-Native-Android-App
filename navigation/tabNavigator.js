@@ -10,3 +10,5 @@ const TabNavigator = () => (
         <Tab.Screen name="New Deck" component={NewDeck} />
     </Tab.Navigator>
 );
+
+export default TabNavigator;
