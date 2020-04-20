@@ -14,6 +14,11 @@ const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 class App extends React.Component {
 
+  componentDidMount() {
+    // Call thunk action creator to get initial decks data and update store.
+    store.dispatch(handleReceiveDecks());
+  }
+
   render() {
     return (
       <NavigationContainer>

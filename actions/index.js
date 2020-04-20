@@ -8,16 +8,17 @@ const receiveDecks = (decks) => ({
 });
 
 // Thunk action creator.
-const handleReceiveDecks = async () => {
+const handleReceiveDecks = () => {
     return(dispatch) => {
-        try {
-            const decks = await _getDecks();
+        _getDecks()
+        .then(decks => {
             receiveDecks(decks);
-        } catch(e) {
-            console.log('Error retreiving decks, please try again', e);
-        }
-    }
+        })
+    } 
 };
 
 export {RECEIVE_DECKS, handleReceiveDecks};
 
+// catch(e) {
+//     console.log('Error retreiving decks, please try again', e);
+// }
