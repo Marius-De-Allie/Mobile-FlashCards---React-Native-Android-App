@@ -6,6 +6,8 @@ import MainStackNavigator from './navigation/stackNavigator';
 import reducer from './reducers';
 import logger from './middleware/logger';
 
+// Create redux store.
+const store = createStore(reducer, applyMiddleware(logger));
 
 export default function App() {
   return (
