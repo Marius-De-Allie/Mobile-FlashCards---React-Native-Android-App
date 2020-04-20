@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStore } from 'redux';
 import MainStackNavigator from './navigation/stackNavigator';
+import reducer from './reducers';
 
 export default function App() {
   return (
