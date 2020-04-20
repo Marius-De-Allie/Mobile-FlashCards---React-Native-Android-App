@@ -30,3 +30,4 @@ const _getDecks = () => {
     })
 };
   
+export {_getDecks};
