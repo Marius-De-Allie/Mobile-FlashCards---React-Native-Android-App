@@ -19,3 +19,5 @@ const handleReceiveDecks = async () => {
     }
 };
 
+export {RECEIVE_DECKS, handleReceiveDecks};
+
