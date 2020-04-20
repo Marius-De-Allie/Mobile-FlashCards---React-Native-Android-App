@@ -7,4 +7,9 @@ const DeckList = (props) => (
     </View>
 ); 
 
+const mapStateToProps = ({decks}) => ({
+    decks,
+    deckIds: Object.keys(decks)
+})
+
 export default DeckList;
