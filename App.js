@@ -11,13 +11,18 @@ import logger from './middleware/logger';
 // Create redux store.
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Provider store={store}>
-        <MainStackNavigator />
-      </Provider>
-    </NavigationContainer>
-  );
-}
+class App extends React.Component {
+
+  render() {
+    return (
+      <NavigationContainer>
+        <Provider store={store}>
+          <MainStackNavigator />
+        </Provider>
+      </NavigationContainer>
+    );
+  }
+};
+
+export default App;
 
