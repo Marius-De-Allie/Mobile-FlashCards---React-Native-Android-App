@@ -5,7 +5,7 @@ import NewQuestion from '../components/NewQuestion';
 
 const Stack = createStackNavigator();
 
-const StackNavigator = () => (
+const MainStackNavigator = () => (
     <Stack.Navigator>
         <Stack.Screen name="Deck" component={Deck} />
         <Stack.Screen name="Quiz" component={Quiz} />
