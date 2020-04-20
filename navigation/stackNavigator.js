@@ -8,7 +8,9 @@ import TabNavigator from './tabNavigator';
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => (
-    <Stack.Navigator>
+    <Stack.Navigator
+        initialRouteName="Home"
+    >
         <Stack.Screen name="Home" component={TabNavigator} />
         <Stack.Screen name="Deck" component={Deck} />
         <Stack.Screen name="Quiz" component={Quiz} />
