@@ -12,3 +12,5 @@ const MainStackNavigator = () => (
         <Stack.Screen name="New Card" component={NewQuestion} />
     </Stack.Navigator>
 );
+
+export default MainStackNavigator;
