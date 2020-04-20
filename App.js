@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(store.getState())
+    console.log('APP', store.getState())
     return (
       <NavigationContainer>
         <Provider store={store}>
