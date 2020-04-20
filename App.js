@@ -13,7 +13,9 @@ const store = createStore(reducer, applyMiddleware(logger));
 export default function App() {
   return (
     <NavigationContainer>
-      <MainStackNavigator />
+      <Provider store={store}>
+        <MainStackNavigator />
+      </Provider>
     </NavigationContainer>
   );
 }
