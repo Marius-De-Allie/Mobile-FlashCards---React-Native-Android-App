@@ -1,5 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import Deck from '../components/Deck';
+import Quiz from '../components/Quiz';
 
 const Stack = createStackNavigator();
 
