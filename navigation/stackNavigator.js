@@ -1,4 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
+import Deck from '../components/Deck';
 
 const Stack = createStackNavigator();
 
