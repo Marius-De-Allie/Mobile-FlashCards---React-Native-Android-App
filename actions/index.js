@@ -12,7 +12,8 @@ const handleReceiveDecks = () => {
     return(dispatch) => {
         _getDecks()
         .then(decks => {
-            receiveDecks(decks);
+            console.log(decks);
+            dispatch(receiveDecks(decks));
         })
     } 
 };
