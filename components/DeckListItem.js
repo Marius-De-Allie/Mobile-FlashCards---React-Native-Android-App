@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const DeckListItem = ({title, cards}) => (
     <View>
-        <Text>{title}</Text>
+        <Text><MaterialCommunityIcons name="cards" />{title}</Text>
     </View>
 );
 
