@@ -10,7 +10,13 @@ const DeckList = (props) => {
     console.log('DECKIDS', deckIds);
     return (
         <View>
-            <Text>Deck List View Comp</Text>
+            {deckIds.map(id => 
+                <DeckListItem 
+                    key={id} 
+                    title={decks[id].title}
+                    cards={decks[id].questions.length} 
+                />
+            )}
         </View>
 
     );
