@@ -14,7 +14,8 @@ const DeckList = (props) => {
                 <DeckListItem 
                     key={id} 
                     title={decks[id].title}
-                    cards={decks[id].questions.length} 
+                    cards={decks[id].questions.length}
+                    deckId={id} 
                 />
             )}
         </View>
