@@ -6,6 +6,7 @@ const Deck = ({route, decks}) => {
     return (
         <View>
             <Text>{`${decks[route.params.deckId].title} deck`}</Text>
+            <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
         </View>
     );
 };
