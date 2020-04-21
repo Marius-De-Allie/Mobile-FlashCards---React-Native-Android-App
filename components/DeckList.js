@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 const DeckList = (props) => {
+    const { decks } = props;
     console.log('DECKLIST', props);
     return (
         <View>
@@ -13,7 +14,7 @@ const DeckList = (props) => {
 } 
 
 const mapStateToProps = (state) => ({
-    decks: state,
+    decks: state
 })
 
 export default connect(mapStateToProps)(DeckList);
