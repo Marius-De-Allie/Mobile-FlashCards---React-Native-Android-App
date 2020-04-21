@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 const DeckList = (props) => {
     const { decks } = props;
+    // Array of all decks.
+    const deckIds = Object.keys(decks);
     console.log('DECKLIST', props);
     return (
         <View>
