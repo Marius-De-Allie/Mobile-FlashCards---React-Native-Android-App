@@ -5,6 +5,13 @@ import { useNavigation } from '@react-navigation/native';
 
 const DeckListItem = ({title, cards}) => {
     const navigation = useNavigation();
+    // Navigate to Deck route.
+    const goToDeck = () => {
+        navigation.push('Deck', {
+            deckId: title
+        })
+    };
+    
     return (
         <View>
             <TouchableWithoutFeedback>
