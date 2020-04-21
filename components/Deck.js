@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
-const Deck = ({routes, deckId}) => {
+const Deck = ({route, decks}) => {
     return (
         <View>
-            <Text>Deck Comp</Text>
+            <Text>{`${decks[route.params.deckId].title} deck`}</Text>
         </View>
     );
 };
