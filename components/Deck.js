@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 const Deck = ({route, decks}) => {
     return (
-        <View>
+        <View style={{alignItems: 'center', justifyContent: 'space-evenly'}}>
             <Text>{`${decks[route.params.deckId].title} deck`}</Text>
             <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
         </View>
