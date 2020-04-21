@@ -4,9 +4,17 @@ import { connect } from 'react-redux';
 
 const Deck = ({route, decks}) => {
     return (
-        <View style={{alignItems: 'center', justifyContent: 'space-evenly'}}>
+        <View>
             <Text>{`${decks[route.params.deckId].title} deck`}</Text>
             <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
+            <View>
+                <TouchableOpacity>
+                    <Text>Take Quiz</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text>Add Card</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 };
