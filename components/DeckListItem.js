@@ -8,7 +8,7 @@ const DeckListItem = ({title, cards, deckId}) => {
     // Navigate to Deck route.
     const goToDeck = () => {
         navigation.push('Deck', {
-            deckId: title
+            deckId
         })
     };
 
