@@ -18,7 +18,7 @@ class NewDeck extends Component {
     // What action to take when creat Deck button is pressed.
     onDeckSubmit = () => {
         // Remove all whitespace from DeckTitle property value in component state.
-        const deckId = this.state.deckTitle.replace(/\s+/g,'');
+        let deckId = this.state.deckTitle.replace(/\s+/g,'');
         // Set newly created deck's deck id to lower case. 
         deckId = deckId.toLowerCase()
         // Create an array of all current Deck keys(ids).
@@ -36,6 +36,7 @@ class NewDeck extends Component {
     
             // Dispatch action creator to add new deck to store.
             this.props.dispatch(addDeck(deckId, title, questions));
+            console.log('added')
         } else {
             /* Else output an error message to user */
             alert('Sorry a deck with this name already exists, please use a different deck title.')
@@ -52,7 +53,7 @@ class NewDeck extends Component {
                     onChangeText={(text) => this.onInputChange(text)}
                     placeholder="Please enter title for new deck"
                 />
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.onDeckSubmit}>
                     <Text>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
