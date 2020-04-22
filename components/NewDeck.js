@@ -19,6 +19,8 @@ class NewDeck extends Component {
     onDeckSubmit = () => {
         // Remove all whitespace from DeckTitle property value in component state.
         const deckId = this.state.deckTitle.replace(/\s+/g,'');
+        // Set newly created deck's deck id to lower case. 
+        deckId = deckId.toLowerCase()
         // Create an array of all current Deck keys(ids).
         const currentDeckIds = Object.keys(this.props.decks);
         // Set each deck id element in array to lower case. 
