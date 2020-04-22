@@ -26,7 +26,9 @@ const Deck = ({route, decks, navigation}) => {
                 >
                     <Text>Take Quiz</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={goToNewCard}
+                >
                     <Text>Add Card</Text>
                 </TouchableOpacity>
             </View>
