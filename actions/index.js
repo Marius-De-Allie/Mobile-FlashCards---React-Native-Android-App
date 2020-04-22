@@ -19,6 +19,12 @@ const handleReceiveDecks = () => {
     } 
 };
 
+// ADD DECK ACTION CREATOR.
+const addDeck = (deck) => ({
+    type: ADD_DECK,
+    deck
+});
+
 export {RECEIVE_DECKS, handleReceiveDecks};
 
 // catch(e) {
