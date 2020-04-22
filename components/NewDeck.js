@@ -35,7 +35,7 @@ class NewDeck extends Component {
             const questions = [];
     
             // Dispatch action creator to add new deck to store.
-            this.props.addDeck(deckId, title, questions);
+            this.props.dispatch(addDeck(deckId, title, questions));
         } else {
             /* Else output an error message to user */
             alert('Sorry a deck with this name already exists, please use a different deck title.')
