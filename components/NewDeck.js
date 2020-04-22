@@ -65,4 +65,4 @@ const mapStateToProps = (state) => ({
     decks: state
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewDeck);
+export default connect(mapStateToProps)(NewDeck);
