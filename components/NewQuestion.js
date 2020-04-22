@@ -3,6 +3,12 @@ import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'r
 import { connect } from 'react-redux';
 
 class NewQuestion extends Component {
+    // Component State.
+    state = {
+        question: '',
+        answer: ''
+    };
+    
     render() {
         return (
             <View>
