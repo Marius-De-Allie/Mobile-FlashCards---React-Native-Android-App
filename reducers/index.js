@@ -10,10 +10,7 @@ const decks = (state = {}, action) => {
         case ADD_DECK:
             return {
                 ...state,
-                [action.deckId]: [action.deckId] ? {
-                    ...state[action.deckId]
-                } : 
-                {
+                [action.deckId]: {                
                     title: action.title,
                     questions: action.questions
                 }
