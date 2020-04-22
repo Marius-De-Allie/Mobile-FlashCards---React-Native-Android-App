@@ -3,12 +3,17 @@ import { View, Text, KeyboardAvoidingView, TextInput } from 'react-native';
 import { connect } from 'react-redux';
 
 class NewDeck extends Component {
+    state = {
+        deckTitle: ''
+    };
     
     render() {
         return (
-            <View>
+            <KeyboardAvoidingView>
                 <Text>Create New Deck</Text>
-            </View>
+
+
+            </KeyboardAvoidingView>
         );
     }
 };
