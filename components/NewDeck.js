@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, KeyboardAvoidingView, TextInput } from 'react-native';
+import { View, Text, KeyboardAvoidingView, TextInput, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 class NewDeck extends Component {
