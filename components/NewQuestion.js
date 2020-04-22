@@ -3,7 +3,6 @@ import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 class NewQuestion extends Component {
-    
     render() {
         console.log(this.props.deckId, this.props.decks);
         return (
@@ -19,4 +18,4 @@ const mapStateToProps = (state, ownProps) => ({
     deckId: ownProps.route.params.deckId
 });
 
-export default NewQuestion;
+export default connect(mapStateToProps)(NewQuestion);
