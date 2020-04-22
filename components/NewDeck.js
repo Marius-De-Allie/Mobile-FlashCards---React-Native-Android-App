@@ -39,7 +39,9 @@ class NewDeck extends Component {
             // Clear input field after submission.
             this.setState(() => ({
                 deckTitle: ''
-            }))
+            }));
+            // Redirect to Decks List view.
+            this.props.navigation.navigate('Decks');
         } else {
             /* Else output an error message to user */
             alert('Sorry a deck with this name already exists, please use a different deck title.')
