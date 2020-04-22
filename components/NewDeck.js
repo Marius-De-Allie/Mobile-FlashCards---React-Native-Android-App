@@ -25,13 +25,21 @@ class NewDeck extends Component {
         const currentDeckIds = Object.keys(this.props.decks);
         // Set each deck id element in array to lower case. 
         currentDeckIds.forEach(id => id.toLowerCase());
-        // Deck title property
-        const title = this.state.deckTitle;
-        // Deck questions property
-        const questions = [];
+        // Check whether newly created Deck's id is equal to the deck Id of currently existing deck.
+        if(!currentDeckIds.includes(deckId)) {
+        /* If not add this new deck to the store. */
 
-        // Dispatch action creator to add new deck to store.
-        this.props.addDeck(deckId, title, questions);
+            // Deck title property
+            const title = this.state.deckTitle;
+            // Deck questions property
+            const questions = [];
+    
+            // Dispatch action creator to add new deck to store.
+            this.props.addDeck(deckId, title, questions);
+        } else {
+            /* Else output an error message to user */
+            alert('Sorry a deck with this name already exists, please use a different deck title.')
+        }
     };
     
     render() {
