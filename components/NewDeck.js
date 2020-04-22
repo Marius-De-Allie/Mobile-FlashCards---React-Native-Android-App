@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, KeyboardAvoidingView, TextInput, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { addDeck } from '../actions';
+
 class NewDeck extends Component {
     state = {
         deckTitle: ''
@@ -18,18 +19,23 @@ class NewDeck extends Component {
     onDeckSubmit = () => {
         // Remove all whitespace from DeckTitle property value in component state.
         const deckId = this.state.deckTitle.replace(/\s+/g,'');
-        const deckObj = {
-            [deckId]: {
-                title: this.state.deckTitle,
-                questions: []
-            }
-        }
 
-        
+        const title = this.state.deckTitle;
+        const questions = [];
+
+        // const deckObj = {
+        //     [deckId]: {
+        //         title: this.state.deckTitle,
+        //         questions: []
+        //     }
+        // }
+        this.props.dispatch(addDeck(deckId, title, questions))
+        console.log(this.props.decks)
 
     };
     
     render() {
+        console.log(this.props.decks)
         const {deckTitle} = this.state;
         return (
             <KeyboardAvoidingView>
@@ -39,7 +45,7 @@ class NewDeck extends Component {
                     onChangeText={(text) => this.onInputChange(text)}
                     placeholder="Please enter title for new deck"
                 />
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.onDeckSubmit}>
                     <Text>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
