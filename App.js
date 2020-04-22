@@ -16,7 +16,7 @@ class App extends React.Component {
 
   componentDidMount() {
     // Call thunk action creator to get initial decks data and update store.
-    // store.dispatch(handleReceiveDecks());
+    store.dispatch(handleReceiveDecks());
   }
 
   render() {
