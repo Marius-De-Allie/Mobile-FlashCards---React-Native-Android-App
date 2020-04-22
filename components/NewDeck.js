@@ -21,6 +21,8 @@ class NewDeck extends Component {
         const deckId = this.state.deckTitle.replace(/\s+/g,'');
         // Create an array of all current Deck keys(ids).
         const currentDeckIds = Object.keys(this.props.decks);
+        // Set each deck id element in array to lower case. 
+        currentDeckIds.forEach(id => id.toLowerCase());
         // Deck title property
         const title = this.state.deckTitle;
         // Deck questions property
