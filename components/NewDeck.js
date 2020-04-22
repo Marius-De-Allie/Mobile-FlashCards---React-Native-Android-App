@@ -19,6 +19,8 @@ class NewDeck extends Component {
     onDeckSubmit = () => {
         // Remove all whitespace from DeckTitle property value in component state.
         const deckId = this.state.deckTitle.replace(/\s+/g,'');
+        // Create an array of all current Deck keys(ids).
+        const currentDeckIds = Object.keys(this.props.decks);
         // Deck title property
         const title = this.state.deckTitle;
         // Deck questions property
