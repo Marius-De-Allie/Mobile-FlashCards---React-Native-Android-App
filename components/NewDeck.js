@@ -24,12 +24,8 @@ class NewDeck extends Component {
         // Deck questions property
         const questions = [];
 
-        // const deckObj = {
-        //     [deckId]: {
-        //         title: this.state.deckTitle,
-        //         questions: []
-        //     }
-        // }
+        // Dispatch action creator to add new deck to store.
+        this.props.addDeck(deckId, title, questions);
     };
     
     render() {
