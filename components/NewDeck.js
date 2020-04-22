@@ -36,7 +36,10 @@ class NewDeck extends Component {
     
             // Dispatch action creator to add new deck to store.
             this.props.dispatch(addDeck(deckId, title, questions));
-            console.log('added')
+            // Clear input field after submission.
+            this.setState(() => ({
+                deckTitle: ''
+            }))
         } else {
             /* Else output an error message to user */
             alert('Sorry a deck with this name already exists, please use a different deck title.')
