@@ -25,7 +25,7 @@ const addDeck = (deck) => ({
     deck
 });
 
-export {RECEIVE_DECKS, handleReceiveDecks};
+export {RECEIVE_DECKS, ADD_DECK, handleReceiveDecks, addDeck};
 
 // catch(e) {
 //     console.log('Error retreiving decks, please try again', e);
