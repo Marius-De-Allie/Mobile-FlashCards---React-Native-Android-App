@@ -10,7 +10,13 @@ const decks = (state = {}, action) => {
         case ADD_DECK:
             return {
                 ...state,
-                ...action.deck
+                [action.deckId]: [action.deckId] ? {
+                    ...state[action.deckId]
+                } : 
+                {
+                    title: action.title,
+                    questions: action.questions
+                }
             }
         default:
             return state;
