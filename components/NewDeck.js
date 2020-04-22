@@ -19,8 +19,9 @@ class NewDeck extends Component {
     onDeckSubmit = () => {
         // Remove all whitespace from DeckTitle property value in component state.
         const deckId = this.state.deckTitle.replace(/\s+/g,'');
-
+        // Deck title property
         const title = this.state.deckTitle;
+        // Deck questions property
         const questions = [];
 
         // const deckObj = {
@@ -29,13 +30,9 @@ class NewDeck extends Component {
         //         questions: []
         //     }
         // }
-        this.props.dispatch(addDeck(deckId, title, questions))
-        console.log(this.props.decks)
-
     };
     
     render() {
-        console.log(this.props.decks)
         const {deckTitle} = this.state;
         return (
             <KeyboardAvoidingView>
@@ -45,7 +42,7 @@ class NewDeck extends Component {
                     onChangeText={(text) => this.onInputChange(text)}
                     placeholder="Please enter title for new deck"
                 />
-                <TouchableOpacity onPress={this.onDeckSubmit}>
+                <TouchableOpacity>
                     <Text>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
@@ -56,6 +53,11 @@ class NewDeck extends Component {
 // Access the following store state as props on this component.
 const mapStateToProps = (state) => ({
     decks: state
+});
+
+// Map addDeck action creator as prop on component
+const mapDispatchToProps = () => ({
+    addDeck
 });
 
 export default connect(mapStateToProps)(NewDeck);
