@@ -1,6 +1,7 @@
 import { _getDecks } from '../_DATA';
 
 const RECEIVE_DECKS = 'RECEIVE_DECKS';
+const ADD_DECK = 'ADD_DECK';
 
 const receiveDecks = (decks) => ({
     type: RECEIVE_DECKS,
