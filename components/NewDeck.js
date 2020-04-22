@@ -21,6 +21,7 @@ class NewDeck extends Component {
                 <Text>Create New Deck</Text>
                 <TextInput 
                     value={deckTitle}
+                    onChangeText={(text) => this.onInputChange(text)}
                     placeholder="Please enter title for new deck"
                 />
             </KeyboardAvoidingView>
