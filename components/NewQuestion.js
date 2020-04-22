@@ -4,10 +4,9 @@ import { connect } from 'react-redux';
 
 class NewQuestion extends Component {
     render() {
-        console.log(this.props.deckId, this.props.decks);
         return (
             <View>
-                <Text>New Question View Comp</Text>
+                <Text>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
             </View>
         );
     }
