@@ -65,9 +65,4 @@ const mapStateToProps = (state) => ({
     decks: state
 });
 
-// Map addDeck action creator as prop on component
-const mapDispatchToProps = () => ({
-    addDeck
-});
-
 export default connect(mapStateToProps, mapDispatchToProps)(NewDeck);
