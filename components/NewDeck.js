@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, KeyboardAvoidingView, TextInput, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-
+import { addDeck } from '../actions';
 class NewDeck extends Component {
     state = {
         deckTitle: ''
