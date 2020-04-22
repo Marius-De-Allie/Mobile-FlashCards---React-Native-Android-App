@@ -3,12 +3,19 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 const Deck = ({route, decks, navigation}) => {
+    
     const goToQuiz = () => {
         navigation.push('Quiz', {
             deckId: route.params.deckId
         })
     };
-    
+
+    const goToNewCard = () => {
+        navigation.navigate('New Card', {
+            deckId: route.params.deckId
+        })
+    };
+
     return (
         <View>
             <Text>{`${decks[route.params.deckId].title} deck`}</Text>
