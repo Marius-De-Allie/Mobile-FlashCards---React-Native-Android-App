@@ -6,13 +6,18 @@ class NewDeck extends Component {
     state = {
         deckTitle: ''
     };
+
+    onInputChange = (text) => {
+        let deckTitle = text.trim(start);
+        this.setState(() => ({
+            deckTitle
+        }))
+    };
     
     render() {
         return (
             <KeyboardAvoidingView>
                 <Text>Create New Deck</Text>
-
-
             </KeyboardAvoidingView>
         );
     }
