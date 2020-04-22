@@ -13,6 +13,21 @@ class NewDeck extends Component {
             deckTitle
         }))
     };
+
+    // What action to take when creat Deck button is pressed.
+    onDeckSubmit = () => {
+        // Remove all whitespace from DeckTitle property value in component state.
+        const deckId = this.state.deckTitle.replace(/\s+/g,'');
+        const deckObj = {
+            [deckId]: {
+                title: this.state.deckTitle,
+                questions: []
+            }
+        }
+
+        
+
+    };
     
     render() {
         const {deckTitle} = this.state;
