@@ -12,4 +12,9 @@ class NewDeck extends Component {
     }
 };
 
+// Access the following store state as props on this component.
+const mapStateToProps = (state) => ({
+    decks: state
+});
+
 export default NewDeck;
