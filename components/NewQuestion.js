@@ -17,7 +17,7 @@ class NewQuestion extends Component {
             question
         }));
     };
-    
+
     // Perform this when text in answer InputText field changes.
     onAnswerChange = (input) => {
         const answer = input.trimStart();
@@ -32,11 +32,20 @@ class NewQuestion extends Component {
         return (
             <View>
                 <Text>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
-                <TextInput 
-                    value={question}
-                    onChangeText={(text) => this.onQuestionChange(text)}
-                    placeholder="Please enter your question."
-                />
+                <View>
+                    <TextInput 
+                        value={question}
+                        onChangeText={(text) => this.onQuestionChange(text)}
+                        placeholder="Please enter your question."
+                    />
+                </View>
+                <View>
+                    <TextInput 
+                        value={answer}
+                        onChangeText={(text) => this.onAnswerChange(text)}
+                        placeholder="Please enter the answer to the question."
+                    />
+                </View>
             </View>
         );
     }
