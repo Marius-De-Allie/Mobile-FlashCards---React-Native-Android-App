@@ -35,7 +35,7 @@ const addCard = (cardObj, deckId) => ({
     deckId
 });
 
-export {RECEIVE_DECKS, ADD_DECK, handleReceiveDecks, addDeck};
+export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, handleReceiveDecks, addDeck, addCard};
 
 // catch(e) {
 //     console.log('Error retreiving decks, please try again', e);
