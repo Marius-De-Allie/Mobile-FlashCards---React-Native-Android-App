@@ -27,6 +27,20 @@ class NewQuestion extends Component {
         }));
     };
 
+    onCardSubmit = () => {
+        const {question, answer} = this.state;
+        // Check whether both input fields are not empty.
+        if(question !== '' && answer !== '') {
+            // if they are not empty, create a question object.
+            const questionObj = {
+                question,
+                answer
+            };
+            // Dispacth action to add question object to that's deck's question array.
+            
+        }
+    }
+
     render() {
         const {question, answer} = this.state;
         return (
