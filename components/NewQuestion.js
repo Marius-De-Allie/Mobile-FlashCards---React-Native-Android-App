@@ -30,7 +30,7 @@ class NewQuestion extends Component {
 
     onCardSubmit = () => {
         const {question, answer} = this.state;
-        const {deckId, dispatch} = this.props;
+        const {deckId} = this.props;
         // Check whether both input fields are not empty.
         if(question !== '' && answer !== '') {
             // if they are not empty, create a question object.
@@ -39,14 +39,14 @@ class NewQuestion extends Component {
                 answer
             };
             // Dispacth action to add question object to that's deck's question array.
-            dispatch(addCard(questionObj, deckId));
+            this.props.dispatch(addCard(questionObj, deckId));
         }
     };
 
     render() {
         const {question, answer} = this.state;
         return (
-            <View>
+            <KeyboardAvoidingView>
                 <Text>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
                 <View>
                     <TextInput 
@@ -65,7 +65,7 @@ class NewQuestion extends Component {
                 <TouchableOpacity onPress={this.onCardSubmit}>
                     <Text>Add Card</Text>
                 </TouchableOpacity>
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 };
