@@ -15,6 +15,14 @@ const decks = (state = {}, action) => {
                     questions: action.questions
                 }
             }
+        case ADD_CARD:
+            return {
+                ...state,
+                [action.deckId]: {
+                    ...state[action.deckId],
+                    questions: state[action.deckId].questions.concat([{...action.cardObj}])
+                }
+            }
         default:
             return state;
     }
