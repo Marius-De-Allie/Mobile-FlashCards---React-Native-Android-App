@@ -28,6 +28,13 @@ const addDeck = (deckId, title, questions) => ({
     questions
 });
 
+// ADD CARD ACTION CREATOR.
+const addCard = (cardObj, deckId) => ({
+    type: ADD_DECK,
+    cardObj,
+    deckId
+});
+
 export {RECEIVE_DECKS, ADD_DECK, handleReceiveDecks, addDeck};
 
 // catch(e) {
