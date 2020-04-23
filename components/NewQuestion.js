@@ -30,6 +30,7 @@ class NewQuestion extends Component {
 
     onCardSubmit = () => {
         const {question, answer} = this.state;
+        const {deckId} = this.props;
         // Check whether both input fields are not empty.
         if(question !== '' && answer !== '') {
             // if they are not empty, create a question object.
