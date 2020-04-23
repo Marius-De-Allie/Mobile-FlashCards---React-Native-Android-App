@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import { addCard } from '../actions';
 
 class NewQuestion extends Component {
     // Component State.
