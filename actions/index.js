@@ -30,7 +30,7 @@ const addDeck = (deckId, title, questions) => ({
 
 // ADD CARD ACTION CREATOR.
 const addCard = (cardObj, deckId) => ({
-    type: ADD_DECK,
+    type: ADD_CARD,
     cardObj,
     deckId
 });
