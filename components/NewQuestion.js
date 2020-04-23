@@ -46,7 +46,7 @@ class NewQuestion extends Component {
     render() {
         const {question, answer} = this.state;
         return (
-            <KeyboardAvoidingView>
+            <KeyboardAvoidingView behavior="height">
                 <Text>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
                 <View>
                     <TextInput 
