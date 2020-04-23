@@ -40,6 +40,8 @@ class NewQuestion extends Component {
             };
             // Dispacth action to add question object to that's deck's question array.
             this.props.dispatch(addCard(questionObj, deckId));
+            // Redirect to the previous Deck view.
+            this.props.navigation.goBack();
         }
     };
 
