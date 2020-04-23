@@ -23,6 +23,11 @@ class NewQuestion extends Component {
         return (
             <View>
                 <Text>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
+                <TextInput 
+                    value={question}
+                    onChangeText={(text) => this.onQuestionChange(text)}
+                    placeholder="Please enter your question."
+                />
             </View>
         );
     }
