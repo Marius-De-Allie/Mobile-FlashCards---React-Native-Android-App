@@ -16,7 +16,16 @@ class NewQuestion extends Component {
         this.setState(() => ({
             question
         }));
-    } 
+    };
+    
+    // Perform this when text in answer InputText field changes.
+    onAnswerChange = (input) => {
+        const answer = input.trimStart();
+        // Update component state answer property value to text in input field.
+        this.setState(() => ({
+            answer
+        }));
+    };
 
     render() {
         const {question, answer} = this.state;
