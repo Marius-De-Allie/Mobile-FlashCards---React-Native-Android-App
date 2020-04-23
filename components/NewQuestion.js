@@ -37,7 +37,7 @@ class NewQuestion extends Component {
                 answer
             };
             // Dispacth action to add question object to that's deck's question array.
-            
+
         }
     }
 
@@ -60,6 +60,9 @@ class NewQuestion extends Component {
                         placeholder="Please enter the answer to the question."
                     />
                 </View>
+                <TouchableOpacity onPress={this.onCardSubmit}>
+                    <Text>Add Card</Text>
+                </TouchableOpacity>
             </View>
         );
     }
