@@ -43,15 +43,18 @@ class Quiz extends React.Component {
     
     // Function for handling next page button onPress event.
     onPressForwardBtn = () => {
+        console.log('forward pressed')
         this.setState(prevState => ({
-            page: prevState.page >= this.props.decks[this.props.deckId].questions.length ? prevState.page : prevState.page ++
+            page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1
         }));
+        console.log(this.state.page)
+        console.log(this.props.decks[this.props.deckId].questions.length)
     };
 
     // Function for handling back button onPress event.
     onPressBackBtn = () => {
         this.setState(prevState => ({
-            page: prevState.page <= 0 ? 0 : prevState.page --
+            page: prevState.page <= 0 ? 0 : prevState.page - 1
         }));
     };
 
