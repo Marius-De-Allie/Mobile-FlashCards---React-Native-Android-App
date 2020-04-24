@@ -19,8 +19,15 @@ class Quiz extends React.Component {
             <View>
                 <Text>{`${decks[deckId].title} Quiz`}</Text>
                 <Text>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
-
-
+                
+                <View>
+                    <TouchableOpacity>
+                        <Text>Back</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text>Forward</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );    
     }
