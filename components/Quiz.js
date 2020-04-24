@@ -43,7 +43,9 @@ class Quiz extends React.Component {
                         <TouchableOpacity>
                             <Text>Retake</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer == ''}
+                        >
                             <Text>Submit</Text>
                         </TouchableOpacity>
                     </View>
