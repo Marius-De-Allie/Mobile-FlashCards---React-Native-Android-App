@@ -69,7 +69,8 @@ class Quiz extends React.Component {
     // Function for handling back button onPress event.
     onPressBackBtn = () => {
         this.setState(prevState => ({
-            page: prevState.page <= 0 ? 0 : prevState.page - 1
+            page: prevState.page <= 0 ? 0 : prevState.page - 1,
+            showAnswer: false
         }));
     };
 
