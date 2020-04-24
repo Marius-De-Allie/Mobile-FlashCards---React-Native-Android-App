@@ -15,7 +15,7 @@ class Quiz extends React.Component {
         const {decks, deckId} = this.props;
         return (
             <View>
-                <Text></Text>
+                <Text>{`${decks[deckId].title} Quiz`}</Text>
             </View>
         );    
     }
