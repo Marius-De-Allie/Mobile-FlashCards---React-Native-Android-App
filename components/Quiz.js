@@ -11,6 +11,13 @@ class Quiz extends React.Component {
         correct: 0
     };
 
+    // Function for handling the show answer button onPress event.
+    onPressShowAnswer = () => {
+        this.setState(() => ({
+            showAnswer: true
+        }))
+    };
+
     renderMainUI = () => {
         const {decks, deckId} = this.props;
         if(this.state.showAnswer === true) {
