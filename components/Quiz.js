@@ -40,7 +40,13 @@ class Quiz extends React.Component {
             )
         }
     };
-
+    
+    // Function for handling next page button onPress event.
+    onPressForwardBtn = () => {
+        this.setState(prevState => ({
+            page: prevState.page >= this.props.decks[this.props.deckId].questions.length ? prevState.page : prevState.page ++
+        }));
+    }
     render() {
         const {decks, deckId} = this.props;
         // Calcluate number of questions in current deck.
