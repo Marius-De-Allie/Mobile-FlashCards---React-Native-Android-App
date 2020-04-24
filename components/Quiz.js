@@ -26,12 +26,11 @@ class Quiz extends React.Component {
         }))
     };
 
-    onAnswerChange = (answer) => {
+    onAnswerChange = (value) => {
         const {answer} = this.state;
         this.setState(() => ({
-            answer
+            answer: value
         }));
-        console.log(this.state.answer);
     };
 
     renderMainUI = () => {
@@ -50,7 +49,7 @@ class Quiz extends React.Component {
                 <View>
                     <View>
                         <Text>Select your answer(yes or no)</Text>
-                        <RadioGroup getChecked={value => console.log(value)}>
+                        <RadioGroup getChecked={value => this.onAnswerChange(value)}>
                             <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
                             <Radio iconName={"lens"} label={"No"} value={"no"}/>
                         </RadioGroup>
