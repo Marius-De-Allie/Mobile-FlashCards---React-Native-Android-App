@@ -59,7 +59,8 @@ class Quiz extends React.Component {
     onPressForwardBtn = () => {
         console.log('forward pressed')
         this.setState(prevState => ({
-            page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1
+            page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1,
+            showAnswer: false
         }));
         console.log(this.state.page)
         console.log(this.props.decks[this.props.deckId].questions.length)
