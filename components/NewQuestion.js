@@ -60,6 +60,11 @@ class NewQuestion extends Component {
                     />
                 </View>
                 <View>
+                    <Text>Please select the correct answer to your new question(yes or no)</Text>
+                    <RadioGroup getChecked={value => console.log(value)}>
+                        <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
+                        <Radio iconName={"lens"} label={"No"} value={"no"}/>
+                    </RadioGroup>
                     <TextInput 
                         value={answer}
                         onChangeText={(text) => this.onAnswerChange(text)}
