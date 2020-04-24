@@ -46,7 +46,15 @@ class Quiz extends React.Component {
         this.setState(prevState => ({
             page: prevState.page >= this.props.decks[this.props.deckId].questions.length ? prevState.page : prevState.page ++
         }));
-    }
+    };
+
+    // Function for handling back button onPress event.
+    onPressBackBtn = () => {
+        this.setState(prevState => ({
+            page: prevState.page <= 0 ? 0 : prevState.page --
+        }));
+    };
+
     render() {
         const {decks, deckId} = this.props;
         // Calcluate number of questions in current deck.
