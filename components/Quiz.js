@@ -31,7 +31,7 @@ class Quiz extends React.Component {
             return (
                 <View>
                     <Text>{decks[deckId].questions[this.state.page].answer}</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.onPressShowQuestion}>
                         <Text>Back to question</Text>
                     </TouchableOpacity>
                 </View>
