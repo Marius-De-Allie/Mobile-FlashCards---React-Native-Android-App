@@ -23,6 +23,16 @@ const decks = (state = {}, action) => {
                     questions: state[action.deckId].questions.concat([{...action.cardObj}])
                 }
             }
+        case TOGGLE_ANSWERED:
+            return {
+                ...state,
+                [action.deckId]: {
+                    ...state[action.deckId],
+                    questions: [...state[action.deckId].questions.splice(action.questionIndex, 1, 
+                                {...state[action.deckId].questions[action.questionIndex], answered: !{...state[action.deckId].questions[action.questionIndex].answered}})
+                            ]
+                }
+            }
         default:
             return state;
     }
