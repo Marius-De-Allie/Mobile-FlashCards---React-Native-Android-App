@@ -34,7 +34,15 @@ class Quiz extends React.Component {
     };
 
     onAnswerSubmit = () => {
-        // Dispatch addAnswered action.
+        const {decks, deckId, dispatch} = this.props;
+        // Update current questions array element by toggling the answered property on the question object.
+        let updatedQuestionEl = this.props.decks[this.props.deckId].questions[this.state.page];
+//         console.log('before', updatedQuestionEl);
+        updatedQuestionEl = {...updatedQuestionEl, answered: !updatedQuestionEl.answered} 
+//         console.log('after', updatedQuestionEl);
+        
+        // Dispatch toggleAnswered action.
+        dispatch(toggleAnswered(deckId, this.state.page, updatedQuestionEl));
         // Check whether answer in component state is equal to question's answer property value in redux store.
         if(this.state.answer[this.state.page] === this.props.decks[this.props.deckId].questions[this.state.page].answer) {
             // If answer is correct, update component correct state property by incrementing by 1.
