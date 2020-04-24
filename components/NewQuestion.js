@@ -21,7 +21,7 @@ class NewQuestion extends Component {
     };
 
     // Perform this when text in answer InputText field changes.
-    onAnswerChange = (value) => {
+    onAnswerSelect = (value) => {
         // Update component state answer property value to currently selected value of RadioGroup component.
         this.setState(() => ({
             answer: value
