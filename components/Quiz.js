@@ -70,7 +70,7 @@ class Quiz extends React.Component {
                     <TouchableOpacity onPress={this.onPressBackBtn}>
                         <Text>Back</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.onPressForwardBtn}>
                         <Text>Forward</Text>
                     </TouchableOpacity>
                 </View>
