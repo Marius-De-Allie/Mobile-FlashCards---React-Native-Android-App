@@ -18,6 +18,7 @@ class Quiz extends React.Component {
         return (
             <View>
                 <Text>{`${decks[deckId].title} Quiz`}</Text>
+                <Text>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
             </View>
         );    
     }
