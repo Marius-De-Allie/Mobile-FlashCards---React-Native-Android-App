@@ -9,7 +9,7 @@ const decks = {
         },
         {
           question: 'Do you make Ajax requests in the render method in React?',
-          answer: 'No',
+          answer: 'no',
           answered: false
         }
       ]
@@ -19,7 +19,7 @@ const decks = {
       questions: [
         {
           question: 'Is a closure the combination of a function and the lexical environment within which that function was declared.?',
-          answer: 'Yes',
+          answer: 'yes',
           answered: false
         }
       ]
