@@ -3,13 +3,13 @@ const decks = {
       title: 'React',
       questions: [
         {
-          question: 'What is React?',
-          answer: 'A library for managing user interfaces',
+          question: 'Is React a library for managing user interfaces?',
+          answer: 'yes',
           answered: false
         },
         {
-          question: 'Where do you make Ajax requests in React?',
-          answer: 'The componentDidMount lifecycle event',
+          question: 'Do you make Ajax requests in the render method in React?',
+          answer: 'No',
           answered: false
         }
       ]
@@ -18,8 +18,8 @@ const decks = {
       title: 'JavaScript',
       questions: [
         {
-          question: 'What is a closure?',
-          answer: 'The combination of a function and the lexical environment within which that function was declared.',
+          question: 'Is a closure the combination of a function and the lexical environment within which that function was declared.?',
+          answer: 'Yes',
           answered: false
         }
       ]
