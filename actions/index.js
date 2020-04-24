@@ -3,6 +3,7 @@ import { _getDecks } from '../_DATA';
 const RECEIVE_DECKS = 'RECEIVE_DECKS';
 const ADD_DECK = 'ADD_DECK';
 const ADD_CARD = 'ADD_CARD';
+const TOGGLE_ANSWERED = 'TOGGLE_ANSWERED';
 
 const receiveDecks = (decks) => ({
     type: RECEIVE_DECKS,
@@ -34,6 +35,11 @@ const addCard = (cardObj, deckId) => ({
     cardObj,
     deckId
 });
+
+// TOGGLE ANSWERED ACTION CREATOR.
+const toggleAnswered = () => ({
+    type: TOGGLE_ANSWERED
+})
 
 export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, handleReceiveDecks, addDeck, addCard};
 
