@@ -26,6 +26,14 @@ class Quiz extends React.Component {
         }))
     };
 
+    onAnswerChange = (answer) => {
+        const {answer} = this.state;
+        this.setState(() => ({
+            answer
+        }));
+        console.log(this.state.answer);
+    };
+
     renderMainUI = () => {
         const {decks, deckId} = this.props;
         if(this.state.showAnswer === true) {
