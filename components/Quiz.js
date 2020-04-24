@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
 class Quiz extends React.Component {
@@ -19,6 +19,8 @@ class Quiz extends React.Component {
             <View>
                 <Text>{`${decks[deckId].title} Quiz`}</Text>
                 <Text>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
+
+
             </View>
         );    
     }
