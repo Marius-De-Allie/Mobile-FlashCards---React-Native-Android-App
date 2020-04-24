@@ -12,9 +12,10 @@ class Quiz extends React.Component {
     }
 
     render() {
+        const {decks, deckId} = this.props;
         return (
             <View>
-                <Text>Quiz Comp</Text>
+                <Text></Text>
             </View>
         );    
     }
