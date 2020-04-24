@@ -19,4 +19,9 @@ class Quiz extends React.Component {
     }
 };
 
+const mapStateToProps = (state, ownProps) => ({
+    decks: state,
+    deckId: ownProps.route.params.deckId
+});
+
 export default Quiz;
