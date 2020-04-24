@@ -25,4 +25,4 @@ const mapStateToProps = (state, ownProps) => ({
     deckId: ownProps.route.params.deckId
 });
 
-export default Quiz;
+export default connect(mapStateToProps)(Quiz);
