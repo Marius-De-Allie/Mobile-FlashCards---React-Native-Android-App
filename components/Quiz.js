@@ -10,7 +10,8 @@ class Quiz extends React.Component {
         showAnswer: false,
         page: 0,
         answer: [],
-        correct: 0
+        correct: 0,
+        formKey: 0
     };
 
     // Function for handling the show answer button onPress event.
@@ -73,7 +74,7 @@ class Quiz extends React.Component {
                 <View>
                     <View>
                         <Text>Select your answer(yes or no)</Text>
-                        <RadioGroup getChecked={value => this.onAnswerChange(value)}>
+                        <RadioGroup getChecked={value => this.onAnswerChange(value)} key={this.state.formKey}>
                             <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
                             <Radio iconName={"lens"} label={"No"} value={"no"}/>
                         </RadioGroup>
@@ -102,7 +103,7 @@ class Quiz extends React.Component {
         console.log('forward pressed')
         this.setState(prevState => ({
             page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1,
-            showAnswer: false
+            showAnswer: false,
         }));
         console.log(this.state.page)
         console.log(this.props.decks[this.props.deckId].questions.length)
