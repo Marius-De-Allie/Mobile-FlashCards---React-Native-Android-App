@@ -41,7 +41,7 @@ const toggleAnswered = () => ({
     type: TOGGLE_ANSWERED
 })
 
-export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, handleReceiveDecks, addDeck, addCard};
+export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, handleReceiveDecks, addDeck, addCard, toggleAnswered};
 
 // catch(e) {
 //     console.log('Error retreiving decks, please try again', e);
