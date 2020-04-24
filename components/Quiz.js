@@ -9,7 +9,37 @@ class Quiz extends React.Component {
         page: 0,
         answer: '',
         correct: 0
-    }
+    };
+
+    renderMainUI = () => {
+        const {decks, deckId} = this.props;
+        if(this.state.showAnswer === true) {
+            return (
+                <View>
+                    <Text>{decks[deckId].questions[this.state.page].answer}</Text>
+                    <TouchableOpacity>
+                        <Text>Back to question</Text>
+                    </TouchableOpacity>
+                </View>
+            )
+        } else {
+            return (
+                <View>
+                    <View>
+                        <TouchableOpacity>
+                            <Text>Retake</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text>Submit</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <TouchableOpacity>
+                        <Text>Show Answer</Text>
+                    </TouchableOpacity>
+                </View>
+            )
+        }
+    };
 
     render() {
         const {decks, deckId} = this.props;
@@ -19,7 +49,8 @@ class Quiz extends React.Component {
             <View>
                 <Text>{`${decks[deckId].title} Quiz`}</Text>
                 <Text>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
-
+                <Text>{decks[deckId].questions[this.state.page].question}</Text>
+                
                 <Text>{`correct ${this.state.correct} | ${this.state.page + 1} answered`}</Text>{/* Need to update this when i add answered prop to questions array */}
                 <View>
                     <TouchableOpacity>
