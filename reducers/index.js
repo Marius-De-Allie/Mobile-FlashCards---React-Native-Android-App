@@ -28,9 +28,8 @@ const decks = (state = {}, action) => {
                 ...state,
                 [action.deckId]: {
                     ...state[action.deckId],
-                    questions: [...state[action.deckId].questions.splice(action.questionIndex, 1, 
-                                {...state[action.deckId].questions[action.questionIndex], answered: !{...state[action.deckId].questions[action.questionIndex].answered}})
-                            ]
+                    questions: [...state[action.deckId].questions]
+                    .splice(action.questionIndex, 1, action.updatedQuestionEl)
                 }
             }
         default:
