@@ -8,7 +8,7 @@ class Quiz extends React.Component {
     state = {
         showAnswer: false,
         page: 0,
-        answer: '',
+        answer: [],
         correct: 0
     };
 
