@@ -21,12 +21,12 @@ class NewQuestion extends Component {
     };
 
     // Perform this when text in answer InputText field changes.
-    onAnswerChange = (input) => {
-        const answer = input.trimStart();
-        // Update component state answer property value to text in input field.
+    onAnswerChange = (value) => {
+        // Update component state answer property value to currently selected value of RadioGroup component.
         this.setState(() => ({
-            answer
+            answer: value
         }));
+        console.log(this.state.answer);
     };
 
     onCardSubmit = () => {
@@ -60,7 +60,7 @@ class NewQuestion extends Component {
                     />
                 </View>
                 <View>
-                    <Text>Please select the correct answer to your new question(yes or no)</Text>
+                    <Text>Please select the correct answer to your new question from the two choices below(yes or no)</Text>
                     <RadioGroup getChecked={value => console.log(value)}>
                         <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
                         <Radio iconName={"lens"} label={"No"} value={"no"}/>
