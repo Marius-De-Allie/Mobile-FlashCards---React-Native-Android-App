@@ -131,7 +131,10 @@ class Quiz extends React.Component {
                     <TouchableOpacity onPress={this.onPressBackBtn}>
                         <Text>Back</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={this.onPressForwardBtn}>
+                    <TouchableOpacity 
+                        onPress={this.onPressForwardBtn}
+                        disabled={this.state.page >= decks[deckId].questions.length -1 || decks[deckId].questions[this.state.page].answered === false}
+                    >
                         <Text>Forward</Text>
                     </TouchableOpacity>
                 </View>
