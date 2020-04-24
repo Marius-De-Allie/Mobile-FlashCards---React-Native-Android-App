@@ -65,11 +65,6 @@ class NewQuestion extends Component {
                         <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
                         <Radio iconName={"lens"} label={"No"} value={"no"}/>
                     </RadioGroup>
-                    <TextInput 
-                        value={answer}
-                        onChangeText={(text) => this.onAnswerChange(text)}
-                        placeholder="Please enter the answer to the question."
-                    />
                 </View>
                 <TouchableOpacity onPress={this.onCardSubmit}>
                     <Text>Add Card</Text>
