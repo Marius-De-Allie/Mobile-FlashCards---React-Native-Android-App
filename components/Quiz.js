@@ -13,6 +13,8 @@ class Quiz extends React.Component {
 
     render() {
         const {decks, deckId} = this.props;
+        // Calcluate number of questions in current deck.
+        const totalQuestions = decks[deckId].questions.length;
         return (
             <View>
                 <Text>{`${decks[deckId].title} Quiz`}</Text>
