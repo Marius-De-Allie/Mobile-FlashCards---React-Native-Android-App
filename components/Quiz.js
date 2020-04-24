@@ -32,6 +32,22 @@ class Quiz extends React.Component {
         }));
     };
 
+    onAnswerSubmit = () => {
+        // Dispatch addAnswered action.
+        // Check whether answer in component state is equal to question's answer property value in redux store.
+        if(this.state.answer[this.state.page] === this.props.decks[this.props.deckId].questions[this.state.page].answer) {
+            // If answer is correct, update component correct state property by incrementing by 1.
+            this.setState((prevState) => ({
+                correct: prevState.correct + 1
+            }))
+        } else {
+            // If answer is incorrect, return component correct state property as is, no change.
+            this.setState((prevState) => ({
+                correct: prevState.correct
+            }))
+        }
+    };
+
     renderMainUI = () => {
         const {decks, deckId} = this.props;
         if(this.state.showAnswer === true) {
