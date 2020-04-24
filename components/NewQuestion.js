@@ -36,7 +36,8 @@ class NewQuestion extends Component {
             // if they are not empty, create a question object.
             const questionObj = {
                 question,
-                answer
+                answer,
+                answered: false
             };
             // Dispacth action to add question object to that's deck's question array.
             this.props.dispatch(addCard(questionObj, deckId));
@@ -54,7 +55,7 @@ class NewQuestion extends Component {
                     <TextInput 
                         value={question}
                         onChangeText={(text) => this.onQuestionChange(text)}
-                        placeholder="Please enter your question."
+                        placeholder="Please enter your question in a yes/no format."
                     />
                 </View>
                 <View>
