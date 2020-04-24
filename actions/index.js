@@ -37,8 +37,11 @@ const addCard = (cardObj, deckId) => ({
 });
 
 // TOGGLE ANSWERED ACTION CREATOR.
-const toggleAnswered = () => ({
-    type: TOGGLE_ANSWERED
+const toggleAnswered = (deckId, questionIndex, updatedQuestionEl) => ({
+    type: TOGGLE_ANSWERED,
+    deckId,
+    questionIndex,
+    updatedQuestionEl
 })
 
 export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, handleReceiveDecks, addDeck, addCard, toggleAnswered};
