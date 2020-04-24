@@ -19,7 +19,8 @@ class Quiz extends React.Component {
             <View>
                 <Text>{`${decks[deckId].title} Quiz`}</Text>
                 <Text>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
-                
+
+                <Text>{`correct ${this.state.correct} | ${this.state.page + 1} answered`}</Text>{/* Need to update this when i add answered prop to questions array */}
                 <View>
                     <TouchableOpacity>
                         <Text>Back</Text>
