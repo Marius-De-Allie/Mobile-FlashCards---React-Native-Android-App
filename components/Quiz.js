@@ -41,6 +41,13 @@ class Quiz extends React.Component {
             return (
                 <View>
                     <View>
+                        <Text>Select your answer(yes or no)</Text>
+                        <RadioGroup getChecked={value => console.log(value)}>
+                            <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
+                            <Radio iconName={"lens"} label={"No"} value={"no"}/>
+                        </RadioGroup>
+                    </View>
+                    <View>
                         <TouchableOpacity>
                             <Text>Retake</Text>
                         </TouchableOpacity>
