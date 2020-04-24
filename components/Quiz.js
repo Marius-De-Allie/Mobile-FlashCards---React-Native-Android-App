@@ -128,7 +128,10 @@ class Quiz extends React.Component {
                 {this.renderMainUI()}
                 <Text>{`correct ${this.state.correct} | ${this.state.page + 1} answered`}</Text>{/* Need to update this when i add answered prop to questions array */}
                 <View>
-                    <TouchableOpacity onPress={this.onPressBackBtn}>
+                    <TouchableOpacity 
+                        onPress={this.onPressBackBtn}
+                        disabled={this.state.page <= 0}
+                    >
                         <Text>Back</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
