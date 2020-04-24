@@ -40,7 +40,7 @@ class Quiz extends React.Component {
                             <Text>Submit</Text>
                         </TouchableOpacity>
                     </View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.onPressShowAnswer}>
                         <Text>Show Answer</Text>
                     </TouchableOpacity>
                 </View>
