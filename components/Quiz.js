@@ -18,6 +18,13 @@ class Quiz extends React.Component {
         }))
     };
 
+    // Function for handling the back to question button onPress event.
+    onPressShowQuestion = () => {
+        this.setState(() => ({
+            showAnswer: false
+        }))
+    };
+
     renderMainUI = () => {
         const {decks, deckId} = this.props;
         if(this.state.showAnswer === true) {
