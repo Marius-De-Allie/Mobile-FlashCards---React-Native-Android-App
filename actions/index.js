@@ -43,7 +43,18 @@ const toggleAnswered = (deckId, questionIndex, updatedQuestionEl) => ({
     deckId,
     questionIndex,
     updatedQuestionEl
-})
+});
+
+// ADD USERANSWER ACTION CREATOR.
+const addUserAnswer = (deckId, questionIndex, answer) => ({
+    type: ADD_USERANSWER,
+    deckId,
+    questionIndex,
+    answer
+});
+
+
+
 
 export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, handleReceiveDecks, addDeck, addCard, toggleAnswered};
 
