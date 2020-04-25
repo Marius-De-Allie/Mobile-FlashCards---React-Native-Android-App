@@ -11,7 +11,7 @@ class Quiz extends React.Component {
         page: 0,
         answer: [],
         correct: 0,
-        formKey: 0
+        formKey: true
     };
 
     // Function for handling the show answer button onPress event.
@@ -56,6 +56,9 @@ class Quiz extends React.Component {
                 correct: prevState.correct
             }))
         }
+        this.setState(() => ({
+            formKey: Math.random() * 10
+        }));
     };
 
     renderMainUI = () => {
