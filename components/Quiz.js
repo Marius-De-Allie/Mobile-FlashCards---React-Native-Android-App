@@ -32,6 +32,7 @@ class Quiz extends React.Component {
         this.setState(() => ({
             answer: value
         }));
+        console.log(this.state.answer);
     };
 
     onAnswerSubmit = () => {
@@ -44,6 +45,8 @@ class Quiz extends React.Component {
         
         // Dispatch toggleAnswered action.
         dispatch(toggleAnswered(deckId, this.state.page, updatedQuestionEl));
+        // Dispatch addUserAnswer action.
+        dispatch(addUserAnswer(deckId, this.state.page, this.state.answer));
         // Check whether answer in component state is equal to question's answer property value in redux store.
         if(this.state.answer[this.state.page] === this.props.decks[this.props.deckId].questions[this.state.page].answer) {
             // If answer is correct, update component correct state property by incrementing by 1.
