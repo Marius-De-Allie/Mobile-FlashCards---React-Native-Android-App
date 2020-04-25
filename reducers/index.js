@@ -31,6 +31,14 @@ const decks = (state = {}, action) => {
                     questions: state[action.deckId].questions.map((el, index) => index === action.questionIndex ? action.updatedQuestionEl : el)
                 }
             }
+        case ADD_USERANSWER:
+            return {
+                ...state,
+                [action.deckId]: {
+                    ...state[action.deckId],
+                    questions: state[action.deckId].questions.map((el, index) => index === action.questionIndex ? {...el, userAnswer: action.answer} : el)
+                }
+            }
         default:
             return state;
     }
