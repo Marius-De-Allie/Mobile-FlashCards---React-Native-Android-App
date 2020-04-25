@@ -29,8 +29,8 @@ class Quiz extends React.Component {
     };
 
     onAnswerChange = (value) => {
-        this.setState((prevState) => ({
-            answer: [...prevState.answer, value]
+        this.setState(() => ({
+            answer: value
         }));
     };
 
