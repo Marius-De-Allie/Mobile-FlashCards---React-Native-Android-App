@@ -5,6 +5,7 @@ const ADD_DECK = 'ADD_DECK';
 const ADD_CARD = 'ADD_CARD';
 const TOGGLE_ANSWERED = 'TOGGLE_ANSWERED';
 const ADD_USERANSWER = 'ADD_USERANSWER';
+const RESET_DECK = 'RESET_DECK';
 
 const receiveDecks = (decks) => ({
     type: RECEIVE_DECKS,
