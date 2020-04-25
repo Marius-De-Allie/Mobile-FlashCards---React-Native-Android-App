@@ -107,6 +107,7 @@ class Quiz extends React.Component {
         this.setState(prevState => ({
             page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1,
             showAnswer: false,
+            formKey: !prevState.formKey
         }));
         console.log(this.state.page)
         console.log(this.props.decks[this.props.deckId].questions.length)
