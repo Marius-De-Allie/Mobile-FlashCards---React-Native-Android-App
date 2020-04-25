@@ -117,7 +117,8 @@ class Quiz extends React.Component {
     onPressBackBtn = () => {
         this.setState(prevState => ({
             page: prevState.page <= 0 ? 0 : prevState.page - 1,
-            showAnswer: false
+            showAnswer: false,
+            formKey: !prevState.formKey
         }));
     };
 
