@@ -76,7 +76,9 @@ class Quiz extends React.Component {
                 </View>
             )
         } else {
+            // Return an array of questions where the question's answered property is equal to true.
             const answeredQuestions = decks[deckId].questions.filter(question => question.answered === true);
+            // Gte length of answeredQuestions array.
             const answeredQuestionsLength = answeredQuestions.length;
             return (
                 <View>
@@ -94,7 +96,9 @@ class Quiz extends React.Component {
                         <Text>Your Answer: {decks[deckId].questions[this.state.page].userAnswer}</Text>
                     }
                     <View>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
+                        >
                             <Text>Retake</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
