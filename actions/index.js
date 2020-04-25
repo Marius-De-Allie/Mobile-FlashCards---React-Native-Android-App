@@ -56,7 +56,7 @@ const addUserAnswer = (deckId, questionIndex, answer) => ({
 
 
 
-export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, handleReceiveDecks, addDeck, addCard, toggleAnswered};
+export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, ADD_USERANSWER, handleReceiveDecks, addDeck, addCard, toggleAnswered, addUserAnswer};
 
 // catch(e) {
 //     console.log('Error retreiving decks, please try again', e);
