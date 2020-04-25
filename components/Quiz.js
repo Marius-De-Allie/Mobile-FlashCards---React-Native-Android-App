@@ -64,6 +64,18 @@ class Quiz extends React.Component {
         }));
     };
 
+    onRetakebtnPress = () => {
+        // Dispatch retakeQuiz action creator.
+
+        // Reset component state to default values.
+        this.setState(() => ({
+            showAnswer: false,
+            page: 0,
+            answer: null,
+            correct: 0
+        }))
+    };
+
     renderMainUI = () => {
         const {decks, deckId} = this.props;
         if(this.state.showAnswer === true) {
