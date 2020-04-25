@@ -56,8 +56,8 @@ class Quiz extends React.Component {
                 correct: prevState.correct
             }))
         }
-        this.setState(() => ({
-            formKey: Math.random() * 10
+        this.setState(prevState => ({
+            formKey: !prevState.formKey
         }));
     };
 
