@@ -4,6 +4,7 @@ const RECEIVE_DECKS = 'RECEIVE_DECKS';
 const ADD_DECK = 'ADD_DECK';
 const ADD_CARD = 'ADD_CARD';
 const TOGGLE_ANSWERED = 'TOGGLE_ANSWERED';
+const ADD_USERANSWER = 'ADD_USERANSWER';
 
 const receiveDecks = (decks) => ({
     type: RECEIVE_DECKS,
