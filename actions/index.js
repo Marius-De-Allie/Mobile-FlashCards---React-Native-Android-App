@@ -54,6 +54,12 @@ const addUserAnswer = (deckId, questionIndex, answer) => ({
     answer
 });
 
+// RESET DECK ACTION CREATOR.
+const resetDeck = (deckId) => ({
+    type: RESET_DECK,
+    deckId
+});
+ 
 
 
 
