@@ -63,7 +63,19 @@ const resetDeck = (deckId) => ({
 
 
 
-export {RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, ADD_USERANSWER, handleReceiveDecks, addDeck, addCard, toggleAnswered, addUserAnswer};
+export {
+    RECEIVE_DECKS, 
+    ADD_DECK, 
+    ADD_CARD, 
+    TOGGLE_ANSWERED, 
+    ADD_USERANSWER, 
+    RESET_DECK, 
+    handleReceiveDecks, 
+    addDeck, 
+    addCard, 
+    toggleAnswered, 
+    addUserAnswer
+};
 
 // catch(e) {
 //     console.log('Error retreiving decks, please try again', e);
