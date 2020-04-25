@@ -75,13 +75,19 @@ class Quiz extends React.Component {
         } else {
             return (
                 <View>
-                    <View>
-                        <Text>Select your answer(yes or no)</Text>
-                        <RadioGroup getChecked={value => this.onAnswerChange(value)} key={this.state.formKey}>
-                            <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
-                            <Radio iconName={"lens"} label={"No"} value={"no"}/>
-                        </RadioGroup>
-                    </View>
+                    {decks[deckId].questions[this.state.page].answered === false ?
+                        <View>
+                            <Text>Select your answer(yes or no)</Text>
+                            <RadioGroup 
+                                getChecked={value => this.onAnswerChange(value)} 
+                                key={this.state.formKey}
+                            >
+                                <Radio iconName={"lens"} label={"Yes"} value={"yes"}  />
+                                <Radio iconName={"lens"} label={"No"} value={"no"} />
+                            </RadioGroup> 
+                        </View> :
+                        <Text>Your Answer: {this.state.answer[this.state.page]}</Text>
+                    }
                     <View>
                         <TouchableOpacity>
                             <Text>Retake</Text>
