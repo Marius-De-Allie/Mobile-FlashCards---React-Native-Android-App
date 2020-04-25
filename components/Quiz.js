@@ -97,7 +97,7 @@ class Quiz extends React.Component {
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={this.onAnswerSubmit}
-                            disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer.length <= 0}
+                            disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
                         >
                             <Text>Submit</Text>
                         </TouchableOpacity>
