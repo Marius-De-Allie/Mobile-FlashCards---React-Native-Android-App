@@ -9,7 +9,7 @@ class Quiz extends React.Component {
     state = {
         showAnswer: false,
         page: 0,
-        answer: [],
+        answer: null,
         correct: 0,
         formKey: true
     };

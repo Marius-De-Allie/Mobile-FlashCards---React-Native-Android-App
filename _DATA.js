@@ -6,13 +6,13 @@ const decks = {
           question: 'Is React a library for managing user interfaces?',
           answer: 'yes',
           answered: false,
-          UserAnswer: null
+          userAnswer: null
         },
         {
           question: 'Do you make Ajax requests in the render method in React?',
           answer: 'no',
           answered: false,
-          UserAnswer: null
+          userAnswer: null
 
         }
       ]
@@ -24,7 +24,7 @@ const decks = {
           question: 'Is a closure the combination of a function and the lexical environment within which that function was declared.?',
           answer: 'yes',
           answered: false,
-          UserAnswer: null
+          userAnswer: null
         }
       ]
     }
