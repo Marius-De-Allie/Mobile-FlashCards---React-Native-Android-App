@@ -76,6 +76,8 @@ class Quiz extends React.Component {
                 </View>
             )
         } else {
+            const answeredQuestions = decks[deckId].questions.filter(question => question.answered === true);
+            const answeredQuestionsLength = answeredQuestions.length;
             return (
                 <View>
                     {decks[deckId].questions[this.state.page].answered === false ?
