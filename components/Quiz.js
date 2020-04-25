@@ -89,7 +89,7 @@ class Quiz extends React.Component {
                                 <Radio iconName={"lens"} label={"No"} value={"no"} />
                             </RadioGroup> 
                         </View> :
-                        <Text>Your Answer: {this.state.answer[this.state.page]}</Text>
+                        <Text>Your Answer: {decks[deckId].questions[this.state.page].userAnswer}</Text>
                     }
                     <View>
                         <TouchableOpacity>
