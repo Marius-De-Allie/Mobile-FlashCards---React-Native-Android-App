@@ -59,6 +59,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightblue',
         borderRadius: 5,
         marginVertical: 30,
+    },
+    deckNameText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#fff',
+        paddingBottom: 3
     }
 })
 
