@@ -10,7 +10,7 @@ const TabNavigator = () => (
     <Tab.Navigator
         initialRouteName="Decks"
     >
-        <Tab.Screen name="Decks" component={DeckList} />
+        <Tab.Screen name="Decks" component={MainStackNavigator} />
         <Tab.Screen name="New Deck" component={NewDeck} />
     </Tab.Navigator>
 );
