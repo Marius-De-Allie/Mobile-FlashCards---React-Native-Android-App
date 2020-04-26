@@ -19,7 +19,7 @@ const Deck = ({route, decks, navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.deckTextContainer}>
-                <Text>{`${decks[route.params.deckId].title} deck`}</Text>
+                <Text style={styles.deckNameText}>{`${decks[route.params.deckId].title} deck`}</Text>
                 <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
             </View>
             <View>
