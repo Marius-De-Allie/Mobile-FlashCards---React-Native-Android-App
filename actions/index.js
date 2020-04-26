@@ -55,6 +55,14 @@ const addUserAnswer = (deckId, questionIndex, answer) => ({
     answer
 });
 
+// SELECT ANSWER ACTION CREATOR.
+const selectAnswer = (deckId, questionIndex, answer) => ({
+    type: SELECT_ANSWER,
+    deckId,
+    questionIndex,
+    answer
+});
+
 // RESET DECK ACTION CREATOR.
 const resetDeck = (deckId) => ({
     type: RESET_DECK,
@@ -70,13 +78,15 @@ export {
     ADD_CARD, 
     TOGGLE_ANSWERED, 
     ADD_USERANSWER, 
-    RESET_DECK, 
+    RESET_DECK,
+    SELECT_ANSWER,
     handleReceiveDecks, 
     addDeck, 
     addCard, 
     toggleAnswered, 
     addUserAnswer,
-    resetDeck
+    resetDeck,
+    selectAnswer
 };
 
 // catch(e) {
