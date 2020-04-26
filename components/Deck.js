@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         paddingBottom: 3
     },
     btnsContainer: {
-        paddingHorizontal: 25,
+        paddingHorizontal: 30,
         paddingVertical: 15,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -79,6 +79,11 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
         flex: 1
+    },
+    buttonText: {
+        fontSize: 20,
+        color: '#fff',
+        textAlign: 'center'
     }
 })
 
