@@ -44,9 +44,13 @@ class Quiz extends React.Component {
 //         console.log('after', updatedQuestionEl);
         
         // Dispatch toggleAnswered action.
-        dispatch(toggleAnswered(deckId, this.state.page, updatedQuestionEl));
+        // dispatch(toggleAnswered(deckId, this.state.page, updatedQuestionEl));
         // Dispatch addUserAnswer action.
-        dispatch(addUserAnswer(deckId, this.state.page, this.state.answer));
+        // dispatch(addUserAnswer(deckId, this.state.page, this.state.answer));
+
+        // Dispatch SELECT_ANSWER action.
+        dispatch(selectAnswer(deckId, this.state.page, this.state.answer));
+
         // Check whether answer in component state is equal to question's answer property value in redux store.
         if(this.state.answer === decks[deckId].questions[this.state.page].answer) {
             // If answer is correct, update component correct state property by incrementing by 1.
