@@ -10,6 +10,7 @@ const DeckList = (props) => {
     console.log('DECKIDS', deckIds);
     return (
         <View style={styles.container}>
+            <Text>Your Decks</Text>
             {deckIds.map(id => 
                 <DeckListItem 
                     key={id} 
@@ -19,7 +20,6 @@ const DeckList = (props) => {
                 />
             )}
         </View>
-
     );
 } 
 
