@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
 
 const Deck = ({route, decks, navigation}) => {
@@ -22,7 +22,7 @@ const Deck = ({route, decks, navigation}) => {
                 <Text>{`${decks[route.params.deckId].title} deck`}</Text>
                 <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
             </View>
-            <View style={styles.btnsContainer}>
+            <View>
                 <TouchableOpacity
                     disabled={decks[route.params.deckId].questions.length <= 0}
                     onPress={goToQuiz}
@@ -50,6 +50,16 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
+    deckTextContainer: {
+        // flex: 1,
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingHorizontal:  50,
+        paddingVertical: 15,
+        backgroundColor: 'lightblue',
+        borderRadius: 5
+
+    }
 })
 
 export default connect(mapStateToProps)(Deck);
