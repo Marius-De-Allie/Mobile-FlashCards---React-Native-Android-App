@@ -11,7 +11,7 @@ const TabNavigator = () => (
         initialRouteName="Decks"
     >
         <Tab.Screen name="Decks" component={MainStackNavigator} />
-        <Tab.Screen name="New Deck" component={NewDeck} />
+        <Tab.Screen name="New Deck" component={NewDeckStack} />
     </Tab.Navigator>
 );
 
