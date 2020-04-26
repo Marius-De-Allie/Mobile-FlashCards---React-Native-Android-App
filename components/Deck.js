@@ -34,7 +34,7 @@ const Deck = ({route, decks, navigation}) => {
                     onPress={goToNewCard}
                     style={[styles.buttons, {marginLeft: 30}]}
                 >
-                    <Text>Add Card</Text>
+                    <Text style={styles.buttonText}>Add Card</Text>
                 </TouchableOpacity>
             </View>
         </View>
