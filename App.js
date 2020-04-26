@@ -5,7 +5,6 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import TabNavigator from './navigation/tabNavigator';
-import MainStackNavigator from './navigation/stackNavigator';
 import reducer from './reducers';
 import logger from './middleware/logger';
 import { handleReceiveDecks } from './actions';
@@ -25,7 +24,7 @@ class App extends React.Component {
     return (
       <NavigationContainer>
         <Provider store={store}>
-          <MainStackNavigator />
+          <TabNavigator />
         </Provider>
       </NavigationContainer>
     );
