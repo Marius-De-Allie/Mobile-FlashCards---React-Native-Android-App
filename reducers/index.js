@@ -1,4 +1,4 @@
-import { RECEIVE_DECKS, ADD_DECK, ADD_CARD, TOGGLE_ANSWERED, ADD_USERANSWER, SELECT_ANSWER, RESET_DECK } from '../actions';
+import { RECEIVE_DECKS, ADD_DECK, ADD_CARD, SELECT_ANSWER, RESET_DECK } from '../actions';
 
 const decks = (state = {}, action) => {
     switch(action.type) {
@@ -21,22 +21,6 @@ const decks = (state = {}, action) => {
                 [action.deckId]: {
                     ...state[action.deckId],
                     questions: state[action.deckId].questions.concat([{...action.cardObj}])
-                }
-            }
-        case TOGGLE_ANSWERED:
-            return {
-                ...state,
-                [action.deckId]: {
-                    ...state[action.deckId],
-                    questions: state[action.deckId].questions.map((el, index) => index === action.questionIndex ? action.updatedQuestionEl : el)
-                }
-            }
-        case ADD_USERANSWER:
-            return {
-                ...state,
-                [action.deckId]: {
-                    ...state[action.deckId],
-                    questions: state[action.deckId].questions.map((el, index) => index === action.questionIndex ? {...el, userAnswer: action.answer} : el)
                 }
             }
         case SELECT_ANSWER:
