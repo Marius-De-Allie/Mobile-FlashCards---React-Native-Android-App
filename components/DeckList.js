@@ -9,7 +9,7 @@ const DeckList = (props) => {
     const deckIds = Object.keys(decks);
     console.log('DECKIDS', deckIds);
     return (
-        <View>
+        <View style={styles.container}>
             {deckIds.map(id => 
                 <DeckListItem 
                     key={id} 
