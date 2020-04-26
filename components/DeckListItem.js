@@ -19,12 +19,12 @@ const DeckListItem = ({title, cards, deckId}) => {
             >
                 <View style={{alignItems: 'center'}}>
                     <Text style={styles.deckNametext}>
-                        <MaterialCommunityIcons 
+                        <MaterialCommunityIcons
                             name="cards"
                             size={35}
                             color="gray"
                         />
-                        {title}
+                        {` ${title}`}
                     </Text>
                     <Text style={{fontSize: 22, paddingVertical: 3}}>{`${cards} card(s)`}</Text>
                 </View>
