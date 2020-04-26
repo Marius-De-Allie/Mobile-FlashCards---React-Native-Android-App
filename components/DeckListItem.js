@@ -16,7 +16,7 @@ const DeckListItem = ({title, cards, deckId}) => {
         <View>
             <TouchableWithoutFeedback onPress={goToDeck}>
                 <View>
-                    <Text ><MaterialCommunityIcons name="cards"/>{title}</Text>
+                    <Text><MaterialCommunityIcons name="cards"/>{title}</Text>
                     <Text>{`${cards} card(s)`}</Text>
                 </View>
             </TouchableWithoutFeedback>
@@ -35,6 +35,11 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         marginBottom: 30,
         marginTop: 30,
+    },
+    deckNametext: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        color: '#fff'
     }
 })
 
