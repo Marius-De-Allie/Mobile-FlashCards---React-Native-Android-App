@@ -15,7 +15,6 @@ const MainStackNavigator = () => (
         <Stack.Screen name="Home" component={DeckList} />
         <Stack.Screen name="Deck" component={Deck} />
         <Stack.Screen name="Quiz" component={Quiz} />
-        <Stack.Screen name="New Card" component={NewQuestion} />
     </Stack.Navigator>
 );
 
