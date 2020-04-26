@@ -48,7 +48,7 @@ class Quiz extends React.Component {
         // Dispatch addUserAnswer action.
         dispatch(addUserAnswer(deckId, this.state.page, this.state.answer));
         // Check whether answer in component state is equal to question's answer property value in redux store.
-        if(decks[deckId].questions[this.state.page].userAnswer === decks[deckId].questions[this.state.page].answer) {
+        if(this.state.answer === decks[deckId].questions[this.state.page].answer) {
             // If answer is correct, update component correct state property by incrementing by 1.
             console.log('CORRECT');
             this.setState((prevState) => ({
@@ -110,6 +110,7 @@ class Quiz extends React.Component {
                     }
                     <View>
                         <TouchableOpacity
+                            onPress={this.onRetakebtnPress}
                             disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
                         >
                             <Text>Retake</Text>
