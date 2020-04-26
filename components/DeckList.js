@@ -27,4 +27,12 @@ const mapStateToProps = (state) => ({
     decks: state
 });
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    }
+});
+
 export default connect(mapStateToProps)(DeckList);
