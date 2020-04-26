@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, TouchableOpacityBase } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,7 +13,6 @@ const DeckListItem = ({title, cards, deckId}) => {
     };
 
     return (
-        <View style={styles.container}>
             <TouchableOpacity onPress={goToDeck}>
                 <View style={{alignItems: 'center'}}>
                     <Text style={styles.deckNametext}>
@@ -27,7 +26,6 @@ const DeckListItem = ({title, cards, deckId}) => {
                     <Text style={{fontSize: 22}}>{`${cards} card(s)`}</Text>
                 </View>
             </TouchableOpacity>
-        </View>
     );
 };
 
