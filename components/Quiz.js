@@ -65,8 +65,8 @@ class Quiz extends React.Component {
     };
 
     onRetakebtnPress = () => {
-        // Dispatch retakeQuiz action creator.
-
+        // Dispatch resetDeck action creator.
+        dispatch(resetDeck(deckId));
         // Reset component state to default values.
         this.setState(() => ({
             showAnswer: false,
