@@ -20,7 +20,7 @@ const Deck = ({route, decks, navigation}) => {
         <View>
             <Text>{`${decks[route.params.deckId].title} deck`}</Text>
             <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
-            <View>
+            <View style={styles.btnsContainer}>
                 <TouchableOpacity
                     disabled={decks[route.params.deckId].questions.length <= 0}
                     onPress={goToQuiz}
@@ -40,5 +40,14 @@ const Deck = ({route, decks, navigation}) => {
 const mapStateToProps = (state) => ({
     decks: state
 });
+
+// Style object.
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+    },
+})
 
 export default connect(mapStateToProps)(Deck);
