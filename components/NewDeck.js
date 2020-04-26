@@ -58,7 +58,10 @@ class NewDeck extends Component {
                     onChangeText={(text) => this.onInputChange(text)}
                     placeholder="Please enter title for new deck"
                 />
-                <TouchableOpacity onPress={this.onDeckSubmit}>
+                <TouchableOpacity 
+                    onPress={this.onDeckSubmit}
+                    disabled={deckTitle === ''}
+                >
                     <Text>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
