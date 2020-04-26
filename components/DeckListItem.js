@@ -22,7 +22,7 @@ const DeckListItem = ({title, cards, deckId}) => {
                         <MaterialCommunityIcons
                             name="cards"
                             size={35}
-                            color="gray"
+                            color="#2ecc71"
                         />
                         {` ${title}`}
                     </Text>
