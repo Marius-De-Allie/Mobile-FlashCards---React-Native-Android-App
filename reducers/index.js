@@ -39,6 +39,14 @@ const decks = (state = {}, action) => {
                     questions: state[action.deckId].questions.map((el, index) => index === action.questionIndex ? {...el, userAnswer: action.answer} : el)
                 }
             }
+        case SELECT_ANSWER:
+            return {
+                ...state,
+                [action.deckId]: {
+                    ...state[action.deckId],
+                    questions: state[action.deckId].questions.map((el, index) => index === action.questionIndex ? {...el, answered: true, userAnswer: action.answer} : el)
+                }
+            }
         case RESET_DECK:
             return {
                 ...state,
