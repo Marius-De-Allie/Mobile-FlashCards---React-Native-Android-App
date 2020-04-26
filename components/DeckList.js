@@ -30,7 +30,7 @@ const mapStateToProps = (state) => ({
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'space-around',
+        justifyContent: 'flex-start',
         alignItems: 'center',
     }
 });
