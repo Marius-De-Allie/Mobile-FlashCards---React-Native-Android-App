@@ -13,7 +13,7 @@ const DeckListItem = ({title, cards, deckId}) => {
     };
 
     return (
-        <View>
+        <View style={styles.container}>
             <TouchableWithoutFeedback onPress={goToDeck}>
                 <View>
                     <Text><MaterialCommunityIcons name="cards"/>{title}</Text>
