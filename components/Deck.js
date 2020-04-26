@@ -18,8 +18,10 @@ const Deck = ({route, decks, navigation}) => {
 
     return (
         <View>
-            <Text>{`${decks[route.params.deckId].title} deck`}</Text>
-            <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
+            <View>
+                <Text>{`${decks[route.params.deckId].title} deck`}</Text>
+                <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
+            </View>
             <View style={styles.btnsContainer}>
                 <TouchableOpacity
                     disabled={decks[route.params.deckId].questions.length <= 0}
