@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
     btnsContainer: {
         paddingHorizontal: 50,
         paddingVertical: 15,
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
