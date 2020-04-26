@@ -13,7 +13,10 @@ const DeckListItem = ({title, cards, deckId}) => {
     };
 
     return (
-            <TouchableOpacity onPress={goToDeck}>
+            <TouchableOpacity 
+                onPress={goToDeck}
+                style={styles.container}
+            >
                 <View style={{alignItems: 'center'}}>
                     <Text style={styles.deckNametext}>
                         <MaterialCommunityIcons 
