@@ -154,6 +154,8 @@ class Quiz extends React.Component {
 
     render() {
         const {decks, deckId} = this.props;
+        // Return an array with all answered questions in current deck.
+        const answeredQuestions = decks[deckId].questions.filter(question => question.answered === true);
         // Calcluate number of questions in current deck.
         const totalQuestions = decks[deckId].questions.length;
         return (
@@ -162,7 +164,7 @@ class Quiz extends React.Component {
                 <Text>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
                 <Text>{decks[deckId].questions[this.state.page].question}</Text>
                 {this.renderMainUI()}
-                <Text>{`correct ${this.state.correct} | ${this.state.page + 1} answered`}</Text>{/* Need to update this when i add answered prop to questions array */}
+                <Text>{`correct ${this.state.correct} | ${answeredQuestions.length} answered`}</Text>
                 <View>
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
