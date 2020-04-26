@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         paddingBottom: 3
     },
     btnsContainer: {
-        paddingHorizontal: 50,
+        paddingHorizontal: 25,
         paddingVertical: 15,
         flexDirection: 'row',
         justifyContent: 'space-between',
