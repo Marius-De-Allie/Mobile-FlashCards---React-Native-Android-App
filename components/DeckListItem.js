@@ -35,7 +35,7 @@ const DeckListItem = ({title, cards, deckId}) => {
 // CSS styles object.
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'lightblue',
+        backgroundColor: '#3498db',
         paddingHorizontal: 50,
         paddingVertical: 15,
         borderRadius: 5,
