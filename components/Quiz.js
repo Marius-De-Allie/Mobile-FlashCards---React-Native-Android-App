@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
-import { toggleAnswered, addUserAnswer, selectAnswer, resetDeck } from '../actions';
+import { selectAnswer, resetDeck } from '../actions';
 
 class Quiz extends React.Component {
     // Component state.
@@ -43,11 +43,6 @@ class Quiz extends React.Component {
         updatedQuestionEl = {...updatedQuestionEl, answered: !updatedQuestionEl.answered} 
 //         console.log('after', updatedQuestionEl);
         
-        // Dispatch toggleAnswered action.
-        // dispatch(toggleAnswered(deckId, this.state.page, updatedQuestionEl));
-        // Dispatch addUserAnswer action.
-        // dispatch(addUserAnswer(deckId, this.state.page, this.state.answer));
-
         // Dispatch SELECT_ANSWER action.
         dispatch(selectAnswer(deckId, this.state.page, this.state.answer));
 
