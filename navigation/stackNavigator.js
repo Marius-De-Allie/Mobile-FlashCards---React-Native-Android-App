@@ -19,11 +19,11 @@ const MainStackNavigator = () => (
     </Stack.Navigator>
 );
 
-const newDeckStack = () => (
+const NewDeckStack = () => (
     <Stack.Navigator>
         <Stack.Screen name="New Deck" component={NewDeck} />
         <Stack.Screen name="New Card" component={NewQuestion} />
     </Stack.Navigator>
 )
 
-export default MainStackNavigator;
+export {MainStackNavigator as default, NewDeckStack};
