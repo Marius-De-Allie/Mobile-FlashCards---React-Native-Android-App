@@ -22,6 +22,7 @@ const Deck = ({route, decks, navigation}) => {
             <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
             <View>
                 <TouchableOpacity
+                    disabled={decks[route.params.deckId].questions.length <= 0}
                     onPress={goToQuiz}
                 >
                     <Text>Take Quiz</Text>
