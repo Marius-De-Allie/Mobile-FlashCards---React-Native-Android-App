@@ -16,13 +16,27 @@ const DeckListItem = ({title, cards, deckId}) => {
         <View>
             <TouchableWithoutFeedback onPress={goToDeck}>
                 <View>
-                    <Text><MaterialCommunityIcons name="cards" />{title}</Text>
+                    <Text ><MaterialCommunityIcons name="cards"/>{title}</Text>
                     <Text>{`${cards} card(s)`}</Text>
                 </View>
             </TouchableWithoutFeedback>
         </View>
     );
 };
+
+// CSS styles object.
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'lightblue',
+        width: 250,
+        padding: 50,
+        borderRadius: 5,
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1,
+        marginBottom: 30,
+        marginTop: 30,
+    }
+})
 
 
 export default DeckListItem;
