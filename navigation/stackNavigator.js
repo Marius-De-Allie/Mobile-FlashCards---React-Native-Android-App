@@ -21,9 +21,9 @@ const MainStackNavigator = () => (
 
 const NewDeckStack = () => (
     <Stack.Navigator
-        initialRouteName="New Deck"
+        initialRouteName="Add Card"
     >
-        <Stack.Screen name="New Deck" component={NewDeck} />
+        <Stack.Screen name="Add Deck" component={NewDeck} />
         <Stack.Screen name="New Card" component={NewQuestion} />
     </Stack.Navigator>
 )
