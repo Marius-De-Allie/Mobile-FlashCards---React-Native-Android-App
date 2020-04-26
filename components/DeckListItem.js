@@ -36,7 +36,8 @@ const DeckListItem = ({title, cards, deckId}) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'lightblue',
-        padding: 50,
+        paddingHorizontal: 50,
+        paddingVertical: 15,
         borderRadius: 5,
         borderBottomColor: 'gray',
         borderBottomWidth: 1,
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     deckNametext: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: '#fff'
+        color: '#fff',
     }
 })
 
