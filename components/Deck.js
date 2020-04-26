@@ -28,7 +28,7 @@ const Deck = ({route, decks, navigation}) => {
                     onPress={goToQuiz}
                     style={[styles.buttons, {marginRight: 30}]}
                 >
-                    <Text>Take Quiz</Text>
+                    <Text style={styles.buttonText}>Take Quiz</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={goToNewCard}
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     buttonText: {
-        fontSize: 20,
+        fontSize: 18,
         color: '#fff',
         textAlign: 'center'
     }
