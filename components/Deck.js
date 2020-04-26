@@ -22,7 +22,7 @@ const Deck = ({route, decks, navigation}) => {
                 <Text style={styles.deckNameText}>{`${decks[route.params.deckId].title} deck`}</Text>
                 <Text style={{fontSize: 20}}>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
             </View>
-            <View>
+            <View style={styles.btnsContainer}>
                 <TouchableOpacity
                     disabled={decks[route.params.deckId].questions.length <= 0}
                     onPress={goToQuiz}
@@ -65,6 +65,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#fff',
         paddingBottom: 3
+    },
+    btnsContainer: {
+        paddingHorizontal: 50,
+        paddingVertical: 15,
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     }
 })
 
