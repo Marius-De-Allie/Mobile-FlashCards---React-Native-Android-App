@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
-import { toggleAnswered, addUserAnswer } from '../actions';
+import { toggleAnswered, addUserAnswer, resetDeck } from '../actions';
 
 class Quiz extends React.Component {
     // Component state.

@@ -44,7 +44,7 @@ const decks = (state = {}, action) => {
                 ...state,
                 [action.deckId]: {
                     ...state[action.deckId],
-                    questions: state.[action.deckId].questions.map(el => ({...el, answered: false, userAnswer: null}))
+                    questions: state[action.deckId].questions.map(el => ({...el, answered: false, userAnswer: null}))
                 }
             }
         default:

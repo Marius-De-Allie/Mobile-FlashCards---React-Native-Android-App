@@ -74,7 +74,8 @@ export {
     addDeck, 
     addCard, 
     toggleAnswered, 
-    addUserAnswer
+    addUserAnswer,
+    resetDeck
 };
 
 // catch(e) {
