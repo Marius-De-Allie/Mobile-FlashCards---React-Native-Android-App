@@ -50,9 +50,6 @@ const resetDeck = (deckId) => ({
     type: RESET_DECK,
     deckId
 });
- 
-
-
 
 export {
     RECEIVE_DECKS, 
