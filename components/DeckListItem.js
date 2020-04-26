@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, TouchableOpacityBase } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,7 +14,7 @@ const DeckListItem = ({title, cards, deckId}) => {
 
     return (
         <View style={styles.container}>
-            <TouchableWithoutFeedback onPress={goToDeck}>
+            <TouchableOpacity onPress={goToDeck}>
                 <View style={{alignItems: 'center'}}>
                     <Text style={styles.deckNametext}>
                         <MaterialCommunityIcons 
@@ -26,7 +26,7 @@ const DeckListItem = ({title, cards, deckId}) => {
                     </Text>
                     <Text style={{fontSize: 22}}>{`${cards} card(s)`}</Text>
                 </View>
-            </TouchableWithoutFeedback>
+            </TouchableOpacity>
         </View>
     );
 };
