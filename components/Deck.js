@@ -20,7 +20,7 @@ const Deck = ({route, decks, navigation}) => {
         <View style={styles.container}>
             <View style={styles.deckTextContainer}>
                 <Text style={styles.deckNameText}>{`${decks[route.params.deckId].title} deck`}</Text>
-                <Text>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
+                <Text style={{fontSize: 20}}>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
             </View>
             <View>
                 <TouchableOpacity
