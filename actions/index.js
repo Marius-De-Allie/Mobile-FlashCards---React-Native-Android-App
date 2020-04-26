@@ -3,10 +3,8 @@ import { _getDecks } from '../_DATA';
 const RECEIVE_DECKS = 'RECEIVE_DECKS';
 const ADD_DECK = 'ADD_DECK';
 const ADD_CARD = 'ADD_CARD';
-const TOGGLE_ANSWERED = 'TOGGLE_ANSWERED';
-const ADD_USERANSWER = 'ADD_USERANSWER';
-const RESET_DECK = 'RESET_DECK';
 const SELECT_ANSWER = 'SELECT_ANSWER';
+const RESET_DECK = 'RESET_DECK';
 
 const receiveDecks = (decks) => ({
     type: RECEIVE_DECKS,
@@ -39,22 +37,6 @@ const addCard = (cardObj, deckId) => ({
     deckId
 });
 
-// TOGGLE ANSWERED ACTION CREATOR.
-const toggleAnswered = (deckId, questionIndex, updatedQuestionEl) => ({
-    type: TOGGLE_ANSWERED,
-    deckId,
-    questionIndex,
-    updatedQuestionEl
-});
-
-// ADD USERANSWER ACTION CREATOR.
-const addUserAnswer = (deckId, questionIndex, answer) => ({
-    type: ADD_USERANSWER,
-    deckId,
-    questionIndex,
-    answer
-});
-
 // SELECT ANSWER ACTION CREATOR.
 const selectAnswer = (deckId, questionIndex, answer) => ({
     type: SELECT_ANSWER,
@@ -76,17 +58,13 @@ export {
     RECEIVE_DECKS, 
     ADD_DECK, 
     ADD_CARD, 
-    TOGGLE_ANSWERED, 
-    ADD_USERANSWER, 
-    RESET_DECK,
     SELECT_ANSWER,
+    RESET_DECK,
     handleReceiveDecks, 
     addDeck, 
     addCard, 
-    toggleAnswered, 
-    addUserAnswer,
+    selectAnswer,
     resetDeck,
-    selectAnswer
 };
 
 // catch(e) {
