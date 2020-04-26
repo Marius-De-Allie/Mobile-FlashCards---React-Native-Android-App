@@ -11,7 +11,7 @@ const Deck = ({route, decks, navigation}) => {
     };
 
     const goToNewCard = () => {
-        navigation.navigate('New Card', {
+        navigation.navigate('Add Card', {
             deckId: route.params.deckId
         })
     };
