@@ -26,11 +26,13 @@ const Deck = ({route, decks, navigation}) => {
                 <TouchableOpacity
                     disabled={decks[route.params.deckId].questions.length <= 0}
                     onPress={goToQuiz}
+                    style={{marginRight: 30}}
                 >
                     <Text>Take Quiz</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={goToNewCard}
+                    style={{marginLeft: 30}}
                 >
                     <Text>Add Card</Text>
                 </TouchableOpacity>
