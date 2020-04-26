@@ -20,7 +20,9 @@ const MainStackNavigator = () => (
 );
 
 const NewDeckStack = () => (
-    <Stack.Navigator>
+    <Stack.Navigator
+        initialRouteName="New Deck"
+    >
         <Stack.Screen name="New Deck" component={NewDeck} />
         <Stack.Screen name="New Card" component={NewQuestion} />
     </Stack.Navigator>
