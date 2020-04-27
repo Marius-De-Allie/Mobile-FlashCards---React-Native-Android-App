@@ -204,6 +204,11 @@ const styles = StyleSheet.create({
     pageCountText: {
         fontSize: 18, 
         color: '#2ecc71'
+    },
+    mainContentContainer: {
+        flex: 1,
+        paddingHorizontal: 30,
+        alignItems: 'flex-start'
     }
 });
 
