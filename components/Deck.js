@@ -35,7 +35,8 @@ const Deck = ({route, decks, navigation}) => {
                     onPress={goToNewCard}
                     style={[styles.buttons, {marginLeft: 30}]}
                 >
-                    <Text style={styles.buttonText}><MaterialIcons name="add-box" size={18} />Add Card</Text>
+                    <MaterialIcons name="add-box" size={18} />
+                    <Text style={styles.buttonText}>{`  Add Card`}</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#2ecc71',
         padding: 15,
         borderRadius: 5,
-        flex: 1
+        flex: 1,
     },
     buttonText: {
         fontSize: 18,
