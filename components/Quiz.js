@@ -207,11 +207,18 @@ const styles = StyleSheet.create({
     },
     mainContentContainer: {
         paddingHorizontal: 30,
-        alignItems: 'flex-start'
+        alignItems: 'stretch'
     },
     questionText: {
         marginBottom: 15, 
         fontSize: 24
+    },
+    quizBtnsContainer: {
+        // flex: 1,
+        flexDirection: 'row',
+        paddingVertical: 15,
+        justifyContent: 'space-between',
+
     }
 });
 
