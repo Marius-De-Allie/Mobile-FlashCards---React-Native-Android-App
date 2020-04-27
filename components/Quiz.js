@@ -220,7 +220,15 @@ const styles = StyleSheet.create({
         // paddingHorizontal: 30,
         justifyContent: 'space-between',
         marginTop: 30
-
+    },
+    quizButtons: {
+        backgroundColor: '#2ecc71',
+        padding: 15,
+        borderRadius: 5,
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });
 
