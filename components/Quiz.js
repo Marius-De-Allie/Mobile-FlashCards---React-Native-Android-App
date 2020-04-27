@@ -189,14 +189,14 @@ class Quiz extends React.Component {
                         style={styles.navButton}
                     >
                         <MaterialCommunityIcons name="chevron-left-circle" size={40} color={this.state.page <= 0 ? 'gray' : '#2ecc71'} />
-                        <Text>Back</Text>
+                        <Text>{` Back`}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         onPress={this.onPressForwardBtn}
                         disabled={this.state.page >= decks[deckId].questions.length -1 || decks[deckId].questions[this.state.page].answered === false}
                         style={styles.navButton}
                     >
-                        <Text>Forward</Text>
+                        <Text>{`Forward `}</Text>
                         <MaterialCommunityIcons 
                             name="chevron-right-circle" 
                             size={40} 
