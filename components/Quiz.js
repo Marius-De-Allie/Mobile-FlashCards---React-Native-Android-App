@@ -161,8 +161,10 @@ class Quiz extends React.Component {
             <View>
                 <Text style={styles.quizTitle}>{`${decks[deckId].title} Quiz`}</Text>
                 <Text style={styles.pageCountText}>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
-                <Text>{decks[deckId].questions[this.state.page].question}</Text>
-                {this.renderMainUI()}
+                <View>
+                    <Text>{decks[deckId].questions[this.state.page].question}</Text>
+                    {this.renderMainUI()}
+                </View>
                 <Text>{`correct ${this.state.correct} | ${answeredQuestions.length} answered`}</Text>
                 <View>
                     <TouchableOpacity 
