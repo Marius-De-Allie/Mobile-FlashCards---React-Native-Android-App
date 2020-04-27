@@ -177,7 +177,7 @@ class Quiz extends React.Component {
                     {this.renderMainUI()}
                 </View>
                 <Text style={styles.scoreText}>Correct
-                    <Text>{` ${this.state.correct} `}</Text>
+                    <Text style={{color: "#2ecc71"}}>{` ${this.state.correct} `}</Text>
                     <Text>|</Text>
                     <Text>{` ${answeredQuestions.length} `}</Text>
                     <Text>Answered</Text>  
