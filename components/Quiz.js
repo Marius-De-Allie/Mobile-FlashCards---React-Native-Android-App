@@ -112,7 +112,7 @@ class Quiz extends React.Component {
                         <TouchableOpacity
                             onPress={this.onRetakebtnPress}
                             disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
-                            style={styles.quizButton}
+                            style={[styles.quizButton, {marginRight: 30}]}
                         >
                             <Text>Retake</Text>
                         </TouchableOpacity>
