@@ -107,7 +107,9 @@ class Quiz extends React.Component {
                                 <Radio iconName={"lens"} label={"No"} value={"no"} />
                             </RadioGroup> 
                         </View> :
-                        <Text>Your Answer: <Text>{decks[deckId].questions[this.state.page].userAnswer}</Text></Text>
+                        <Text style={styles.yourAnsText}>Your Answer: 
+                            <Text style={{color: '#2ecc71'}}>{' ' + decks[deckId].questions[this.state.page].userAnswer.toUpperCase()}</Text>
+                        </Text>
                     }
                     <View style={styles.quizBtnsContainer}>
                         <TouchableOpacity
