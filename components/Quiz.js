@@ -187,6 +187,7 @@ class Quiz extends React.Component {
                         onPress={this.onPressBackBtn}
                         disabled={this.state.page <= 0}
                     >
+                        <MaterialCommunityIcons name="chevron-left-circle" size={40} color={this.state.page <= 0 ? 'gray' : '#2ecc71'} />
                         <Text>Back</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
