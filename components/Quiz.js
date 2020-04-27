@@ -208,6 +208,10 @@ const styles = StyleSheet.create({
     mainContentContainer: {
         paddingHorizontal: 30,
         alignItems: 'flex-start'
+    },
+    questionText: {
+        marginBottom: 15, 
+        fontSize: 24
     }
 });
 
