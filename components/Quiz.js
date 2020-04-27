@@ -298,7 +298,17 @@ const styles = StyleSheet.create({
     correctAnsContainer: {
         alignSelf: 'center', 
         alignItems: 'center'
-    }
+    },
+    backtoQuestionButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#3498db', 
+        paddingVertical: 15, 
+        paddingHorizontal: 50, 
+        marginTop: 30, 
+        borderRadius: 5
+    },
 
 });
 
