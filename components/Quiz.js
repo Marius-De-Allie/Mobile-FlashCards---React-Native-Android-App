@@ -97,7 +97,7 @@ class Quiz extends React.Component {
                 <View>
                     {decks[deckId].questions[this.state.page].answered === false ?
                         <View>
-                            <Text>Select your answer(yes or no)</Text>
+                            <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <RadioGroup 
                                 getChecked={value => this.onAnswerChange(value)} 
                                 key={this.state.formKey}
