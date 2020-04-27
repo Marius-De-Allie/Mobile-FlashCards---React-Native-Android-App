@@ -294,6 +294,10 @@ const styles = StyleSheet.create({
     navButton: {
         flexDirection: 'row',
         alignItems: 'center'
+    },
+    correctAnsContainer: {
+        alignSelf: 'center', 
+        alignItems: 'center'
     }
 
 });
