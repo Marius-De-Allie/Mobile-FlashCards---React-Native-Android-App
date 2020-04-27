@@ -114,14 +114,14 @@ class Quiz extends React.Component {
                             disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
                             style={[styles.quizButton, {marginRight: 30}]}
                         >
-                            <Text>Retake</Text>
+                            <Text style={styles.quizBtnText}>Retake</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={this.onAnswerSubmit}
                             disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
                             style={[styles.quizButton, {marginLeft: 30}]}
                         >
-                            <Text>Submit</Text>
+                            <Text style={styles.quizBtnText}>Submit</Text>
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity onPress={this.onPressShowAnswer}>
