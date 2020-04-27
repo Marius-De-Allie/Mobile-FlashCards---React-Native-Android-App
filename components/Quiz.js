@@ -133,7 +133,7 @@ class Quiz extends React.Component {
                         style={styles.showAnsButton}
                         onPress={this.onPressShowAnswer}
                     >
-                        <Text>Show Answer</Text>
+                        <Text style={styles.showAnsBtnText}>Show Answer</Text>
                     </TouchableOpacity>
                 </View>
             )
