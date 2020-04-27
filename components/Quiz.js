@@ -231,7 +231,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    quizBtnText: {
+        fontSize: 18,
+        color: '#fff',
+        textAlign: 'center',
     }
+
 });
 
 export default connect(mapStateToProps)(Quiz);
