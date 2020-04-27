@@ -197,7 +197,11 @@ const styles = StyleSheet.create({
     quizTitle: {
         alignSelf: 'center',
         fontSize: 32,
-        marginVertical: 30
+        // marginVertical: 30
+    },
+    pageCountText: {
+        fontSize: 18, 
+        color: '#2ecc71'
     }
 });
 
