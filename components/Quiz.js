@@ -83,7 +83,7 @@ class Quiz extends React.Component {
         if(this.state.showAnswer === true) {
             return (
                 <View style={styles.correctAnsContainer}>
-                    <Text>{decks[deckId].questions[this.state.page].answer}</Text>
+                    <Text>{decks[deckId].questions[this.state.page].answer.toUpperCase()}</Text>
                     <TouchableOpacity onPress={this.onPressShowQuestion}>
                         <Text>Back to question</Text>
                     </TouchableOpacity>
