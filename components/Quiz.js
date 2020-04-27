@@ -182,7 +182,7 @@ class Quiz extends React.Component {
                     <Text style={{color: "#3498db"}}>{` ${answeredQuestions.length} `}</Text>
                     <Text>Answered</Text>  
                 </Text>
-                <View>
+                <View style={styles.navBtnsContainer}>
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
                         disabled={this.state.page <= 0}
