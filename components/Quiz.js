@@ -186,6 +186,7 @@ class Quiz extends React.Component {
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
                         disabled={this.state.page <= 0}
+                        style={styles.navButton}
                     >
                         <MaterialCommunityIcons name="chevron-left-circle" size={40} color={this.state.page <= 0 ? 'gray' : '#2ecc71'} />
                         <Text>Back</Text>
@@ -193,6 +194,7 @@ class Quiz extends React.Component {
                     <TouchableOpacity 
                         onPress={this.onPressForwardBtn}
                         disabled={this.state.page >= decks[deckId].questions.length -1 || decks[deckId].questions[this.state.page].answered === false}
+                        style={styles.navButton}
                     >
                         <Text>Forward</Text>
                         <MaterialCommunityIcons 
@@ -288,7 +290,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 10,
         marginVertical: 30
+    },
+    navButton: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
+
 });
 
 export default connect(mapStateToProps)(Quiz);
