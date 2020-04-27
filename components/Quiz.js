@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
         marginTop: 15, 
         borderRadius: 5
     },
-    showAnsBtnText: {
+    btnText: {
         fontSize: 18,
         color: '#fff'
     },
