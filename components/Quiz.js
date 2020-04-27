@@ -195,6 +195,10 @@ class Quiz extends React.Component {
                         disabled={this.state.page >= decks[deckId].questions.length -1 || decks[deckId].questions[this.state.page].answered === false}
                     >
                         <Text>Forward</Text>
+                        <MaterialCommunityIcons 
+                            name="chevron-right-circle" 
+                            size={40} 
+                            color={this.state.page >= decks[deckId].questions.length -1 || decks[deckId].questions[this.state.page].answered === false ? 'gray' : '#2ecc71'} />
                     </TouchableOpacity>
                 </View>
             </View>
