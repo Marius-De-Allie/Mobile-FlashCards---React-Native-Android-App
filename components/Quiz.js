@@ -179,7 +179,7 @@ class Quiz extends React.Component {
                 <Text style={styles.scoreText}>Correct
                     <Text style={{color: "#2ecc71"}}>{` ${this.state.correct} `}</Text>
                     <Text>|</Text>
-                    <Text>{` ${answeredQuestions.length} `}</Text>
+                    <Text style={{color: "#3498db"}}>{` ${answeredQuestions.length} `}</Text>
                     <Text>Answered</Text>  
                 </Text>
                 <View>
