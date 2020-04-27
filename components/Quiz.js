@@ -116,7 +116,7 @@ class Quiz extends React.Component {
                             style={[styles.quizButton, {marginRight: 30}]}
                         >
                             <MaterialIcons name="refresh" size={18} color="#fff" />
-                            <Text style={styles.quizBtnText}>Retake</Text>
+                            <Text style={styles.quizBtnText}>{`  Retake`}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={this.onAnswerSubmit}
