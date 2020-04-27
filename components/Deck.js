@@ -30,7 +30,7 @@ const Deck = ({route, decks, navigation}) => {
                     style={[styles.buttons, {marginRight: 30}]}
                 >
                     <Ionicons name="md-play" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>Take Quiz</Text>
+                    <Text style={styles.buttonText}>{`  Take Quiz`}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={goToNewCard}
