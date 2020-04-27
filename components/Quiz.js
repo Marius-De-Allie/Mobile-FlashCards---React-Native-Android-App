@@ -129,7 +129,10 @@ class Quiz extends React.Component {
                             <Text style={styles.quizBtnText}>{`  Submit`}</Text>
                         </TouchableOpacity>
                     </View>
-                    <TouchableOpacity onPress={this.onPressShowAnswer}>
+                    <TouchableOpacity 
+                        style={styles.showAnsButton}
+                        onPress={this.onPressShowAnswer}
+                    >
                         <Text>Show Answer</Text>
                     </TouchableOpacity>
                 </View>
