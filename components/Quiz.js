@@ -276,6 +276,13 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 15,
         fontSize: 18
+    },
+    navBtnsContainer: {
+        flexDirection:'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginHorizontal: 10,
+        marginVertical: 30
     }
 });
 
