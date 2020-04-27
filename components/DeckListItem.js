@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
     },
     deckNametext: {
-        fontSize: 30,
+        fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
         paddingVertical: 3
