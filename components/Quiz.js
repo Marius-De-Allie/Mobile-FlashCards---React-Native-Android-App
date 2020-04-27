@@ -133,8 +133,8 @@ class Quiz extends React.Component {
                         style={styles.showAnsButton}
                         onPress={this.onPressShowAnswer}
                     >
-                        <MaterialCommunityIcons name="monitor-cellphone-star" size={18} color="#fff" />
-                        <Text style={styles.showAnsBtnText}>Show Answer</Text>
+                        <MaterialCommunityIcons name="lightbulb-on-outline" size={18} color="#fff" />
+                        <Text style={styles.showAnsBtnText}>{`  Show Answer`}</Text>
                     </TouchableOpacity>
                 </View>
             )
