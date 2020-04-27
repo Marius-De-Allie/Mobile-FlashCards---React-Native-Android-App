@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
-import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { selectAnswer, resetDeck } from '../actions';
 
 class Quiz extends React.Component {
