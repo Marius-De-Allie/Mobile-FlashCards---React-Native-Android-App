@@ -124,7 +124,7 @@ class Quiz extends React.Component {
                             style={[styles.quizButton, {marginLeft: 30}]}
                         >
                             <Ionicons name="md-checkbox-outline" size={18} color="#fff" />
-                            <Text style={styles.quizBtnText}>Submit</Text>
+                            <Text style={styles.quizBtnText}>{`  Submit`}</Text>
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity onPress={this.onPressShowAnswer}>
