@@ -119,7 +119,7 @@ class Quiz extends React.Component {
                         <TouchableOpacity
                             onPress={this.onAnswerSubmit}
                             disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
-                            style={styles.quizButton}
+                            style={[styles.quizButton, {marginLeft: 30}]}
                         >
                             <Text>Submit</Text>
                         </TouchableOpacity>
