@@ -161,7 +161,7 @@ class Quiz extends React.Component {
             <View>
                 <Text style={styles.quizTitle}>{`${decks[deckId].title} Quiz`}</Text>
                 <Text style={styles.pageCountText}>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
-                <View>
+                <View style={styles.mainContentContainer}>
                     <Text>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
                 </View>
@@ -206,7 +206,6 @@ const styles = StyleSheet.create({
         color: '#2ecc71'
     },
     mainContentContainer: {
-        flex: 1,
         paddingHorizontal: 30,
         alignItems: 'flex-start'
     }
