@@ -26,7 +26,7 @@ const DeckListItem = ({title, cards, deckId}) => {
                         />
                         {` ${title}`}
                     </Text>
-                    <Text style={{fontSize: 22, paddingVertical: 3}}>{`${cards} card(s)`}</Text>
+                    <Text style={{fontSize: 20, paddingVertical: 3}}>{`${cards} card(s)`}</Text>
                 </View>
             </TouchableOpacity>
     );
