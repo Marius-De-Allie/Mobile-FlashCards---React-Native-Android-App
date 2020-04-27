@@ -176,7 +176,7 @@ class Quiz extends React.Component {
                     <Text style={styles.questionText}>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
                 </View>
-                <Text>{`correct ${this.state.correct} | ${answeredQuestions.length} answered`}</Text>
+                <Text>{`Correct ${this.state.correct} | ${answeredQuestions.length} Answered`}</Text>
                 <View>
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
@@ -266,6 +266,11 @@ const styles = StyleSheet.create({
     showAnsBtnText: {
         fontSize: 18,
         color: '#fff'
+    },
+    scoreText: {
+        alignSelf: 'center',
+        marginTop: 15,
+        fontSize: 18
     }
 });
 
