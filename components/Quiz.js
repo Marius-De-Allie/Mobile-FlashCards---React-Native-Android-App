@@ -115,6 +115,7 @@ class Quiz extends React.Component {
                             disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
                             style={[styles.quizButton, {marginRight: 30}]}
                         >
+                            <MaterialIcons name="refresh" size={18} color="#fff" />
                             <Text style={styles.quizBtnText}>Retake</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
