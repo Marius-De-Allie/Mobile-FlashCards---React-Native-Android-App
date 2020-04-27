@@ -259,6 +259,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 50, 
         marginTop: 15, 
         borderRadius: 5
+    },
+    showAnsBtnText: {
+        fontSize: 18,
+        color: '#fff'
     }
 });
 
