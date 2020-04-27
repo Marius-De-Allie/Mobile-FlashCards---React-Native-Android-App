@@ -88,7 +88,8 @@ class Quiz extends React.Component {
                         onPress={this.onPressShowQuestion}
                         style={styles.backtoQuestionButton}
                     >
-                        <Text>Back to question</Text>
+                        <MaterialCommunityIcons name="hand-pointing-left" size={18} color="#fff" />
+                        <Text>{`  Back to question`}</Text>
                     </TouchableOpacity>
                 </View>
             )
