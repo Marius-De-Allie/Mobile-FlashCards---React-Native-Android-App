@@ -123,6 +123,7 @@ class Quiz extends React.Component {
                             disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
                             style={[styles.quizButton, {marginLeft: 30}]}
                         >
+                            <Ionicons name="md-checkbox-outline" size={18} color="#fff" />
                             <Text style={styles.quizBtnText}>Submit</Text>
                         </TouchableOpacity>
                     </View>
