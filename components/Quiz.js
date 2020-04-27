@@ -245,6 +245,17 @@ const styles = StyleSheet.create({
     yourAnsText: {
         fontSize: 20, 
         alignSelf: 'center'
+    },
+    showAnsButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center', 
+        backgroundColor: '#3498db', 
+        paddingVertical: 15, 
+        paddingHorizontal: 50, 
+        marginTop: 15, 
+        borderRadius: 5
     }
 });
 
