@@ -108,7 +108,7 @@ class Quiz extends React.Component {
                         </View> :
                         <Text>Your Answer: {decks[deckId].questions[this.state.page].userAnswer}</Text>
                     }
-                    <View>
+                    <View style={styles.quizBtnsContainer}>
                         <TouchableOpacity
                             onPress={this.onRetakebtnPress}
                             disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
@@ -217,7 +217,9 @@ const styles = StyleSheet.create({
         // flex: 1,
         flexDirection: 'row',
         paddingVertical: 15,
+        // paddingHorizontal: 30,
         justifyContent: 'space-between',
+        marginTop: 30
 
     }
 });
