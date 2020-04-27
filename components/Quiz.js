@@ -302,6 +302,7 @@ const styles = StyleSheet.create({
     correctAnsContainer: {
         alignSelf: 'center', 
         alignItems: 'center',
+        marginTop: 15
     },
     correctAnsText: {
         color: "#2ecc71", 
