@@ -188,4 +188,17 @@ const mapStateToProps = (state, ownProps) => ({
     deckId: ownProps.route.params.deckId
 });
 
+// Style object.
+const styles = StyleSheet.create({
+    // container: {
+    //     flex: 1,
+        // alignItems: 'stretch'
+    // }
+    quizTitle: {
+        alignSelf: 'center',
+        fontSize: 32,
+        marginVertical: 30
+    }
+});
+
 export default connect(mapStateToProps)(Quiz);
