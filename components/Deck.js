@@ -29,13 +29,14 @@ const Deck = ({route, decks, navigation}) => {
                     onPress={goToQuiz}
                     style={[styles.buttons, {marginRight: 30}]}
                 >
+                    <MaterialIcons name="" />
                     <Text style={styles.buttonText}>Take Quiz</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={goToNewCard}
                     style={[styles.buttons, {marginLeft: 30}]}
                 >
-                    <MaterialIcons name="add-box" size={18} />
+                    <MaterialIcons name="add-box" size={18} color="#fff" />
                     <Text style={styles.buttonText}>{`  Add Card`}</Text>
                 </TouchableOpacity>
             </View>
