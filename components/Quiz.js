@@ -89,7 +89,7 @@ class Quiz extends React.Component {
                         style={styles.backtoQuestionButton}
                     >
                         <MaterialCommunityIcons name="hand-pointing-left" size={18} color="#fff" />
-                        <Text>{`  Back to question`}</Text>
+                        <Text style={styles.btnText}>{`  Back to question`}</Text>
                     </TouchableOpacity>
                 </View>
             )
@@ -301,7 +301,12 @@ const styles = StyleSheet.create({
     },
     correctAnsContainer: {
         alignSelf: 'center', 
-        alignItems: 'center'
+        alignItems: 'center',
+    },
+    correctAnsText: {
+        color: "#2ecc71", 
+        fontWeight: "bold", 
+        fontSize: 20
     },
     backtoQuestionButton: {
         flexDirection: 'row',
@@ -313,6 +318,7 @@ const styles = StyleSheet.create({
         marginTop: 30, 
         borderRadius: 5
     },
+
 
 });
 
