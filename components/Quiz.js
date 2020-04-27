@@ -162,7 +162,7 @@ class Quiz extends React.Component {
                 <Text style={styles.quizTitle}>{`${decks[deckId].title} Quiz`}</Text>
                 <Text style={styles.pageCountText}>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
                 <View style={styles.mainContentContainer}>
-                    <Text>{decks[deckId].questions[this.state.page].question}</Text>
+                    <Text style={styles.questionText}>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
                 </View>
                 <Text>{`correct ${this.state.correct} | ${answeredQuestions.length} answered`}</Text>
