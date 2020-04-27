@@ -81,6 +81,9 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
         flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     buttonText: {
         fontSize: 18,
