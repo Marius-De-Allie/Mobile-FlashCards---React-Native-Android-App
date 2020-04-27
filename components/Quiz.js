@@ -112,12 +112,14 @@ class Quiz extends React.Component {
                         <TouchableOpacity
                             onPress={this.onRetakebtnPress}
                             disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
+                            style={styles.quizButton}
                         >
                             <Text>Retake</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={this.onAnswerSubmit}
                             disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
+                            style={styles.quizButton}
                         >
                             <Text>Submit</Text>
                         </TouchableOpacity>
@@ -221,7 +223,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: 30
     },
-    quizButtons: {
+    quizButton: {
         backgroundColor: '#2ecc71',
         padding: 15,
         borderRadius: 5,
