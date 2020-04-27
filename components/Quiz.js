@@ -82,7 +82,7 @@ class Quiz extends React.Component {
         const {decks, deckId} = this.props;
         if(this.state.showAnswer === true) {
             return (
-                <View>
+                <View style={styles.correctAnsContainer}>
                     <Text>{decks[deckId].questions[this.state.page].answer}</Text>
                     <TouchableOpacity onPress={this.onPressShowQuestion}>
                         <Text>Back to question</Text>
