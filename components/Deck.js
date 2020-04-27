@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 const Deck = ({route, decks, navigation}) => {
     
@@ -29,7 +29,6 @@ const Deck = ({route, decks, navigation}) => {
                     onPress={goToQuiz}
                     style={[styles.buttons, {marginRight: 30}]}
                 >
-                    <MaterialIcons name="" />
                     <Text style={styles.buttonText}>Take Quiz</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
