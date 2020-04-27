@@ -107,7 +107,7 @@ class Quiz extends React.Component {
                                 <Radio iconName={"lens"} label={"No"} value={"no"} />
                             </RadioGroup> 
                         </View> :
-                        <Text>Your Answer: {decks[deckId].questions[this.state.page].userAnswer}</Text>
+                        <Text>Your Answer: <Text>{decks[deckId].questions[this.state.page].userAnswer}</Text></Text>
                     }
                     <View style={styles.quizBtnsContainer}>
                         <TouchableOpacity
@@ -239,8 +239,11 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#fff',
         textAlign: 'center',
+    },
+    yourAnsText: {
+        fontSize: 20, 
+        alignSelf: 'center'
     }
-
 });
 
 export default connect(mapStateToProps)(Quiz);
