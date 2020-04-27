@@ -170,8 +170,8 @@ class Quiz extends React.Component {
         const totalQuestions = decks[deckId].questions.length;
         return (
             <View>
-                <Text style={styles.quizTitle}>{`${decks[deckId].title} Quiz`}</Text>
                 <Text style={styles.pageCountText}>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
+                <Text style={styles.quizTitle}>{`${decks[deckId].title} Quiz`}</Text>
                 <View style={styles.mainContentContainer}>
                     <Text style={styles.questionText}>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
@@ -214,7 +214,9 @@ const styles = StyleSheet.create({
     },
     pageCountText: {
         fontSize: 18, 
-        color: '#2ecc71'
+        color: '#2ecc71',
+        marginLeft: 10,
+        marginTop: 15
     },
     mainContentContainer: {
         paddingHorizontal: 30,
