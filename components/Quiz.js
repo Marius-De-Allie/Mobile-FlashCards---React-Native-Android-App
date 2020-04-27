@@ -176,7 +176,12 @@ class Quiz extends React.Component {
                     <Text style={styles.questionText}>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
                 </View>
-                <Text>{`Correct ${this.state.correct} | ${answeredQuestions.length} Answered`}</Text>
+                <Text style={styles.scoreText}>Correct
+                    <Text>{` ${this.state.correct} `}</Text>
+                    <Text>|</Text>
+                    <Text>{` ${answeredQuestions.length} `}</Text>
+                    <Text>Answered</Text>  
+                </Text>
                 <View>
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
