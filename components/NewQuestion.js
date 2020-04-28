@@ -90,6 +90,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 30,
         marginVertical: 30
+    },
+    headerText: {
+        fontSize: 32,
+        marginBottom: 30
     }
 });
 
