@@ -136,6 +136,7 @@ class Quiz extends React.Component {
                     <TouchableOpacity 
                         style={styles.showAnsButton}
                         onPress={this.onPressShowAnswer}
+                        disabled={decks[deckId].questions[this.state.page].answered === false}
                     >
                         <MaterialCommunityIcons name="lightbulb-on-outline" size={18} color="#fff" />
                         <Text style={styles.btnText}>{`  Show Answer`}</Text>
