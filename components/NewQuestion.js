@@ -72,7 +72,7 @@ class NewQuestion extends Component {
                 </View>
                 <TouchableOpacity 
                     onPress={this.onCardSubmit}
-                    style={styles.button}
+                    style={[styles.button, {backgroundColor: question === '' || answer === '' ? 'gray' : '#2ecc71'}]}
                 >
                     <Text>Add Card</Text>
                 </TouchableOpacity>
