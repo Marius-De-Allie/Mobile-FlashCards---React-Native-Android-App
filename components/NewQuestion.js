@@ -54,7 +54,7 @@ class NewQuestion extends Component {
                 behavior="height"
                 style={styles.container}
             >
-                <Text>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
+                <Text style={styles.headerText}>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
                 <View>
                     <TextInput 
                         value={question}
