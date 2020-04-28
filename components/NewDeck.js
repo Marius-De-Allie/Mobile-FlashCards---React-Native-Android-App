@@ -67,7 +67,7 @@ class NewDeck extends Component {
                     disabled={deckTitle === ''}
                     style={[styles.button, {backgroundColor: deckTitle === '' ? 'gray' : '#2ecc71'}]}
                 >
-                    <Text>Create Deck</Text>
+                    <Text style={styles.buttonText}>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
