@@ -37,7 +37,7 @@ class Quiz extends React.Component {
     };
 
     onAnswerSubmit = () => {
-        const {decks, deckId, dispatch, navigation} = this.props;
+        const {decks, deckId, dispatch} = this.props;
         // Update current questions array element by toggling the answered property on the question object.
         let updatedQuestionEl = this.props.decks[this.props.deckId].questions[this.state.page];
 //         console.log('before', updatedQuestionEl);
@@ -80,7 +80,8 @@ class Quiz extends React.Component {
     };
 
     onGotoDeck = () => {
-        navigation.navigate('Deck', {deckId: decks[deckId]})
+        const {deckId, navigation} = this.props;
+        navigation.navigate('Deck', {deckId})
     };
 
     renderMainUI = () => {
@@ -133,7 +134,7 @@ class Quiz extends React.Component {
                         </TouchableOpacity>
                         {this.state.page >= decks[deckId].questions.length -1 && decks[deckId].questions.length === answeredQuestionsLength ?
                             <TouchableOpacity
-                                onPress={this.onAnswerSubmit}
+                                onPress={this.onGotoDeck}
                                 style={[styles.quizButton, {marginLeft: 30}, 
                                 {backgroundColor: '#2ecc71'}]}
                             >
