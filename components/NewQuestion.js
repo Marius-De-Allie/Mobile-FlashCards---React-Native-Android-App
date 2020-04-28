@@ -74,7 +74,7 @@ class NewQuestion extends Component {
                     onPress={this.onCardSubmit}
                     style={[styles.button, {backgroundColor: question === '' || answer === '' ? 'gray' : '#2ecc71'}]}
                 >
-                    <Text>Add Card</Text>
+                    <Text style={styles.buttonText}>Add Card</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
