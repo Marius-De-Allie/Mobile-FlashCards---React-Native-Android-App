@@ -74,4 +74,14 @@ const mapStateToProps = (state) => ({
     decks: state
 });
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginHorizontal: 30,
+        marginVertical: 30
+    }
+})
+
 export default connect(mapStateToProps)(NewDeck);
