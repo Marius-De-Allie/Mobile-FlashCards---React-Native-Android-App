@@ -236,6 +236,7 @@ const styles = StyleSheet.create({
     },
     mainContentContainer: {
         paddingHorizontal: 30,
+        // marginHorizontal: 30,
         alignItems: 'stretch'
     },
     questionText: {

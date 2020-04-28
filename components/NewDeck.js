@@ -67,7 +67,7 @@ class NewDeck extends Component {
                     disabled={deckTitle === ''}
                     style={[styles.button, {backgroundColor: deckTitle === '' ? 'gray' : '#2ecc71'}]}
                 >
-                    <Text style={{color: "#fff"}}>Create Deck</Text>
+                    <Text>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
@@ -112,8 +112,11 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 30,
         borderRadius: 5,
+    },
+    buttonText: {
+        fontSize: 18,
+        color: '#fff'    
     }
-
 });
 
 export default connect(mapStateToProps)(NewDeck);
