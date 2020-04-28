@@ -59,7 +59,7 @@ class NewQuestion extends Component {
                     <TextInput 
                         value={question}
                         onChangeText={(text) => this.onQuestionChange(text)}
-                        placeholder="Please enter your question in a yes/no format."
+                        placeholder="Please enter question in a yes/no format."
                     />
                 </View>
                 <View>
@@ -95,6 +95,20 @@ const styles = StyleSheet.create({
         fontSize: 32,
         marginBottom: 30,
         textAlign: 'center'
+    },
+    textInput: {
+        borderBottomWidth: 1, 
+        borderTopWidth: 1, 
+        borderRightWidth: 1, 
+        borderLeftWidth: 1,
+        borderBottomColor: '#3498db', 
+        borderTopColor: '#3498db', 
+        borderRightColor: '#3498db', 
+        borderLeftColor: '#3498db', 
+        borderRadius: 5, 
+        paddingHorizontal: 10, 
+        fontSize: 18,
+        color: '#2ecc71'
     }
 });
 
