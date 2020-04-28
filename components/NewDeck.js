@@ -42,7 +42,7 @@ class NewDeck extends Component {
                 deckTitle: ''
             }));
             // Redirect to Decks List view.
-            this.props.navigation.navigate('Decks');
+            this.props.navigation.navigate('Deck', {deckId});
         } else {
             /* Else output an error message to user */
             alert('Sorry a deck with this name already exists, please use a different deck title.')
