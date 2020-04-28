@@ -65,7 +65,7 @@ class NewDeck extends Component {
                 <TouchableOpacity 
                     onPress={this.onDeckSubmit}
                     disabled={deckTitle === ''}
-                    style={[styles.button]}
+                    style={[styles.button, {backgroundColor: deckTitle === '' ? 'gray' : '#2ecc71'}]}
                 >
                     <Text style={{color: "#fff"}}>Create Deck</Text>
                 </TouchableOpacity>
