@@ -88,6 +88,20 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: 32,
         marginBottom: 30
+    },
+    textInput: {
+        borderBottomWidth: 1, 
+        borderTopWidth: 1, 
+        borderRightWidth: 1, 
+        borderLeftWidth: 1,
+        borderBottomColor: '#3498db', 
+        borderTopColor: '#3498db', 
+        borderRightColor: '#3498db', 
+        borderLeftColor: '#3498db', 
+        borderRadius: 5, 
+        paddingHorizontal: 10, 
+        fontSize: 18,
+        color: '#2ecc71'
     }
 
 })
