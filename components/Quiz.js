@@ -61,7 +61,8 @@ class Quiz extends React.Component {
             }))
         }
         this.setState(prevState => ({
-            formKey: !prevState.formKey
+            formKey: !prevState.formKey,
+            answer: null
         }));
     };
 
@@ -129,7 +130,8 @@ class Quiz extends React.Component {
                         <TouchableOpacity
                             onPress={this.onAnswerSubmit}
                             disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
-                            style={[styles.quizButton, {marginLeft: 30}]}
+                            style={[styles.quizButton, {marginLeft: 30}, 
+                            {backgroundColor: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? '#2ecc71' : 'gray' }]}
                         >
                             <Ionicons name="md-checkbox-outline" size={18} color="#fff" />
                             <Text style={styles.quizBtnText}>{`  Submit`}</Text>
