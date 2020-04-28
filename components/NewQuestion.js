@@ -70,7 +70,10 @@ class NewQuestion extends Component {
                         <Radio iconName={"lens"} label={"No"} value={"no"}/>
                     </RadioGroup>
                 </View>
-                <TouchableOpacity onPress={this.onCardSubmit}>
+                <TouchableOpacity 
+                    onPress={this.onCardSubmit}
+                    style={styles.button}
+                >
                     <Text>Add Card</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
