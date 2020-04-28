@@ -134,7 +134,8 @@ class Quiz extends React.Component {
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity 
-                        style={styles.showAnsButton}
+                        style={[styles.showAnsButton, {backgroundColor: decks[deckId].questions[this.state.page].answered === false ? 'gray' : '#3498db', 
+                    }]}
                         onPress={this.onPressShowAnswer}
                         disabled={decks[deckId].questions[this.state.page].answered === false}
                     >
