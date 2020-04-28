@@ -69,7 +69,7 @@ class NewDeck extends Component {
                     style={[styles.button, {backgroundColor: deckTitle === '' ? 'gray' : '#2ecc71'}]}
                 >
                     <MaterialIcons name="note-add" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>Create Deck</Text>
+                    <Text style={styles.buttonText}>{`  Create Deck`}</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
