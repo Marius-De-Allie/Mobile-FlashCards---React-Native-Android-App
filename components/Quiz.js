@@ -254,7 +254,6 @@ const styles = StyleSheet.create({
         marginTop: 30
     },
     quizButton: {
-        backgroundColor: '#2ecc71',
         padding: 15,
         borderRadius: 5,
         flex: 1,
