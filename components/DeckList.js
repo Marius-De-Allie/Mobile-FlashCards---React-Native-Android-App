@@ -7,14 +7,6 @@ const DeckList = (props) => {
     const { decks } = props;
     // Array of all decks.
     const deckIds = Object.keys(decks);
-    // Render DeckListItem component for every deck in our deckIds array.
-    const renderDeckListItem = (deck) => <DeckListItem 
-        key={deck} 
-        title={decks[deck].title}
-        cards={decks[deck].questions.length}
-        deckId={deck} 
-    />
-
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Your Decks</Text>
