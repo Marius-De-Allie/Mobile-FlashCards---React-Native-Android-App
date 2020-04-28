@@ -51,7 +51,10 @@ class NewDeck extends Component {
     render() {
         const {deckTitle} = this.state;
         return (
-            <KeyboardAvoidingView behavior="height">
+            <KeyboardAvoidingView 
+                behavior="height"
+                style={styles.container}
+            >
                 <Text>Create New Deck</Text>
                 <TextInput 
                     value={deckTitle}
