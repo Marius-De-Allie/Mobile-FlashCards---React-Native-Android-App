@@ -60,6 +60,7 @@ class NewQuestion extends Component {
                         value={question}
                         onChangeText={(text) => this.onQuestionChange(text)}
                         placeholder="Please enter question in a yes/no format."
+                        style={styles.textInput}
                     />
                 </View>
                 <View>
