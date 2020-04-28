@@ -305,6 +305,10 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#fff'
     },
+    scoreContainer: {
+        alignSelf: 'center',
+        marginTop: 15
+    },
     scoreText: {
         alignSelf: 'center',
         // marginTop: 15,
