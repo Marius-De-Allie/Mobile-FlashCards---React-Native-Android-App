@@ -121,6 +121,10 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 30,
         borderRadius: 5,
+    },
+    buttonText: {
+        fontSize: 18,
+        color: '#fff'    
     }
 });
 
