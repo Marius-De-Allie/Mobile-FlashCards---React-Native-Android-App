@@ -201,10 +201,14 @@ class Quiz extends React.Component {
                     <Text style={styles.questionText}>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
                 </View>
-                <Text style={{alignSelf: 'center'}}>
-                    YOUR SCORE
-                </Text>
-                <Text style={{alignSelf: 'center'}}>{` ${Math.round((this.state.correct / totalQuestions) * 100)} %`}</Text>
+                {answeredQuestions.length === decks[deckId].questions.length && 
+                    <View>
+                        <Text>
+                            YOUR SCORE
+                        </Text>
+                        <Text>{` ${Math.round((this.state.correct / totalQuestions) * 100)} %`}</Text>
+                    </View>
+                }
                 <View style={styles.navBtnsContainer}>
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
