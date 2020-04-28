@@ -31,12 +31,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'flex-start',
-        alignItems: 'center',
+        alignItems: 'stretch',
+        marginHorizontal: 30,
+        marginVertical: 30
     },
     text: {
         fontSize: 32,
-        marginTop: 30,
-        marginBottom: 30
+        // marginTop: 30,
+        marginBottom: 30,
+        alignSelf: 'center'
     }
 });
 

@@ -17,17 +17,17 @@ const DeckListItem = ({title, cards, deckId}) => {
                 onPress={goToDeck}
                 style={styles.container}
             >
-                <View style={{alignItems: 'center'}}>
+                <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                    <MaterialCommunityIcons
+                        name="cards"
+                        size={35}
+                        color="#2ecc71"
+                    />
                     <Text style={styles.deckNametext}>
-                        <MaterialCommunityIcons
-                            name="cards"
-                            size={35}
-                            color="#2ecc71"
-                        />
                         {` ${title}`}
                     </Text>
-                    <Text style={{fontSize: 20, paddingVertical: 3}}>{`${cards} card(s)`}</Text>
                 </View>
+                <Text style={{fontSize: 20, paddingVertical: 3, alignSelf: 'center'}}>{`${cards} card(s)`}</Text>
             </TouchableOpacity>
     );
 };
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         marginBottom: 30,
         marginTop: 30,
+        alignItems: 'center'
     },
     deckNametext: {
         fontSize: 24,
