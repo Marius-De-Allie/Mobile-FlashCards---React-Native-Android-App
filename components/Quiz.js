@@ -134,7 +134,7 @@ class Quiz extends React.Component {
                             {backgroundColor: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? '#2ecc71' : 'gray' }]}
                         >
                             <Ionicons name="md-checkbox-outline" size={18} color="#fff" />
-                            <Text style={styles.quizBtnText}>{`  Submit`}</Text>
+                            <Text style={styles.quizBtnText}>{decks[deckId].questions[this.state.page].answered === true ? `  Submitted` : `  Submit`}</Text>
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity 
