@@ -110,6 +110,14 @@ const styles = StyleSheet.create({
         borderRadius: 5, 
         fontSize: 18,
         color: '#2ecc71'
+    },
+    button: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 15,
+        marginTop: 30,
+        borderRadius: 5,
     }
 });
 
