@@ -55,7 +55,7 @@ class NewDeck extends Component {
                 behavior="height"
                 style={styles.container}
             >
-                <Text>Create New Deck</Text>
+                <Text style={styles.headerText}>Create New Deck</Text>
                 <TextInput 
                     value={deckTitle}
                     onChangeText={(text) => this.onInputChange(text)}
