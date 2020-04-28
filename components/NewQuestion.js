@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 32,
-        marginBottom: 30
+        marginBottom: 30,
+        textAlign: 'center'
     }
 });
 
