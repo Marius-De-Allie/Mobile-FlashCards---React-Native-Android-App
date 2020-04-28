@@ -18,14 +18,7 @@ const DeckList = (props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Your Decks</Text>
-            {deckIds.map(id => 
-                <DeckListItem 
-                    key={id} 
-                    title={decks[id].title}
-                    cards={decks[id].questions.length}
-                    deckId={id} 
-                />
-            )}
+            
         </View>
     );
 } 
