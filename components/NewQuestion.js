@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import RadioGroup, { Radio } from "react-native-radio-input";
 import { addCard } from '../actions';
