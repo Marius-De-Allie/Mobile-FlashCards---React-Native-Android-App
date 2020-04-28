@@ -27,7 +27,6 @@ const mapStateToProps = (state) => ({
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'stretch',
         marginHorizontal: 30,
