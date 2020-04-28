@@ -307,6 +307,7 @@ const styles = StyleSheet.create({
     },
     scoreContainer: {
         alignSelf: 'center',
+        alignItems: 'center',
         marginTop: 15
     },
     scoreText: {
