@@ -76,7 +76,7 @@ class NewQuestion extends Component {
                     style={[styles.button, {backgroundColor: question === '' || answer === '' ? 'gray' : '#2ecc71'}]}
                 >
                     <MaterialIcons name="add-box" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>Add Card</Text>
+                    <Text style={styles.buttonText}>{`  Add Card`}</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
