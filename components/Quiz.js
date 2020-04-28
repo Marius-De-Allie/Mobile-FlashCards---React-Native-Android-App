@@ -201,12 +201,10 @@ class Quiz extends React.Component {
                     <Text style={styles.questionText}>{decks[deckId].questions[this.state.page].question}</Text>
                     {this.renderMainUI()}
                 </View>
-                <Text style={styles.scoreText}>Correct
-                    <Text style={{color: "#2ecc71"}}>{` ${this.state.correct} `}</Text>
-                    <Text>|</Text>
-                    <Text style={{color: "#3498db"}}>{` ${answeredQuestions.length} `}</Text>
-                    <Text>Answered</Text>  
+                <Text style={{alignSelf: 'center'}}>
+                    YOUR SCORE
                 </Text>
+                <Text style={{alignSelf: 'center'}}>{` ${Math.round((this.state.correct / totalQuestions) * 100)} %`}</Text>
                 <View style={styles.navBtnsContainer}>
                     <TouchableOpacity 
                         onPress={this.onPressBackBtn}
@@ -305,7 +303,7 @@ const styles = StyleSheet.create({
     },
     scoreText: {
         alignSelf: 'center',
-        marginTop: 15,
+        // marginTop: 15,
         fontSize: 18
     },
     navBtnsContainer: {
