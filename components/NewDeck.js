@@ -65,8 +65,9 @@ class NewDeck extends Component {
                 <TouchableOpacity 
                     onPress={this.onDeckSubmit}
                     disabled={deckTitle === ''}
+                    style={[styles.button]}
                 >
-                    <Text>Create Deck</Text>
+                    <Text style={{color: "#fff"}}>Create Deck</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
@@ -113,6 +114,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     }
 
-})
+});
 
 export default connect(mapStateToProps)(NewDeck);
