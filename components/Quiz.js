@@ -37,7 +37,7 @@ class Quiz extends React.Component {
     };
 
     onAnswerSubmit = () => {
-        const {decks, deckId, dispatch} = this.props;
+        const {decks, deckId, dispatch, navigation} = this.props;
         // Update current questions array element by toggling the answered property on the question object.
         let updatedQuestionEl = this.props.decks[this.props.deckId].questions[this.state.page];
 //         console.log('before', updatedQuestionEl);
@@ -77,6 +77,10 @@ class Quiz extends React.Component {
             answer: null,
             correct: 0
         }))
+    };
+
+    onGotoDeck = () => {
+        navigation.navigate('Deck', {deckId: decks[deckId]})
     };
 
     renderMainUI = () => {
