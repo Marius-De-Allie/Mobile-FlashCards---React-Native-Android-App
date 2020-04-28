@@ -119,9 +119,9 @@ class Quiz extends React.Component {
                     <View style={styles.quizBtnsContainer}>
                         <TouchableOpacity
                             onPress={this.onRetakebtnPress}
-                            disabled={this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength}
+                            disabled={decks[deckId].questions.length !== answeredQuestionsLength}
                             style={[styles.quizButton, {marginRight: 30, 
-                                backgroundColor: this.state.page < decks[deckId].questions.length -1 || decks[deckId].questions.length !== answeredQuestionsLength ? 'gray' 
+                                backgroundColor: decks[deckId].questions.length !== answeredQuestionsLength ? 'gray' 
                                 : '#2ecc71'}]}
                         >
                             <MaterialIcons name="refresh" size={18} color="#fff" />
