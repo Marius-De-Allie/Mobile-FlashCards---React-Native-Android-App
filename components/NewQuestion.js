@@ -55,7 +55,7 @@ class NewQuestion extends Component {
                 style={styles.container}
             >
                 <Text style={styles.headerText}>{`Add new card to the ${this.props.decks[this.props.deckId].title} deck`}</Text>
-                <View>
+                <View style={{marginBottom: 30}}>
                     <TextInput 
                         value={question}
                         onChangeText={(text) => this.onQuestionChange(text)}
