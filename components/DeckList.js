@@ -8,7 +8,7 @@ const DeckList = (props) => {
     // Array of all decks.
     const deckIds = Object.keys(decks);
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.text}>Your Decks</Text>
             {deckIds.map(id => <DeckListItem 
                     key={id} 
@@ -28,8 +28,8 @@ const mapStateToProps = (state) => ({
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // justifyContent: 'flex-start',
-        // alignItems: 'stretch',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
         marginHorizontal: 30,
         marginVertical: 30
     },
