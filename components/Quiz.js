@@ -275,7 +275,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         alignSelf: 'center', 
-        backgroundColor: '#3498db', 
         paddingVertical: 15, 
         paddingHorizontal: 50, 
         marginTop: 15, 
