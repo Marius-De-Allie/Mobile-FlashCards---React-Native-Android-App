@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, KeyboardAvoidingView, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import { Foundation } from '@expo/vector-icons';
 import { addDeck } from '../actions';
 
 class NewDeck extends Component {
