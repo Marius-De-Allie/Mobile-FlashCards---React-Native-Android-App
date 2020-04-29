@@ -30,8 +30,15 @@ class Quiz extends React.Component {
     };
 
     onAnswerChange = (value) => {
+        this.setState((prevState) => ({
+            answer: prevState.answer === value ? prevState.answer : value
+        }));
+        console.log(this.state.answer);
+    };
+    onPressCorrect = () => {
+        const answer= this.state.answer === 'yes' ? this.state.answer : 'yes';
         this.setState(() => ({
-            answer: value
+            answer
         }));
         console.log(this.state.answer);
     };
