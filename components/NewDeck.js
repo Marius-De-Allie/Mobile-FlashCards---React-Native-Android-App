@@ -66,10 +66,18 @@ class NewDeck extends Component {
                 <TouchableOpacity 
                     onPress={this.onDeckSubmit}
                     disabled={deckTitle === ''}
-                    style={[styles.button, {backgroundColor: deckTitle === '' ? 'gray' : '#2ecc71'}]}
+                    style={[styles.button, {backgroundColor: deckTitle === '' ? '#F2F2F2' : '#2ecc71',
+                    borderTopWidth: deckTitle === '' ? 1 : 0, 
+                    borderRightWidth: deckTitle === '' ? 1 : 0, 
+                    borderBottomWidth: deckTitle === '' ? 1 : 0, 
+                    borderLeftWidth: deckTitle === '' ? 1 : 0,
+                    
+                }]}
                 >
-                    <MaterialIcons name="note-add" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>{`  Create Deck`}</Text>
+
+
+                    <MaterialIcons name="note-add" size={18} color={deckTitle === '' ? '#3498db' : '#fff' } />
+                    <Text style={[styles.buttonText, {color: deckTitle === '' ? '#3498db' : '#fff' }]}>{`  Create Deck`}</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
@@ -115,10 +123,13 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 30,
         borderRadius: 5,
+        borderBottomColor: '#3498db', 
+        borderTopColor: '#3498db', 
+        borderRightColor: '#3498db', 
+        borderLeftColor: '#3498db'
     },
     buttonText: {
         fontSize: 18,
-        color: '#fff'    
     }
 });
 
