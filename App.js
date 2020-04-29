@@ -8,6 +8,7 @@ import TabNavigator from './navigation/tabNavigator';
 import reducer from './reducers';
 import logger from './middleware/logger';
 import { handleReceiveDecks } from './actions';
+import { persistStore, persistReducer } from 'redux-persist';
 
 
 // Create redux store.
