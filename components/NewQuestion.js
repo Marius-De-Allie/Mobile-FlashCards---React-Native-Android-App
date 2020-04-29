@@ -73,10 +73,16 @@ class NewQuestion extends Component {
                 </View>
                 <TouchableOpacity 
                     onPress={this.onCardSubmit}
-                    style={[styles.button, {backgroundColor: question === '' || answer === '' ? 'gray' : '#2ecc71'}]}
+                    style={[styles.button, {backgroundColor: question === '' || answer === '' ? '#F2F2F2' : '#2ecc71',
+                    borderTopWidth: question === '' || answer === '' ? 1 : 0, 
+                    borderRightWidth: question === '' || answer === '' ? 1 : 0, 
+                    borderBottomWidth: question === '' || answer === '' ? 1 : 0, 
+                    borderLeftWidth: question === '' || answer === '' ? 1 : 0,
+
+                }]}
                 >
-                    <MaterialIcons name="add-box" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>{`  Add Card`}</Text>
+                    <MaterialIcons name="add-box" size={18} color={question === '' || answer === '' ? '#3498db' : '#fff'} />
+                    <Text style={[styles.buttonText, {color: question === '' || answer === '' ? '#3498db' : '#fff'}]}>{`  Add Card`}</Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         );
@@ -100,7 +106,8 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: 32,
         marginBottom: 30,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight: 'bold'
     },
     textInput: {
         borderBottomWidth: 1, 
@@ -123,10 +130,13 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 30,
         borderRadius: 5,
+        borderBottomColor: '#3498db', 
+        borderTopColor: '#3498db', 
+        borderRightColor: '#3498db', 
+        borderLeftColor: '#3498db'
     },
     buttonText: {
         fontSize: 18,
-        color: '#fff'    
     }
 });
 

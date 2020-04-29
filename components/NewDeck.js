@@ -71,7 +71,6 @@ class NewDeck extends Component {
                     borderRightWidth: deckTitle === '' ? 1 : 0, 
                     borderBottomWidth: deckTitle === '' ? 1 : 0, 
                     borderLeftWidth: deckTitle === '' ? 1 : 0,
-                    
                 }]}
                 >
 
