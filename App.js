@@ -9,6 +9,7 @@ import reducer from './reducers';
 import logger from './middleware/logger';
 import { handleReceiveDecks } from './actions';
 import { persistStore, persistReducer } from 'redux-persist';
+import { AsyncStorage } from 'react-native';
 
 
 // Create redux store.
