@@ -10,7 +10,7 @@ import logger from './middleware/logger';
 import { handleReceiveDecks } from './actions';
 
 // Create redux store.
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+export const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 class App extends React.Component {
 
