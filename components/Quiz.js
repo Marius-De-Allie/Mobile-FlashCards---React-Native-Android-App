@@ -120,22 +120,27 @@ class Quiz extends React.Component {
                 <View>
                     {decks[deckId].questions[this.state.page].answered === false ? 
                         <View style={styles.ansBtnContainer}>
-                            <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
+                            <Text style={{marginBottom: 10, fontSize: 20}}>Make your selection</Text>
                             <TouchableOpacity
                                 onPress={this.onPressCorrect}
-                                style={[styles.ansButton, {flexDirection: 'row', alignItems: 'center', 
-                                backgroundColor: this.state.answer === 'yes' ? '#2ecc71' : 'gray'}]}
+                                style={[styles.ansButton, {flexDirection: 'row', justifyContent: 'center', 
+                                backgroundColor: this.state.answer === 'yes' ? '#2ecc71' : '#F2F2F2', 
+                                borderTopWidth: this.state.answer === 'yes' ? 0 : 1, borderRightWidth: this.state.answer === 'yes' ? 0 : 1, 
+                                borderBottomWidth: this.state.answer === 'yes' ? 0 : 1, borderLeftWidth: this.state.answer === 'yes' ? 0 : 1}]}
                             >
-                                <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
-                                <Text style={styles.btnText}>Correct</Text>
+                                <MaterialCommunityIcons name="check-circle-outline" size={18} color={this.state.answer === 'yes' ? "#fff": "black"}  />
+                                <Text style={{fontSize: 18, color: this.state.answer === 'yes' ?  '#fff': "black"}}>{`  Correct`}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 onPress={this.onPressIncorrect}
-                                style={[styles.ansButton, {backgroundColor: this.state.answer === 'no' ? '#2ecc71' : 'gray'}]}
+                                style={[styles.ansButton, {backgroundColor: this.state.answer === 'no' ? '#2ecc71' : '#F2F2F2', marginTop: 15,
+                                borderTopWidth: this.state.answer === 'no' ? 0 : 1, borderRightWidth: this.state.answer === 'no' ? 0 : 1, 
+                                borderBottomWidth: this.state.answer === 'no' ? 0 : 1, borderLeftWidth: this.state.answer === 'no' ? 0 : 1}
+                            ]}
                             >
-                                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                                    <MaterialCommunityIcons name="close-box-outline" size={18} color="#fff" />
-                                    <Text style={styles.btnText}>Incorrect</Text>
+                                <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                                    <MaterialCommunityIcons name="close-box-outline" size={18} color={this.state.answer === 'no' ?  '#fff': "black"} />
+                                    <Text style={{fontSize: 18, color: this.state.answer === 'no' ?  '#fff': "black"}}>{`  Incorrect`}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View> :
@@ -373,10 +378,11 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     ansButton: {
+        alignItems: 'center',  
+        width: 180,
         padding: 15,
         borderRadius: 5,
-
-    }
+    },
 });
 
 export default connect(mapStateToProps)(Quiz);
