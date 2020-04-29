@@ -117,9 +117,9 @@ class Quiz extends React.Component {
             // Gte length of answeredQuestions array.
             const answeredQuestionsLength = answeredQuestions.length;
             return (
-                <View style={styles.ansBtnContainer}>
+                <View>
                     {decks[deckId].questions[this.state.page].answered === false ? 
-                        <View>
+                        <View style={styles.ansBtnContainer}>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
                                 onPress={this.onPressCorrect}
@@ -368,6 +368,11 @@ const styles = StyleSheet.create({
     ansBtnContainer: {
         alignSelf: 'center',
         alignItems: 'center'
+    },
+    ansButton: {
+        padding: 15,
+        borderRadius: 5,
+
     }
 });
 
