@@ -153,11 +153,17 @@ class Quiz extends React.Component {
                             onPress={this.onRetakebtnPress}
                             disabled={decks[deckId].questions.length !== answeredQuestionsLength}
                             style={[styles.quizButton, {marginRight: 30, 
-                                backgroundColor: decks[deckId].questions.length !== answeredQuestionsLength ? 'F2F2F2' 
-                                : '#2ecc71'}]}
+                                backgroundColor: decks[deckId].questions.length !== answeredQuestionsLength ? '#F2F2F2' 
+                                : '#2ecc71', borderTopWidth: decks[deckId].questions.length !== answeredQuestionsLength ? 1 : 0, 
+                                borderRightWidth: decks[deckId].questions.length !== answeredQuestionsLength ? 1 : 0, 
+                                borderBottomWidth: decks[deckId].questions.length !== answeredQuestionsLength ? 1 : 0, 
+                                borderLeftWidth: decks[deckId].questions.length !== answeredQuestionsLength ? 1 : 0}]}
                         >
-                            <MaterialIcons name="refresh" size={18} color="#fff" />
-                            <Text style={styles.quizBtnText}>{`  Retake`}</Text>
+                            <MaterialIcons name="refresh" size={18} color={decks[deckId].questions.length !== answeredQuestionsLength ? "#3498db" 
+                            : "#fff"} />
+                            <Text style={[styles.quizBtnText, {color: decks[deckId].questions.length !== answeredQuestionsLength ? "#3498db" : "#fff"}]}>
+                                {`  Retake`}
+                            </Text>
                         </TouchableOpacity>
                         {this.state.page >= decks[deckId].questions.length -1 && decks[deckId].questions.length === answeredQuestionsLength ?
                             <TouchableOpacity
@@ -166,16 +172,25 @@ class Quiz extends React.Component {
                                 {backgroundColor: '#2ecc71'}]}
                             >
                                 <MaterialCommunityIcons name="cards-outline" size={18} color="#fff" />
-                                <Text style={styles.quizBtnText}>{`  Back to Deck`}</Text>
+                                <Text style={[styles.quizBtnText, {color: "#fff"}]}>{`  Back to Deck`}</Text>
                             </TouchableOpacity> :
                             <TouchableOpacity
                                 onPress={this.onAnswerSubmit}
                                 disabled={decks[deckId].questions[this.state.page].answered === true || this.state.answer === null}
                                 style={[styles.quizButton, {marginLeft: 30}, 
-                                {backgroundColor: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? '#2ecc71' : 'gray' }]}
+                                {backgroundColor: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? '#2ecc71' : '#F2F2F2',
+                                    borderTopWidth: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? 0 : 1, 
+                                    borderRightWidth: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? 0 : 1, 
+                                    borderBottomWidth: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? 0 : 1, 
+                                    borderLeftWidth: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? 0 : 1,
+                                }]}
                             >
-                                <Ionicons name="md-checkbox-outline" size={18} color="#fff" />
-                                <Text style={styles.quizBtnText}>{decks[deckId].questions[this.state.page].answered === true ? `  Submitted` : `  Submit`}</Text>
+                                <Ionicons name="md-checkbox-outline" size={18} 
+                                    color={decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? "#fff" : "#3498db"} 
+                                />
+                                <Text style={[styles.quizBtnText, {color: decks[deckId].questions[this.state.page].answered === false && this.state.answer !== null ? "#fff" : "#3498db"}]}>
+                                    {decks[deckId].questions[this.state.page].answered === true ? `  Submitted` : `  Submit`}
+                                </Text>
                             </TouchableOpacity>
                         }
                     </View>
@@ -307,7 +322,11 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderTopColor: "#3498db",
+        borderRightColor: "#3498db",
+        borderBottomColor: "#3498db",
+        borderLeftColor: "#3498db"
     },
     quizBtnText: {
         fontSize: 18,
