@@ -11,6 +11,10 @@ import { handleReceiveDecks } from './actions';
 import { persistStore, persistReducer } from 'redux-persist';
 import { AsyncStorage } from 'react-native';
 
+const persistConfig = {
+  key: 'root',
+  storage: AsyncStorage
+};
 
 // Create redux store.
 export const store = createStore(reducer, applyMiddleware(thunk, logger));
