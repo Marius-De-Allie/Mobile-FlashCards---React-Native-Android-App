@@ -12,6 +12,8 @@ import { setAsyncData } from './utils/api';
 
 // Create redux store.
 export const store = createStore(reducer, applyMiddleware(thunk, logger));
+// Call setAsyncData function to create AsyncStorage decks item.
+setAsyncData();
 
 class App extends React.Component {
 
