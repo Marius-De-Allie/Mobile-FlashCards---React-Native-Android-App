@@ -109,6 +109,12 @@ class Quiz extends React.Component {
                     {decks[deckId].questions[this.state.page].answered === false ?
                         <View>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
+                            <TouchableOpacity
+                                onPress={() => console.log('correct')}
+                            >
+                                <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
+                                <Text>Correct</Text>
+                            </TouchableOpacity>
                             <RadioGroup 
                                 getChecked={value => this.onAnswerChange(value)} 
                                 key={this.state.formKey}
