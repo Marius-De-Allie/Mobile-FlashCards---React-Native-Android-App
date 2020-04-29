@@ -2,7 +2,7 @@ import { AsyncStorage } from 'react-native';
 import { store } from '../App';
 
 // Setup asyncStorage item to hold app data.
-export const setAsyncData = async () => {
+export const setDecks = async () => {
     try {
         await AsyncStorage.setItem('decks', JSON.stringify(store.getState()));
     } catch(e) {
@@ -10,4 +10,13 @@ export const setAsyncData = async () => {
     }
 };
 
-
+// Retrieve AsyncStorage item 'decks'.
+export const getAsyncData = async () => {
+    try {
+        let results = await AsyncStorage.getItem('decks');
+        results = JSON.parse(results);
+        return results;
+    } catch(e) {
+        console.log('Unable to load async data');
+    }
+  }; 
