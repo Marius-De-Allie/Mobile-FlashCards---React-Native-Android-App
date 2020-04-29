@@ -202,7 +202,7 @@ class Quiz extends React.Component {
                     {this.renderMainUI()}
                 </View>
                 {answeredQuestions.length === decks[deckId].questions.length && 
-                    <View>
+                    <View style={styles.scoreContainer}>
                         <Text>
                             YOUR SCORE
                         </Text>
