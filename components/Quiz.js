@@ -153,7 +153,7 @@ class Quiz extends React.Component {
                             onPress={this.onRetakebtnPress}
                             disabled={decks[deckId].questions.length !== answeredQuestionsLength}
                             style={[styles.quizButton, {marginRight: 30, 
-                                backgroundColor: decks[deckId].questions.length !== answeredQuestionsLength ? 'gray' 
+                                backgroundColor: decks[deckId].questions.length !== answeredQuestionsLength ? 'F2F2F2' 
                                 : '#2ecc71'}]}
                         >
                             <MaterialIcons name="refresh" size={18} color="#fff" />
@@ -311,7 +311,6 @@ const styles = StyleSheet.create({
     },
     quizBtnText: {
         fontSize: 18,
-        color: '#fff',
         textAlign: 'center',
     },
     yourAnsText: {
