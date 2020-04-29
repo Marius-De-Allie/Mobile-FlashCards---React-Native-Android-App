@@ -113,7 +113,7 @@ class Quiz extends React.Component {
                         <View>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
-                                onPress={() => console.log('correct')}
+                                onPress={(yes) => this.onAnswerChange(yes)}
                             >
                                 <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
                                 <Text>Correct</Text>
