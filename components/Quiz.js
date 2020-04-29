@@ -123,14 +123,6 @@ class Quiz extends React.Component {
                                     <Text>Incorrect</Text>
                                 </View>
                             </TouchableOpacity>
-
-                            <RadioGroup 
-                                getChecked={value => this.onAnswerChange(value)} 
-                                key={this.state.formKey}
-                            >
-                                <Radio iconName={"lens"} label={"Yes"} value={"yes"}  />
-                                <Radio iconName={"lens"} label={"No"} value={"no"} />
-                            </RadioGroup> 
                         </View> :
                         <Text style={styles.yourAnsText}>Your Answer: 
                             <Text style={{color: '#2ecc71'}}>{' ' + decks[deckId].questions[this.state.page].userAnswer.toUpperCase()}</Text>
