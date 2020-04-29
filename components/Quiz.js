@@ -301,7 +301,8 @@ const styles = StyleSheet.create({
     quizTitle: {
         alignSelf: 'center',
         fontSize: 32,
-        // marginVertical: 30
+        fontWeight: 'bold',
+        marginBottom: 30
     },
     pageCountText: {
         fontSize: 18, 

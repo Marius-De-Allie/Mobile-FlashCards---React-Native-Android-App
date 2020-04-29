@@ -1,7 +1,8 @@
 import { AsyncStorage } from 'react-native';
-import { Notifications, Permissions } from 'expo';
+import { Notifications } from 'expo';
+import * as Permissions from 'expo-permissions';
 
-const NOTIFICATION_KEY = 'Flashcards:notifications';
+const NOTIFICATION_KEY = 'MobileFlashcards:notifications';
 
 let decks = {
     React: {
@@ -50,7 +51,7 @@ const clearLocalNotifications = () => {
 const createNotifications = () => {
   return {
     title: 'Take your Quiz',
-    body: 'Don\'t forget to take your quiz today.',
+    body: 'Don\'t forget to complete atleast one quiz today.',
     android: {
       sound: true,
       priority: 'high',
@@ -58,8 +59,7 @@ const createNotifications = () => {
       vibrate: true
     }
   }
-
-}
+};
 
 const setLocalNotifications = () => {
   AsyncStorage.getItem(NOTIFICATION_KEY)
