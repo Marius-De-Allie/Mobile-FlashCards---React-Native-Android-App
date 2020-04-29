@@ -136,21 +136,26 @@ class Quiz extends React.Component {
                                 style={[styles.ansButton, {flexDirection: 'row', justifyContent: 'center', 
                                 backgroundColor: this.state.answer === 'yes' ? '#2ecc71' : '#F2F2F2', 
                                 borderTopWidth: this.state.answer === 'yes' ? 0 : 1, borderRightWidth: this.state.answer === 'yes' ? 0 : 1, 
-                                borderBottomWidth: this.state.answer === 'yes' ? 0 : 1, borderLeftWidth: this.state.answer === 'yes' ? 0 : 1}]}
+                                borderBottomWidth: this.state.answer === 'yes' ? 0 : 1, borderLeftWidth: this.state.answer === 'yes' ? 0 : 1,
+                                borderTopColor: "#2ecc71", borderRightColor: "#2ecc71", 
+                                borderBottomColor: "#2ecc71", borderLeftColor: "#2ecc71"
+                            }]}
                             >
-                                <MaterialCommunityIcons name="check-circle-outline" size={18} color={this.state.answer === 'yes' ? "#fff": "black"}  />
-                                <Text style={{fontSize: 18, color: this.state.answer === 'yes' ?  '#fff': "black"}}>{`  Correct`}</Text>
+                                <MaterialCommunityIcons name="check-circle-outline" size={18} color={this.state.answer === 'yes' ? "#fff": "#2ecc71"}  />
+                                <Text style={{fontSize: 18, color: this.state.answer === 'yes' ?  '#fff': "#2ecc71"}}>{`  Correct`}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 onPress={this.onPressIncorrect}
                                 style={[styles.ansButton, {backgroundColor: this.state.answer === 'no' ? '#2ecc71' : '#F2F2F2', marginTop: 15,
                                 borderTopWidth: this.state.answer === 'no' ? 0 : 1, borderRightWidth: this.state.answer === 'no' ? 0 : 1, 
-                                borderBottomWidth: this.state.answer === 'no' ? 0 : 1, borderLeftWidth: this.state.answer === 'no' ? 0 : 1}
+                                borderBottomWidth: this.state.answer === 'no' ? 0 : 1, borderLeftWidth: this.state.answer === 'no' ? 0 : 1,
+                                borderTopColor: "red", borderRightColor: "red", 
+                                borderBottomColor: "red", borderLeftColor: "red"}
                             ]}
                             >
                                 <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                                    <MaterialCommunityIcons name="close-box-outline" size={18} color={this.state.answer === 'no' ?  '#fff': "black"} />
-                                    <Text style={{fontSize: 18, color: this.state.answer === 'no' ?  '#fff': "black"}}>{`  Incorrect`}</Text>
+                                    <MaterialCommunityIcons name="close-box-outline" size={18} color={this.state.answer === 'no' ?  '#fff': "red"} />
+                                    <Text style={{fontSize: 18, color: this.state.answer === 'no' ?  '#fff': "red"}}>{`  Incorrect`}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View> :
