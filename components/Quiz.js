@@ -119,7 +119,7 @@ class Quiz extends React.Component {
             return (
                 <View>
                     {decks[deckId].questions[this.state.page].answered === false ? 
-                        <View>
+                        <View style={styles.ansBtnContainer}>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
                                 onPress={this.onPressCorrect}
@@ -365,8 +365,10 @@ const styles = StyleSheet.create({
         marginTop: 30, 
         borderRadius: 5
     },
-
-
+    ansBtnContainer: {
+        alignSelf: 'center',
+        alignItems: 'center'
+    }
 });
 
 export default connect(mapStateToProps)(Quiz);
