@@ -86,6 +86,9 @@ class Quiz extends React.Component {
 
     renderMainUI = () => {
         const {decks, deckId} = this.props;
+        // Declare yes and no variables to be passed into onAnswerChange method.
+        const yes = 'yes';
+        const no = 'no';
         if(this.state.showAnswer === true) {
             return (
                 <View style={styles.correctAnsContainer}>
