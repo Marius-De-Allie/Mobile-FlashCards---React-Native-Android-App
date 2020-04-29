@@ -1,5 +1,5 @@
 import React, { Component }from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { Text, ScrollView, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import DeckListItem from './DeckListItem';
 
@@ -11,12 +11,13 @@ const DeckList = (props) => {
         <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.text}>Your Decks</Text>
             {deckIds.map(id => <DeckListItem 
-                    key={id} 
-                    title={decks[id].title}
-                    cards={decks[id].questions.length}
-                    deckId={id} 
-                />
-            )}
+                                    key={id} 
+                                    title={decks[id].title}
+                                    cards={decks[id].questions.length}
+                                    deckId={id} 
+                                />
+                            )}
+            
         </ScrollView>
     );
 } 
@@ -42,3 +43,4 @@ const styles = StyleSheet.create({
 });
 
 export default connect(mapStateToProps)(DeckList);
+

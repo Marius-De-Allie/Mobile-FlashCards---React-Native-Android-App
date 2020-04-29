@@ -1,4 +1,9 @@
-const decks = {
+import { AsyncStorage } from 'react-native';
+import { Notifications, Permissions } from 'expo';
+
+const NOTIFICATION_KEY = 'Flashcards:notifications';
+
+let decks = {
     React: {
       title: 'React',
       questions: [
@@ -33,8 +38,58 @@ const decks = {
 
 const _getDecks = () => {
     return new Promise((res, rej) => {
-      setTimeout(() => res({...decks}), 1000)
+      setTimeout(() => res({...decks}), 500)
     })
 };
+
+const clearLocalNotifications = () => {
+  return AsyncStorage.removeItem(NOTIFICATION_KEY)
+  .then(Notifications.cancelAllScheduledNotificationsAsync)
+}
+
+const createNotifications = () => {
+  return {
+    title: 'Take your Quiz',
+    body: 'Don\'t forget to take your quiz today.',
+    android: {
+      sound: true,
+      priority: 'high',
+      sticky: false,
+      vibrate: true
+    }
+  }
+
+}
+
+const setLocalNotifications = () => {
+  AsyncStorage.getItem(NOTIFICATION_KEY)
+  .then(JSON.parse)
+  .then(data => {
+    if(data === null) {
+      Permissions.askAsync(Permissions.NOTIFICATIONS)
+      .then(({status}) => {
+        if(status === 'granted') {
+          Notifications.cancelAllScheduledNotificationsAsync();
+
+          let tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          tomorrow.setHours(17);
+          tomorrow.setMinutes(0);
+
+          Notifications.scheduleLocalNotificationAsync(
+            createNotifications(),
+            {
+              time: tomorrow,
+              repeat: 'day'
+            }
+          )
+
+          AsyncStorage.setItem(NOTIFICATION_KEY, JSON.stringify(true));
+        }
+      })
+    }
+  })
+
+}
   
-export {_getDecks};
+export {_getDecks, clearLocalNotifications, createNotifications, setLocalNotifications};
