@@ -35,8 +35,17 @@ class Quiz extends React.Component {
         }));
         console.log(this.state.answer);
     };
+
     onPressCorrect = () => {
         const answer= this.state.answer === 'yes' ? this.state.answer : 'yes';
+        this.setState(() => ({
+            answer
+        }));
+        console.log(this.state.answer);
+    };
+
+    onPressIncorrect = () => {
+        const answer= this.state.answer === 'no' ? this.state.answer : 'no';
         this.setState(() => ({
             answer
         }));
@@ -120,7 +129,7 @@ class Quiz extends React.Component {
                         <View>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
-                                onPress={(yes) => this.onAnswerChange(yes)}
+                                onPress={this.onPressCorrect}
                             >
                                 <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
                                 <Text>Correct</Text>
