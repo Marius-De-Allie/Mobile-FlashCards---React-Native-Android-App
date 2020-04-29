@@ -135,7 +135,7 @@ class Quiz extends React.Component {
                                 <Text>Correct</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
-                                onPress={(no) => this.onAnswerChange(no)}
+                                onPress={this.onPressIncorrect}
                             >
                                 <View>
                                     <MaterialCommunityIcons name="close-box-outline" size={18} color="#fff" />
