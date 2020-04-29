@@ -123,7 +123,7 @@ class Quiz extends React.Component {
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
                                 onPress={this.onPressCorrect}
-                                style={styles.ansButton}
+                                style={[styles.ansButton, {flexDirection: 'row', alignItems: 'center'}]}
                             >
                                 <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
                                 <Text style={styles.btnText}>Correct</Text>
@@ -132,7 +132,7 @@ class Quiz extends React.Component {
                                 onPress={this.onPressIncorrect}
                                 style={styles.ansButton}
                             >
-                                <View>
+                                <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                     <MaterialCommunityIcons name="close-box-outline" size={18} color="#fff" />
                                     <Text style={styles.btnText}>Incorrect</Text>
                                 </View>
