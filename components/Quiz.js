@@ -117,9 +117,9 @@ class Quiz extends React.Component {
             // Gte length of answeredQuestions array.
             const answeredQuestionsLength = answeredQuestions.length;
             return (
-                <View>
+                <View style={styles.ansBtnContainer}>
                     {decks[deckId].questions[this.state.page].answered === false ? 
-                        <View style={styles.ansBtnContainer}>
+                        <View>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
                                 onPress={this.onPressCorrect}
