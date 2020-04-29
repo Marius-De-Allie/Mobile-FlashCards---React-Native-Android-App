@@ -260,10 +260,16 @@ class Quiz extends React.Component {
                 </View>
                 {answeredQuestions.length === decks[deckId].questions.length && 
                     <View style={styles.scoreContainer}>
-                        <Text>
-                            YOUR SCORE
+                        <Text
+                            style={{fontSize: 24}}
+                        >
+                            Your Score
                         </Text>
-                        <Text>{` ${Math.round((this.state.correct / totalQuestions) * 100)} %`}</Text>
+                        <Text 
+                            style={[styles.scoreText, {color: Math.round((this.state.correct / totalQuestions) * 100) < 50 ? 'red' : '#2ecc71'}]}
+                        >
+                            {` ${Math.round((this.state.correct / totalQuestions) * 100)} %`}
+                        </Text>
                     </View>
                 }
                 <View style={styles.navBtnsContainer}>
@@ -370,12 +376,12 @@ const styles = StyleSheet.create({
     scoreContainer: {
         alignSelf: 'center',
         alignItems: 'center',
-        marginTop: 15
+        marginTop: 30
     },
     scoreText: {
-        alignSelf: 'center',
-        // marginTop: 15,
-        fontSize: 18
+        // alignSelf: 'center',
+        fontSize: 24,
+        fontWeight: 'bold'
     },
     navBtnsContainer: {
         flexDirection:'row',
