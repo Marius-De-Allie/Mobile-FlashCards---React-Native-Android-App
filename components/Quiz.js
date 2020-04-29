@@ -126,7 +126,7 @@ class Quiz extends React.Component {
                                 style={styles.ansButton}
                             >
                                 <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
-                                <Text>Correct</Text>
+                                <Text style={styles.btnText}>Correct</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 onPress={this.onPressIncorrect}
@@ -134,7 +134,7 @@ class Quiz extends React.Component {
                             >
                                 <View>
                                     <MaterialCommunityIcons name="close-box-outline" size={18} color="#fff" />
-                                    <Text>Incorrect</Text>
+                                    <Text style={styles.btnText}>Incorrect</Text>
                                 </View>
                             </TouchableOpacity>
                         </View> :
