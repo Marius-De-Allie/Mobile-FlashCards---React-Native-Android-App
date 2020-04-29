@@ -119,7 +119,7 @@ class Quiz extends React.Component {
                                 <Text>Correct</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
-                                onPress={() => console.log('Incorrect')}
+                                onPress={(no) => this.onAnswerChange(no)}
                             >
                                 <View>
                                     <MaterialCommunityIcons name="close-box-outline" size={18} color="#fff" />
