@@ -106,7 +106,7 @@ class Quiz extends React.Component {
             const answeredQuestionsLength = answeredQuestions.length;
             return (
                 <View>
-                    {decks[deckId].questions[this.state.page].answered === false ?
+                    {decks[deckId].questions[this.state.page].answered === false ? 
                         <View>
                             <Text style={{marginBottom: 10, fontSize: 20}}>Select your answer(yes or no)</Text>
                             <TouchableOpacity
@@ -115,6 +115,15 @@ class Quiz extends React.Component {
                                 <MaterialCommunityIcons name="check-circle-outline" size={18} color="#fff" />
                                 <Text>Correct</Text>
                             </TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={() => console.log('Incorrect')}
+                            >
+                                <View>
+                                    <MaterialCommunityIcons name="close-box-outline" size={18} color="#fff" />
+                                    <Text>Incorrect</Text>
+                                </View>
+                            </TouchableOpacity>
+
                             <RadioGroup 
                                 getChecked={value => this.onAnswerChange(value)} 
                                 key={this.state.formKey}
