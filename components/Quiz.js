@@ -317,7 +317,8 @@ const styles = StyleSheet.create({
     },
     questionText: {
         marginBottom: 15, 
-        fontSize: 24
+        fontSize: 24,
+        textAlign: 'center'
     },
     quizBtnsContainer: {
         // flex: 1,
