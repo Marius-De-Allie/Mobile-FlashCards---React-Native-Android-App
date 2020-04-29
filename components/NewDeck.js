@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 32,
+        fontWeight: 'bold',
         marginBottom: 30
     },
     textInput: {
