@@ -19,9 +19,8 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, reducer);
 
 // Create redux store.
-export const store = createStore(persistReducer, applyMiddleware(thunk, logger));
-// Call setAsyncData function to create AsyncStorage decks item.
-setAsyncData();
+const store = createStore(persistReducer, applyMiddleware(thunk, logger));
+let persistor = persistStore(store, {manualPersist: true});
 
 
 
