@@ -8,7 +8,7 @@ import TabNavigator from './navigation/tabNavigator';
 import reducer from './reducers';
 import logger from './middleware/logger';
 import { handleReceiveDecks } from './actions';
-import { setAsyncData } from './utils/api';
+import { setAsyncData, getAsyncData } from './utils/api';
 
 // Create redux store.
 export const store = createStore(reducer, applyMiddleware(thunk, logger));
