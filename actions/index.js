@@ -19,11 +19,12 @@ const handleReceiveDecks = (data) => {
 };
 
 // ADD DECK ACTION CREATOR.
-const addDeck = (deckId, title, questions) => ({
+const addDeck = (deckId, title, questions, completedOn) => ({
     type: ADD_DECK,
     deckId,
     title,
-    questions
+    questions,
+    completedOn
 });
 
 // ADD CARD ACTION CREATOR.
