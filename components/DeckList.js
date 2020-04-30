@@ -3,23 +3,26 @@ import { Text, ScrollView, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import DeckListItem from './DeckListItem';
 
-const DeckList = (props) => {
-    const { decks } = props;
-    // Array of all decks.
-    const deckIds = Object.keys(decks);
-    return (
-        <ScrollView contentContainerStyle={styles.container}>
-            <Text style={styles.text}>Your Decks</Text>
-            {deckIds.map(id => <DeckListItem 
-                                    key={id} 
-                                    title={decks[id].title}
-                                    cards={decks[id].questions.length}
-                                    deckId={id} 
-                                />
-            )}
-        </ScrollView>
-    );
-} ;
+class DeckList extends React.Component {
+
+    render() {
+        const { decks } = this.props;
+        // Array of all decks.
+        const deckIds = Object.keys(decks);
+        return (
+            <ScrollView contentContainerStyle={styles.container}>
+                <Text style={styles.text}>Your Decks</Text>
+                {deckIds.map(id => <DeckListItem 
+                                        key={id} 
+                                        title={decks[id].title}
+                                        cards={decks[id].questions.length}
+                                        deckId={id} 
+                                    />
+                )}
+            </ScrollView>
+        );
+    }
+};
 
 const mapStateToProps = (state) => ({
     decks: state
