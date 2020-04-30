@@ -40,6 +40,14 @@ const decks = (state = {}, action) => {
                     questions: state[action.deckId].questions.map(el => ({...el, answered: false, userAnswer: null}))
                 }
             }
+        case SET_COMPLETED:
+            return {
+                ...state,
+                [action.deckId]: {
+                    ...state[action.deckId],
+                    completedOn: action.date
+                }
+            }
         default:
             return state;
     }

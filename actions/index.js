@@ -50,8 +50,9 @@ const resetDeck = (deckId) => ({
 });
 
 // SET COMPLETED ACTION CREATOR.
-const setCompleted = (date) => ({
+const setCompleted = (deckId, date) => ({
     type: SET_COMPLETED,
+    deckId,
     date
 });
 
