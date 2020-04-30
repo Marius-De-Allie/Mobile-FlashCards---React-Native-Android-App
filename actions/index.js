@@ -49,15 +49,23 @@ const resetDeck = (deckId) => ({
     deckId
 });
 
+// SET COMPLETED ACTION CREATOR.
+const setCompleted = (date) => ({
+    type: SET_COMPLETED,
+    date
+});
+
 export {
     RECEIVE_DECKS, 
     ADD_DECK, 
     ADD_CARD, 
     SELECT_ANSWER,
     RESET_DECK,
+    SET_COMPLETED,
     handleReceiveDecks, 
     addDeck, 
     addCard, 
     selectAnswer,
     resetDeck,
+    setCompleted
 };
