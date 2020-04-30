@@ -37,6 +37,9 @@ class App extends React.Component {
     // Call thunk action creator to get initial decks data and update store.
     store.dispatch(handleReceiveDecks(data))
         })
+        .catch(e => {
+          console.log(e);
+        }) 
     setLocalNotifications();
   }
 
