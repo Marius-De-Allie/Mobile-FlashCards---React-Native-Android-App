@@ -1,4 +1,4 @@
-import { RECEIVE_DECKS, ADD_DECK, ADD_CARD, SELECT_ANSWER, RESET_DECK } from '../actions';
+import { RECEIVE_DECKS, ADD_DECK, ADD_CARD, SELECT_ANSWER, RESET_DECK, SET_COMPLETED } from '../actions';
 
 const decks = (state = {}, action) => {
     switch(action.type) {
