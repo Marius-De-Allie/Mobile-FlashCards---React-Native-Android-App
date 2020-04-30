@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Animated } from '
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
 import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import { selectAnswer, resetDeck } from '../actions';
+import { selectAnswer, resetDeck, setCompleted } from '../actions';
 import { clearLocalNotifications, setLocalNotifications } from '../_DATA';
 
 class Quiz extends React.Component {
