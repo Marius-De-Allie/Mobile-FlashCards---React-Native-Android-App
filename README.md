@@ -5,7 +5,6 @@
 - [Introduction](#introduction)
 - [Instructions](#instructions)
 - [App State - Redux](#App_State_Redux)
-- [Create React App Info](#Create_React_App|Expo_Info)
 
 ## Introduction
 
@@ -99,6 +98,6 @@ This project is a mobile flashcards application developed using the React Native
     3. answered - whether question has been answered by current user or not | either true or false.
     4. userAnswer - Answer submitted by user for question | either 'yes or 'no'.
 
-## Create_React_Native_App|Expo_Info
+## Create React Native App|Expo Info
     
 This project was bootstrapped with [Create React Native App/Expo](https://github.com/expo/create-react-native-app).
