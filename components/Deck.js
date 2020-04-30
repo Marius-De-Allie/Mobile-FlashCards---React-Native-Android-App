@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground, Animated } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
