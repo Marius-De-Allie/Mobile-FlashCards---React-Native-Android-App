@@ -33,6 +33,11 @@ const STORAGE_KEY = 'decks';
 // const {store, persistor} = configureStore();
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
+// Have AsynStorage data update each time store is updated.
+store.subscribe(() => {
+  AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(store.getState()))
+});
+
 
 class App extends React.Component {
 
