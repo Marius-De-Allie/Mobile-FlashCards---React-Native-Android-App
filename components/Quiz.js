@@ -65,9 +65,20 @@ class Quiz extends React.Component {
                 correct: prevState.correct
             }))
         }
-        this.setState(() => ({
-            answer: null
-        }));
+        this.setState((prevState) => ({
+            answer: null,
+            questionsAnswered: prevState.questionsAnswered + 1
+        }),() => {
+            // return current date as string.
+            let today = new Date().toLocaleDateString();
+            // Check if allquestions in deck has bene answered
+            if(this.state.questionsAnswered >= decks[deckId].questions.length) {
+                // If yes, dispatch SET_COMPLETED action, passing in current date as arg.
+                dispatch(setCompleted(deckId, today))
+            } else {
+                // Do nothing
+            }
+        });
         // If user has completed atleast one quiz turn off notifcation for that day and set notification for next day.
         const answeredQuestions = decks[deckId].questions.filter(question => question.answered === true);
         const totalQuestions = decks[deckId].questions.length;
