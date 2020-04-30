@@ -23,12 +23,22 @@ store.subscribe(() => {
   
 
 class App extends React.Component {
-
   componentDidMount() {
+    AsyncStorage.getItem(STORAGE_KEY)
+    .then(JSON.parse)
+    .then(asyncDecks => {
+      let data;
+      if(Object.keys(asyncDecks).length <= 0 || asyncDecks === null) {
+        _getDecks()
+        .then(decks => data = decks)
+      } else {
+        data = asyncDecks;
+        // store.dispatch(handleReceiveDecks(asyncDecks))
+      }
       // Call thunk action creator to get initial decks data and update store.
-      store.dispatch(handleReceiveDecks());
+      store.dispatch(handleReceiveDecks(data))
+    })
       setLocalNotifications();
-      // persistor.persist();
   }
 
   render() {
