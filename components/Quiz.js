@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
 import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
@@ -12,7 +12,7 @@ class Quiz extends React.Component {
         showAnswer: false,
         page: 0,
         answer: null,
-        correct: 0,
+        correct: 0
     };
 
     // Function for handling the show answer button onPress event.
@@ -69,8 +69,7 @@ class Quiz extends React.Component {
                 correct: prevState.correct
             }))
         }
-        this.setState(prevState => ({
-            formKey: !prevState.formKey,
+        this.setState(() => ({
             answer: null
         }));
         // If user has completed atleast one quiz turn off notifcation for that day and set notification for next day.
@@ -227,8 +226,7 @@ class Quiz extends React.Component {
         console.log('forward pressed')
         this.setState(prevState => ({
             page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1,
-            showAnswer: false,
-            formKey: !prevState.formKey
+            showAnswer: false
         }));
         console.log(this.state.page)
         console.log(this.props.decks[this.props.deckId].questions.length)
@@ -238,8 +236,7 @@ class Quiz extends React.Component {
     onPressBackBtn = () => {
         this.setState(prevState => ({
             page: prevState.page <= 0 ? 0 : prevState.page - 1,
-            showAnswer: false,
-            formKey: !prevState.formKey
+            showAnswer: false
         }));
     };
 
