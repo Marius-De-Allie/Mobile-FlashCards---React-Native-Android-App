@@ -3,46 +3,53 @@ import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react
 import { connect } from 'react-redux';
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
-const Deck = ({route, decks, navigation}) => {
-    
-    const goToQuiz = () => {
+class Deck extends React.Component {
+
+    goToQuiz = () => {
+        const {route, navigation} = this.props;
         navigation.push('Quiz', {
             deckId: route.params.deckId
         })
     };
 
-    const goToNewCard = () => {
+    goToNewCard = () => {
+        const {route, navigation} = this.props;
         navigation.navigate('Add Card', {
             deckId: route.params.deckId
         })
     };
 
-    return (
-        <View style={styles.container}>
-            <View style={styles.deckTextContainer}>
-                <Text style={styles.deckNameText}>{`${decks[route.params.deckId].title} deck`}</Text>
-                <Text style={{fontSize: 20}}>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
+    render() {
+        const {route, decks, navigation } = this.props;
+        return (
+            <View style={styles.container}>
+                <View style={styles.deckTextContainer}>
+                    <Text style={styles.deckNameText}>{`${decks[route.params.deckId].title} deck`}</Text>
+                    <Text style={{fontSize: 20}}>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
+                </View>
+                <View style={styles.btnsContainer}>
+                    <TouchableOpacity
+                        disabled={decks[route.params.deckId].questions.length <= 0}
+                        onPress={this.goToQuiz}
+                        style={[styles.buttons, {marginRight: 30}]}
+                    >
+                        <Ionicons name="md-play" size={18} color="#fff" />
+                        <Text style={styles.buttonText}>{`  Take Quiz`}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={this.goToNewCard}
+                        style={[styles.buttons, {marginLeft: 30}]}
+                    >
+                        <MaterialIcons name="add-box" size={18} color="#fff" />
+                        <Text style={styles.buttonText}>{`  Add Card`}</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
-            <View style={styles.btnsContainer}>
-                <TouchableOpacity
-                    disabled={decks[route.params.deckId].questions.length <= 0}
-                    onPress={goToQuiz}
-                    style={[styles.buttons, {marginRight: 30}]}
-                >
-                    <Ionicons name="md-play" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>{`  Take Quiz`}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={goToNewCard}
-                    style={[styles.buttons, {marginLeft: 30}]}
-                >
-                    <MaterialIcons name="add-box" size={18} color="#fff" />
-                    <Text style={styles.buttonText}>{`  Add Card`}</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-    );
+        );
+    }
+
 };
+
 // Access the following store state as props on this component.
 const mapStateToProps = (state) => ({
     decks: state
