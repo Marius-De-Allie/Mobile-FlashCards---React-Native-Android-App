@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Animated } from 'react-native';
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
 import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
@@ -34,7 +34,6 @@ class Quiz extends React.Component {
         this.setState(() => ({
             answer
         }));
-        console.log(this.state.answer);
     };
 
     onPressIncorrect = () => {
@@ -42,16 +41,13 @@ class Quiz extends React.Component {
         this.setState(() => ({
             answer
         }));
-        console.log(this.state.answer);
     };
 
     onAnswerSubmit = () => {
         const {decks, deckId, dispatch} = this.props;
         // Update current questions array element by toggling the answered property on the question object.
         let updatedQuestionEl = this.props.decks[this.props.deckId].questions[this.state.page];
-//         console.log('before', updatedQuestionEl);
         updatedQuestionEl = {...updatedQuestionEl, answered: !updatedQuestionEl.answered} 
-//         console.log('after', updatedQuestionEl);
         
         // Dispatch SELECT_ANSWER action.
         dispatch(selectAnswer(deckId, this.state.page, this.state.answer));
@@ -59,7 +55,6 @@ class Quiz extends React.Component {
         // Check whether answer in component state is equal to question's answer property value in redux store.
         if(this.state.answer === decks[deckId].questions[this.state.page].answer) {
             // If answer is correct, update component correct state property by incrementing by 1.
-            console.log('CORRECT');
             this.setState((prevState) => ({
                 correct: prevState.correct + 1
             }))
@@ -92,7 +87,7 @@ class Quiz extends React.Component {
             showAnswer: false,
             page: 0,
             answer: null,
-            correct: 0
+            correct: 0,
         }))
     };
 
@@ -102,6 +97,7 @@ class Quiz extends React.Component {
     };
 
     renderMainUI = () => {
+        const {opacity, bounceValue} = this.state;
         const {decks, deckId} = this.props;
         // Declare yes and no variables to be passed into onAnswerChange method.
         const yes = 'yes';
@@ -109,7 +105,7 @@ class Quiz extends React.Component {
         if(this.state.showAnswer === true) {
             return (
                 <View style={styles.correctAnsContainer}>
-                    <Text style={styles.correctAnsText}>{decks[deckId].questions[this.state.page].answer.toUpperCase()}</Text>
+                    <Animated.Text style={styles.correctAnsText}>{decks[deckId].questions[this.state.page].answer.toUpperCase()}</Animated.Text>
                     <TouchableOpacity 
                         onPress={this.onPressShowQuestion}
                         style={styles.backtoQuestionButton}
@@ -223,13 +219,10 @@ class Quiz extends React.Component {
     
     // Function for handling next page button onPress event.
     onPressForwardBtn = () => {
-        console.log('forward pressed')
         this.setState(prevState => ({
             page: prevState.page >= this.props.decks[this.props.deckId].questions.length - 1 ? prevState.page : prevState.page + 1,
             showAnswer: false
         }));
-        console.log(this.state.page)
-        console.log(this.props.decks[this.props.deckId].questions.length)
     };
 
     // Function for handling back button onPress event.
