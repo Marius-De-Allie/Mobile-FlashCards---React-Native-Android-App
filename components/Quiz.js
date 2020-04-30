@@ -13,7 +13,6 @@ class Quiz extends React.Component {
         page: 0,
         answer: null,
         correct: 0,
-        formKey: true
     };
 
     // Function for handling the show answer button onPress event.
