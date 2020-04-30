@@ -20,7 +20,11 @@ const MainStackNavigator = () => (
             options={({route}) => ({title: `${route.params.deckId} Deck`})}
 
         />
-        <Stack.Screen name="Quiz" component={Quiz} />
+        <Stack.Screen 
+            name="Quiz" 
+            component={Quiz}
+            options={({route}) => ({title: `${route.params.deckId} Quiz`})}
+        />
     </Stack.Navigator>
 );
 
