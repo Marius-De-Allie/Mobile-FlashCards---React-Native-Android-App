@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -8,36 +8,19 @@ import TabNavigator from './navigation/tabNavigator';
 import reducer from './reducers';
 import logger from './middleware/logger';
 import { handleReceiveDecks } from './actions';
-import { persistStore, persistReducer } from 'redux-persist';
 import { AsyncStorage } from 'react-native';
-import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import {  setLocalNotifications } from './_DATA';
 
 const STORAGE_KEY = 'decks';
-// const persistConfig = {
-//   timeout: 10000,
-//   key: 'root',
-//   storage: AsyncStorage,
-//   stateReconciler: autoMergeLevel2
-// };
-
-// const persistedReducer = persistReducer(persistConfig, reducer);
-
-// // Create redux store.
-// const configureStore = () => {
-//   const store = createStore(persistedReducer, applyMiddleware(thunk, logger));
-//   let persistor = persistStore(store);
-//   return {persistor, store}
-// };
 
 // const {store, persistor} = configureStore();
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
-// Have AsynStorage data update each time store is updated.
-store.subscribe(() => {
-  AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(store.getState()))
-});
-
+// Have AsyncStorage data update each time store is updated.
+store.subscribe(() => {
+    AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(store.getState()))
+  });
+  
 
 class App extends React.Component {
 
