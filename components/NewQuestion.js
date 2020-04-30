@@ -25,7 +25,6 @@ class NewQuestion extends Component {
         this.setState((prevState) => ({
             answer: prevState.answer === 'yes' ? prevState.answer : 'yes'
         }));
-        console.log(this.state.answer);
     };
 
     // Perform this when no answer button is pressed.
@@ -33,7 +32,6 @@ class NewQuestion extends Component {
         this.setState((prevState) => ({
             answer: prevState.answer === 'no' ? prevState.answer : 'no'
         }));
-        console.log(this.state.answer);
     };
 
     onCardSubmit = () => {

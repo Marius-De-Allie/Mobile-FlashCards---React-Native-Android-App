@@ -73,8 +73,6 @@ class NewDeck extends Component {
                     borderLeftWidth: deckTitle === '' ? 1 : 0,
                 }]}
                 >
-
-
                     <MaterialIcons name="note-add" size={18} color={deckTitle === '' ? '#3498db' : '#fff' } />
                     <Text style={[styles.buttonText, {color: deckTitle === '' ? '#3498db' : '#fff' }]}>{`  Create Deck`}</Text>
                 </TouchableOpacity>
@@ -88,6 +86,7 @@ const mapStateToProps = (state) => ({
     decks: state
 });
 
+// CSS Style object
 const styles = StyleSheet.create({
     container: {
         flex: 1,
