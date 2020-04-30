@@ -18,10 +18,21 @@ This project is a mobile flashcards application developed using the React Native
 - Application may be downloaded or cloned (git clone https://github.com/Marius-De-Allie/Mobile-FlashCards---React-Native-Android-App)from [my GitHub repository](https://github.com/Marius-De-Allie/Mobile-FlashCards---React-Native-Android-App)
 - Once downloaded or cloned via git clone terminal command
 - Run `yarn install` or `npm install` via terminal, to download all dependencies for the application.
-- Run `yarn start`, `npm start`, `expo start` via terminal, to launch application's dev server. In the terminal window you will be preseneted with instructions on how to view your mobile app, see below. *The dev server is usually accessible at (url: `http://localhost:19002/`).
-<img width="331" alt="Annotation 2020-04-29 224959" src="https://user-images.githubusercontent.com/45582613/80666934-cafe0400-8a6b-11ea-887e-6ed0dcbac7d1.png">
-Also a new browser tab should open on your default browser with buttons to launch the app in your web browser, on an android device simulator or on an ios device or simulator. If you do not have android or ios simulators setup on your machine you may chose the view the mobile app on your web browser, however do note that the apperance and styling on the app will not always display correctly, as it would show up on an actual mobile device or simulator.
+- Run `yarn start`, `npm start`, `expo start` via terminal, to launch application's dev server. In the terminal window you will be preseneted with instructions on how to view your mobile app, see below. *The dev server is usually accessible in your browser at (url: `http://localhost:19002/`).
+<img width="331" alt="Annotation 2020-04-29 224959" src="https://user-images.githubusercontent.com/45582613/80673604-b460a880-8a7d-11ea-989d-0f528a4be731.png">
+
+- Also a new browser tab should open on your default browser with buttons to launch the app in your web browser, on an android device simulator or on an ios device or simulator. 
+
 <img width="216" alt="Annotation 2020-04-29 230433" src="https://user-images.githubusercontent.com/45582613/80667692-d9e5b600-8a6d-11ea-86e2-2c65300e1060.png">
+
+- If you do not have android or ios simulators setup on your machine you may chose the view the mobile app on your web browser usually at url: (`http://localhost:19006/`), however do note that the apperance and styling on the app will not always display correctly, as it would show up on an actual mobile device or simulator.
+
+- You will also have options in the terminal window to launch the app by:
+    1. scanning a QR code in the terminal window
+    2. typing a in terminal to run the android emulator
+    2. typing w in terminal to run the app in your wbe browser.
+    3. typing e to send a link to the app to your phone via email
+
 - If you chose to view the app on your phsyical mobile device you will need to download the [Expo](https://expo.io/) app from your app store.
 - If you opt to run the app on your computer using a simulator for your resepective mobile OS you will need to install and comfigure the simulator on your computer. More info can be found bt googling android/IOS emulator setup react-native. THE IOS SIMULATOR ONLY WORKS ON MAC OSX!
 
