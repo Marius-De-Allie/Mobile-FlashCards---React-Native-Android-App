@@ -12,13 +12,9 @@ const receiveDecks = (decks) => ({
 });
 
 // Thunk action creator.
-const handleReceiveDecks = () => {
+const handleReceiveDecks = (data) => {
     return(dispatch) => {
-        _getDecks()
-        .then(decks => {
-            console.log(decks);
-            dispatch(receiveDecks(decks));
-        })
+        dispatch(receiveDecks(data));
     } 
 };
 
