@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { MaterialIcons } from '@expo/vector-icons';
-import RadioGroup, { Radio } from "react-native-radio-input";
+import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
 import { addCard } from '../actions';
 
 class NewQuestion extends Component {
@@ -21,11 +20,18 @@ class NewQuestion extends Component {
         }));
     };
 
-    // Perform this when text in answer InputText field changes.
-    onAnswerSelect = (value) => {
-        // Update component state answer property value to currently selected value of RadioGroup component.
-        this.setState(() => ({
-            answer: value
+    // Perform this when yes answer button is pressed.
+    onYesSelect = () => {
+        this.setState((prevState) => ({
+            answer: prevState.answer === 'yes' ? prevState.answer : 'yes'
+        }));
+        console.log(this.state.answer);
+    };
+
+    // Perform this when no answer button is pressed.
+    onNoSelect = () => {
+        this.setState((prevState) => ({
+            answer: prevState.answer === 'no' ? prevState.answer : 'no'
         }));
         console.log(this.state.answer);
     };
@@ -43,6 +49,11 @@ class NewQuestion extends Component {
             };
             // Dispacth action to add question object to that's deck's question array.
             this.props.dispatch(addCard(questionObj, deckId));
+            // Reset component state values to empty strings.
+            this.setState(() => ({
+                question: '',
+                answer: ''
+            }))
             // Redirect to the previous Deck view.
             this.props.navigation.navigate('Deck', {
                 deckId
@@ -66,12 +77,35 @@ class NewQuestion extends Component {
                         style={styles.textInput}
                     />
                 </View>
-                <View>
-                    <Text>Please select the correct answer to your new question from the two choices below(yes or no)</Text>
-                    <RadioGroup getChecked={value => this.onAnswerSelect(value)}>
-                        <Radio iconName={"lens"} label={"Yes"} value={"yes"}/>
-                        <Radio iconName={"lens"} label={"No"} value={"no"}/>
-                    </RadioGroup>
+                <View style={styles.ansContainer}>
+                    <Text style={styles.ansText}>Please select the correct answer to your new question from the two choices below</Text>
+                    <TouchableOpacity
+                        onPress={this.onYesSelect}
+                        style={[styles.ansButton, {backgroundColor: answer === 'yes' ? '#2ecc71' : '#F2F2F2',
+                        borderTopWidth: answer === 'yes' ? 0 : 1, 
+                        borderRightWidth: answer === 'yes' ? 0 : 1, 
+                        borderBottomWidth: answer === 'yes' ? 0 : 1, 
+                        borderLeftWidth: answer === 'yes' ? 0 : 1,
+    
+                    }]}
+                    >
+                        <FontAwesome name="thumbs-up" size={18} color={answer === 'yes' ? '#fff' : 'black'}/>
+                        <Text style={{fontSize: 18, color: answer === 'yes' ? '#fff' : 'black' }}>{`  Yes`}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={this.onNoSelect}
+                        style={[styles.ansButton, {backgroundColor: answer === 'no' ? '#2ecc71' : '#F2F2F2',
+                        borderTopWidth: answer === 'no' ? 0 : 1, 
+                        borderRightWidth: answer === 'no' ? 0 : 1, 
+                        borderBottomWidth: answer === 'no' ? 0 : 1, 
+                        borderLeftWidth: answer === 'no' ? 0 : 1,
+                        marginTop: 15
+
+                    }]}
+                    >
+                        <FontAwesome name="thumbs-down" size={18} color={answer === 'no' ? '#fff' : 'black'}/>
+                        <Text style={{fontSize: 18, color: answer === 'no' ? '#fff' : 'black' }}>{`  No`}</Text>
+                    </TouchableOpacity>
                 </View>
                 <TouchableOpacity 
                     onPress={this.onCardSubmit}
@@ -139,7 +173,26 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 18,
-    }
+    },
+    ansText: {
+        fontSize: 18,
+        textAlign: 'center',
+        marginBottom: 30
+    },
+    ansContainer: {
+        alignSelf: 'center',
+        alignItems: 'center'
+
+    },
+    ansButton: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 90,
+        padding: 15,
+        borderRadius: 5,
+
+    },
 });
 
 export default connect(mapStateToProps)(NewQuestion);
