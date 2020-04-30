@@ -63,7 +63,3 @@ export {
     selectAnswer,
     resetDeck,
 };
-
-// catch(e) {
-//     console.log('Error retreiving decks, please try again', e);
-// }
