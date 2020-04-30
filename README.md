@@ -14,7 +14,6 @@ This project is a mobile flashcards application developed using the React Native
 ## Instructions
 
 ### How to start the Mobile Flashcards React-Native android application
-- Application URL [Click here to launch Would You Rather App](https://would-you-rather-4028c9.netlify.app/)
 - Application may be downloaded or cloned (git clone https://github.com/Marius-De-Allie/Mobile-FlashCards---React-Native-Android-App)from [my GitHub repository](https://github.com/Marius-De-Allie/Mobile-FlashCards---React-Native-Android-App)
 - Once downloaded or cloned via git clone terminal command
 - Run `yarn install` or `npm install` via terminal, to download all dependencies for the application.
