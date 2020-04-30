@@ -25,6 +25,7 @@ class Deck extends React.Component {
 
     componentDidMount() {
         const {opacity, bounceValue} = this.state;
+        // Animate Deck View when first loaded.
         Animated.parallel([
             Animated.timing(bounceValue, { toValue: 1, duration: 700}),
             Animated.timing(opacity, { toValue: 1, duration: 1200})
@@ -61,7 +62,6 @@ class Deck extends React.Component {
             </Animated.View>
         );
     }
-
 };
 
 // Access the following store state as props on this component.
