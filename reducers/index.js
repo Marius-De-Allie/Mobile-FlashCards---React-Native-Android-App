@@ -12,7 +12,8 @@ const decks = (state = {}, action) => {
                 ...state,
                 [action.deckId]: {                
                     title: action.title,
-                    questions: action.questions
+                    questions: action.questions,
+                    completedOn: action.completedOn
                 }
             }
         case ADD_CARD:
