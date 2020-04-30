@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 class Deck extends React.Component {
+    state = {
+        bounceValue: new Animated.Value(0),
+        opacity: new Animated.Value(0)
+    }
 
     goToQuiz = () => {
         const {route, navigation} = this.props;
@@ -19,10 +23,20 @@ class Deck extends React.Component {
         })
     };
 
+    componentDidMount() {
+        const {opacity, bounceValue} = this.state;
+        Animated.parallel([
+            Animated.timing(bounceValue, { toValue: 1, duration: 700}),
+            Animated.timing(opacity, { toValue: 1, duration: 1200})
+        ])
+        .start()
+    }
+
     render() {
         const {route, decks, navigation } = this.props;
+        const {bounceValue, opacity} = this.state;
         return (
-            <View style={styles.container}>
+            <Animated.View style={[styles.container, {transform: [{scale: bounceValue}], opacity}]}>
                 <View style={styles.deckTextContainer}>
                     <Text style={styles.deckNameText}>{`${decks[route.params.deckId].title} deck`}</Text>
                     <Text style={{fontSize: 20}}>{`${decks[route.params.deckId].questions.length} card(s)`}</Text>
@@ -44,7 +58,7 @@ class Deck extends React.Component {
                         <Text style={styles.buttonText}>{`  Add Card`}</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
+            </Animated.View>
         );
     }
 
