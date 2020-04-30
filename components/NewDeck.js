@@ -34,9 +34,11 @@ class NewDeck extends Component {
             const title = this.state.deckTitle;
             // Deck questions property
             const questions = [];
+            // Deck completedOn property.
+            const completedOn = null;
     
             // Dispatch action creator to add new deck to store.
-            this.props.dispatch(addDeck(deckId, title, questions));
+            this.props.dispatch(addDeck(deckId, title, questions, completedOn));
             // Clear input field after submission.
             this.setState(() => ({
                 deckTitle: ''
