@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
 import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
@@ -247,7 +247,7 @@ class Quiz extends React.Component {
         // Calcluate number of questions in current deck.
         const totalQuestions = decks[deckId].questions.length;
         return (
-            <View>
+            <ScrollView>
                 <Text style={styles.pageCountText}>{`Page ${this.state.page + 1}/${totalQuestions}`}</Text>
                 <Text style={styles.quizTitle}>{`${decks[deckId].title} Quiz`}</Text>
                 <View style={styles.mainContentContainer}>
@@ -289,7 +289,7 @@ class Quiz extends React.Component {
                             color={this.state.page >= decks[deckId].questions.length -1 || decks[deckId].questions[this.state.page].answered === false ? 'gray' : '#2ecc71'} />
                     </TouchableOpacity>
                 </View>
-            </View>
+            </ScrollView>
         );    
     }
 };
