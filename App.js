@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import { Constanst } from 'expo';
 import TabNavigator from './navigation/tabNavigator';
 import reducer from './reducers';
 import logger from './middleware/logger';
@@ -46,9 +45,7 @@ class App extends React.Component {
     return (
       <NavigationContainer>
         <Provider store={store}>
-          <View>
-            <StatusBar />
-          </View>
+          <StatusBar backgroundColor="#3498db" barStyle="light-content"/>
           <TabNavigator />
         </Provider>
       </NavigationContainer>
