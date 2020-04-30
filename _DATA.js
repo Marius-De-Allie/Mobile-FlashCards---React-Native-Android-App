@@ -21,7 +21,8 @@ let decks = {
           userAnswer: null
 
         }
-      ]
+      ],
+      completedOn: null
     },
     JavaScript: {
       title: 'JavaScript',
@@ -32,7 +33,8 @@ let decks = {
           answered: false,
           userAnswer: null
         }
-      ]
+      ],
+      completedOn: null
     }
 
 };
