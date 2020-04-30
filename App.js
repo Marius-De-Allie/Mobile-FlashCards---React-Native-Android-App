@@ -12,6 +12,8 @@ import { persistStore, persistReducer } from 'redux-persist';
 import { AsyncStorage } from 'react-native';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import {  setLocalNotifications } from './_DATA';
+
+const STORAGE_KEY = 'decks';
 // const persistConfig = {
 //   timeout: 10000,
 //   key: 'root',
