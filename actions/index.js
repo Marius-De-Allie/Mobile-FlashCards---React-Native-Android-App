@@ -5,6 +5,7 @@ const ADD_DECK = 'ADD_DECK';
 const ADD_CARD = 'ADD_CARD';
 const SELECT_ANSWER = 'SELECT_ANSWER';
 const RESET_DECK = 'RESET_DECK';
+const SET_COMPLETED = 'SET_COMPLETED';
 
 const receiveDecks = (decks) => ({
     type: RECEIVE_DECKS,
