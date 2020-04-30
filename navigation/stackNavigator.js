@@ -5,7 +5,6 @@ import Quiz from '../components/Quiz';
 import NewQuestion from '../components/NewQuestion';
 import DeckList from '../components/DeckList';
 import NewDeck from '../components/NewDeck';
-import TabNavigator from './tabNavigator';
 
 const Stack = createStackNavigator();
 
