@@ -102,4 +102,4 @@ This project is a mobile flashcards application developed using the React Native
 
 ## Create_React_Native_App|Expo_Info
     
-    This project was bootstrapped with [Create React Native App/Expo](https://github.com/expo/create-react-native-app).
+This project was bootstrapped with [Create React Native App/Expo](https://github.com/expo/create-react-native-app).
