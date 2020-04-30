@@ -9,6 +9,13 @@ const TabNavigator = () => (
     <Tab.Navigator
         initialRouteName="Decks"
         initialLayout={{width: Dimensions.get('window').width}}
+        tabBarOptions={{
+            activeTintColor: '#3498db',
+            inactiveTintColor: 'gray',
+            indicatorStyle: {
+                backgroundColor: '#3498db'
+            }
+        }}
     >
         <Tab.Screen name="Decks" component={MainStackNavigator} />
         <Tab.Screen name="New Deck" component={NewDeckStack} />
