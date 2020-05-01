@@ -65,6 +65,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 30,
         alignSelf: 'center'
+    },
+    noDeckText: {
+        fontSize: 24,
+        color: '#3498db',
+        alignSelf: 'center',
+        textAlign: 'center'
     }
 });
 
