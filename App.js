@@ -28,22 +28,22 @@ class App extends React.Component {
     AsyncStorage.getItem(STORAGE_KEY)
         .then(JSON.parse)
         .then(asyncDecks => {
-        if(Object.keys(asyncDecks).length < 0) {
-          // Call thunk action creator to get initial decks data and update store.
+        if(Object.keys(asyncDecks).length > 0) {
+          // Call thunk action creator to get initial decks data from asyncStorage and update store.
           store.dispatch(handleReceiveDecks(asyncDecks))
-
         } else {
           _getDecks()
           .then(decks => {
+            // Call thunk action creator to get initial decks data from db file and update store.
                 store.dispatch(handleReceiveDecks(decks))
-
+                
           })
-
+          .catch(e => console.log('Unable to load data from local db', e));
         }
         })
         .catch(e => {
-          console.log(e);
-        }) 
+          console.log('Unable to load Async data', e);
+        });
     setLocalNotifications();
   }
 
