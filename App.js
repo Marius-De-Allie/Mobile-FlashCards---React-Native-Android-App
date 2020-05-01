@@ -28,8 +28,18 @@ class App extends React.Component {
     AsyncStorage.getItem(STORAGE_KEY)
         .then(JSON.parse)
         .then(asyncDecks => {
-        // Call thunk action creator to get initial decks data and update store.
-        store.dispatch(handleReceiveDecks(asyncDecks))
+        if(Object.keys(asyncDecks).length < 0) {
+          // Call thunk action creator to get initial decks data and update store.
+          store.dispatch(handleReceiveDecks(asyncDecks))
+
+        } else {
+          _getDecks()
+          .then(decks => {
+                store.dispatch(handleReceiveDecks(decks))
+
+          })
+
+        }
         })
         .catch(e => {
           console.log(e);

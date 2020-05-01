@@ -8,7 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 const TabNavigator = () => (
     <Tab.Navigator
         initialRouteName="Decks"
-        initialLayout={{width: Dimensions.get('window').width}}
+        // initialLayout={{width: Dimensions.get('window').width}}
         tabBarOptions={{
             activeTintColor: '#3498db',
             inactiveTintColor: 'gray',
