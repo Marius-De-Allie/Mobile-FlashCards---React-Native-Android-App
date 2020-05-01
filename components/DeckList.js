@@ -25,6 +25,23 @@ class DeckList extends React.Component {
         const { decks } = this.props;
         // Array of all decks.
         const deckIds = Object.keys(decks);
+        const renderUI= () => {
+            Object.keys(decks).length > 0 ? 
+            <ScrollView contentContainerStyle={styles.container}>
+                <Text style={styles.text}>Your Decks</Text>
+                {deckIds.map(id => <DeckListItem 
+                                        key={id} 
+                                        title={decks[id].title}
+                                        cards={decks[id].questions.length}
+                                        deckId={id} 
+                                    />
+                )}
+            </ScrollView> :
+            <ScrollView>
+                <Text style={styles.text}>Your Decks</Text>
+                <Text>You currently have no decks, Swipe right to add new deck</Text>
+            </ScrollView>
+        }
         return (
             <ScrollView contentContainerStyle={styles.container}>
                 <Text style={styles.text}>Your Decks</Text>
