@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, ScrollView, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import DeckListItem from './DeckListItem';
 
 class DeckList extends React.Component {
@@ -39,7 +40,7 @@ class DeckList extends React.Component {
             </ScrollView> :
             <ScrollView>
                 <Text style={styles.text}>Your Decks</Text>
-                <Text>You currently have no decks, Swipe right to add new deck</Text>
+                <Text>You currently have no decks, Swipe left to add new deck</Text>
             </ScrollView>
         }
         return (
