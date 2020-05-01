@@ -26,34 +26,23 @@ class DeckList extends React.Component {
         const { decks } = this.props;
         // Array of all decks.
         const deckIds = Object.keys(decks);
-        const renderUI= () => {
-            Object.keys(decks).length > 0 ? 
-            <ScrollView contentContainerStyle={styles.container}>
-                <Text style={styles.text}>Your Decks</Text>
-                {deckIds.map(id => <DeckListItem 
-                                        key={id} 
-                                        title={decks[id].title}
-                                        cards={decks[id].questions.length}
-                                        deckId={id} 
-                                    />
-                )}
-            </ScrollView> :
-            <ScrollView>
-                <Text style={styles.text}>Your Decks</Text>
-                <Text>You currently have no decks, Swipe left to add new deck</Text>
-                <MaterialCommunityIcons name="gesture-swipe-left" />
-            </ScrollView>
-        }
         return (
             <ScrollView contentContainerStyle={styles.container}>
                 <Text style={styles.text}>Your Decks</Text>
-                {deckIds.map(id => <DeckListItem 
-                                        key={id} 
-                                        title={decks[id].title}
-                                        cards={decks[id].questions.length}
-                                        deckId={id} 
-                                    />
-                )}
+                {deckIds.length > 0 ? 
+                    deckIds.map(id => <DeckListItem 
+                                            key={id} 
+                                            title={decks[id].title}
+                                            cards={decks[id].questions.length}
+                                            deckId={id} 
+                                        />
+                    ) :
+                        <>
+                            <Text>You currently have no decks, Swipe left to add new deck</Text>
+                            <MaterialCommunityIcons name="gesture-swipe-left" />
+                        </>
+                
+                }
             </ScrollView>
         );
     }
