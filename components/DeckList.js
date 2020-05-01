@@ -5,6 +5,22 @@ import DeckListItem from './DeckListItem';
 
 class DeckList extends React.Component {
 
+    componentDidMount() {
+        const {decks} = this.props;
+        const deckIds = Object.keys(decks);
+        if(deckIds.includes(id => decks[id].completedOn === new Date().toLocaleDateString())) {
+            console.log('notificaton cancelled for today')
+            // Do not send notification on this day.
+            clearLocalNotifications()
+            // Set notification for next calendar day
+            .then(setLocalNotifications)
+            } else {
+                // Do nothing i.e. notification will execute on this day as normal.
+                console.log('notificaton will go off today')
+            }
+            
+    }
+
     render() {
         const { decks } = this.props;
         // Array of all decks.
