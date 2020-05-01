@@ -38,7 +38,7 @@ class DeckList extends React.Component {
                                         />
                     ) :
                         <>
-                            <Text>You currently have no decks, Swipe left to add new deck</Text>
+                            <Text style={styles.noDeckText}>You currently have no decks, Swipe left to add new deck</Text>
                             <MaterialCommunityIcons name="gesture-swipe-left" />
                         </>
                 
