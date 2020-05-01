@@ -43,6 +43,7 @@ class DeckList extends React.Component {
                                 name="gesture-swipe-left" 
                                 size={65} 
                                 color="#3498db" 
+                                style={styles.icon}
                             />
                         </>
                 
