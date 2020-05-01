@@ -39,7 +39,11 @@ class DeckList extends React.Component {
                     ) :
                         <>
                             <Text style={styles.noDeckText}>You currently have no decks, Swipe left to add new deck</Text>
-                            <MaterialCommunityIcons name="gesture-swipe-left" />
+                            <MaterialCommunityIcons 
+                                name="gesture-swipe-left" 
+                                size={65} 
+                                color="#3498db" 
+                            />
                         </>
                 
                 }
@@ -71,6 +75,10 @@ const styles = StyleSheet.create({
         color: '#3498db',
         alignSelf: 'center',
         textAlign: 'center'
+    },
+    icon: {
+        alignSelf: 'center',
+        marginTop: 15,
     }
 });
 
