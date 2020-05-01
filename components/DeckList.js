@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
+import { Text, ScrollView, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import DeckListItem from './DeckListItem';
