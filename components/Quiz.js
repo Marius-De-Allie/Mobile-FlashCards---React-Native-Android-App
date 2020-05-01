@@ -1,10 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Animated } from 'react-native';
-import RadioGroup, { Radio } from 'react-native-radio-input';
 import { connect } from 'react-redux';
 import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { selectAnswer, resetDeck, setCompleted } from '../actions';
-import { clearLocalNotifications, setLocalNotifications } from '../_DATA';
 
 class Quiz extends React.Component {
     // Component state.
@@ -79,15 +77,6 @@ class Quiz extends React.Component {
                 // Do nothing
             }
         });
-        // If user has completed atleast one quiz turn off notifcation for that day and set notification for next day.
-        const answeredQuestions = decks[deckId].questions.filter(question => question.answered === true);
-        const totalQuestions = decks[deckId].questions.length;
-        if(answeredQuestions.length >= totalQuestions) {
-            clearLocalNotifications()
-            .then(setLocalNotifications)
-        } else {
-            // Do nothing
-        }
     };
 
     onRetakebtnPress = () => {
