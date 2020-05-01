@@ -29,7 +29,7 @@ class App extends React.Component {
         .then(JSON.parse)
         .then(asyncDecks => {
         // Call thunk action creator to get initial decks data and update store.
-    //     store.dispatch(handleReceiveDecks(asyncDecks))
+        store.dispatch(handleReceiveDecks(asyncDecks))
         })
         .catch(e => {
           console.log(e);

@@ -3,22 +3,42 @@ import { Text, ScrollView, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import DeckListItem from './DeckListItem';
+import { clearLocalNotifications, setLocalNotifications } from '../_DATA';
 
 class DeckList extends React.Component {
 
-    componentDidMount() {
-        const {decks} = this.props;
-        const deckIds = Object.keys(decks);
-        if(deckIds.includes(id => decks[id].completedOn === new Date().toLocaleDateString())) {
-            console.log('notificaton cancelled for today')
-            // Do not send notification on this day.
-            clearLocalNotifications()
-            // Set notification for next calendar day
-            .then(setLocalNotifications)
-            } else {
+    componentDidUpdate() {
+        setTimeout(() => {
+            const {decks} = this.props;
+            const deckIds = Object.keys(decks);
+            // Create new array with all questions that has a completed date of current day.
+            const newArray = deckIds.filter(id=> decks[id].completedOn === new Date().toLocaleDateString());
+            console.log('deckList', newArray);
+            // Check how many deck's (if any) were completed on today's date.
+            if(newArray.length > 0) {
+                console.log('notificaton cancelled for today')
+                // Do not send notification on this day.
+                clearLocalNotifications()
+                // Set notification for next calendar day
+                .then(setLocalNotifications)
+            } else {
                 // Do nothing i.e. notification will execute on this day as normal.
                 console.log('notificaton will go off today')
-            }
+            }
+
+            }, 3000)
+            // const newArray = deckIds.filter(id=> decks[id].completedOn === new Date().toLocaleDateString())
+            // console.log(newArray);
+//         if(deckIds.includes(id => decks[id].completedOn === new Date().toLocaleDateString())) {
+//             console.log('notificaton cancelled for today', decks[id].completedOn, new Date().toLocaleDateString())
+            // Do not send notification on this day.
+//             clearLocalNotifications()
+            // Set notification for next calendar day
+//             .then(setLocalNotifications)
+//             } else {
+                // Do nothing i.e. notification will execute on this day as normal.
+    //             console.log('notificaton will go off today')
+    //         }
             
     }
 
