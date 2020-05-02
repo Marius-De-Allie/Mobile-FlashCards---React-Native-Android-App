@@ -8,7 +8,8 @@
 
 ## Introduction
 
-This project is a mobile flashcards application developed using the React Native library The app was developed for use on google android mobile devices. The Redux library is used for application state management and react-native navigation is used for app navigation/routing between different views within the application. The purpose of the application is to allow the user to create "decks" of flashcards containing questions on specific subject matter of the user's choosing. The user can then access the creatd decks and cards to take the quiz questions, using the application as a study/review aid. Once a quiz (deck of cards) is completed, the user is presented with their score for that quiz and can retake the quiz if they so choose.
+This project is a mobile flashcards application developed using the React Native library. The app was developed for use on google android mobile devices. The Redux library is used for application state management and react-native navigation is used for app navigation/routing between different views within the application. The application's state is persisted using AsyncStorage.
+The purpose of the application is to allow the user to create "decks" of flashcards containing questions on specific subject matter of the user's choosing. The user can then access the creatd decks and cards to take the quiz questions, using the application as a study/review aid. Once a quiz (deck of cards) is completed, the user is presented with their score for that quiz and can retake the quiz if they so choose.
 
 ## Instructions
 
